@@ -450,3 +450,75 @@ function dropdown_generate_tag_cloud( $tags, $args = '' ) {
 
 	return apply_filters( 'dropdown_generate_tag_cloud', $return, $tags, $args );
 }
+
+// Register sidebars for each branch of AgriLife */
+// Extension
+add_action( 'widgets_init', 'ag_register_sidebars');
+function ag_register_sidebars() {
+  
+  //Extension
+  register_sidebar(
+    array(
+      'id' => 'sidebar_extension',
+      'name' => 'Sidebar - Extension',
+      'description' => __('These widgets will only show on the Extension page'),
+      'before_widget' => '<div id="%1#s" class="extension-widget">',
+      'after_widget' => '</div>',
+      'before_title' => '<h3 class="widget-title">',
+      'after_title' => '</h3>',
+    )
+  );
+
+  // Research
+  register_sidebar(
+    array(
+      'id' => 'sidebar_research',
+      'name' => 'Sidebar - Research',
+      'description' => __('These widgets will only show on the Research page'),
+      'before_widget' => '<div id="%1#s" class="research-widget">',
+      'after_widget' => '</div>',
+      'before_title' => '<h3 class="widget-title">',
+      'after_title' => '</h3>',
+    )
+  );
+
+  // College
+  register_sidebar(
+    array(
+      'id' => 'sidebar_college',
+      'name' => 'Sidebar - College',
+      'description' => __('These widgets will only show on the College page'),
+      'before_widget' => '<div id="%1#s" class="college-widget">',
+      'after_widget' => '</div>',
+      'before_title' => '<h3 class="widget-title">',
+      'after_title' => '</h3>',
+    )
+  );
+
+  // Forestry
+  register_sidebar(
+    array(
+      'id' => 'sidebar_forestry',
+      'name' => 'Sidebar - Forestry',
+      'description' => __('These widgets will only show on the Forestry page'),
+      'before_widget' => '<div id="%1#s" class="forestry-widget">',
+      'after_widget' => '</div>',
+      'before_title' => '<h3 class="widget-title">',
+      'after_title' => '</h3>',
+    )
+  );
+
+  // TVMDL 
+  register_sidebar(
+    array(
+      'id' => 'sidebar_tvmdl',
+      'name' => 'Sidebar - TVMDL',
+      'description' => __('These widgets will only show on the TVMDL page'),
+      'before_widget' => '<div id="%1#s" class="tvmdl-widget">',
+      'after_widget' => '</div>',
+      'before_title' => '<h3 class="widget-title">',
+      'after_title' => '</h3>',
+    )
+  );
+
+}
