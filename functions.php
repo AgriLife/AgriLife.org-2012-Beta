@@ -112,16 +112,6 @@ function flexopotamus_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Home Page Sidebar', 'flexopotamus' ),
-		'id' => 'home-widget-area',
-		'description' => __( 'The sidebar for the home page', 'flexopotamus' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>'
-	) );
-
-	register_sidebar( array(
 		'name' => __( 'Footer Area One', 'flexopotamus' ),
 		'id' => 'sidebar-3',
 		'description' => __( 'An optional widget area for your site footer', 'flexopotamus' ),
@@ -150,35 +140,6 @@ function flexopotamus_widgets_init() {
 		'before_title' => '<h1 class="footer-info-title widget-title-remove">',
 		'after_title' => '</h1>'
 	) );
-	register_sidebar( array(
-		'name' => __( 'Footer Area Four', 'flexopotamus' ),
-		'id' => 'sidebar-6',
-		'description' => __( 'An optional widget area for your site footer', 'flexopotamus' ),
-		'before_widget' => '<aside id="%1$s" class="%2$s footer-info-container one-of-3"><div class="footer-info-wrap">',
-		'after_widget' => "</div></aside>",
-		'before_title' => '<h1 class="footer-info-title widget-title-remove">',
-		'after_title' => '</h1>'
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Footer Area Five', 'flexopotamus' ),
-		'id' => 'sidebar-7',
-		'description' => __( 'An optional widget area for your site footer', 'flexopotamus' ),
-		'before_widget' => '<aside id="%1$s" class="%2$s footer-info-container one-of-3"><div class="footer-info-wrap">',
-		'after_widget' => "</div></aside>",
-		'before_title' => '<h1 class="footer-info-title widget-title-remove">',
-		'after_title' => '</h1>'
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Footer Area Six', 'flexopotamus' ),
-		'id' => 'sidebar-8',
-		'description' => __( 'An optional widget area for your site footer', 'flexopotamus' ),
-		'before_widget' => '<aside id="%1$s" class="%2$s footer-info-container one-of-3 last"><div class="footer-info-wrap">',
-		'after_widget' => "</div></aside>",
-		'before_title' => '<h1 class="footer-info-title widget-title-remove">',
-		'after_title' => '</h1>'
-	) );	
 	
 }
 add_action( 'widgets_init', 'flexopotamus_widgets_init' );
