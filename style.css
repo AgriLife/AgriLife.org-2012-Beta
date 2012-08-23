@@ -357,8 +357,8 @@ em { font-style: italic; }
 .container {margin: 10px auto;max-width: 1024px;}
 .featured-content {
 	border-radius: 3px;
-	border-radius: 3px;	
-	box-shadow: 0 0 2px rgba(0,0,0,.3);	
+	border-radius: 3px;		
+	margin-bottom: 1em;
 }
 #feature-container {
 	display: none;	
@@ -366,8 +366,7 @@ em { font-style: italic; }
 .feartured-content { box-shadow: 0 1px 3px rgba(0,0,0,.2);}
 .featured-stories-container {
 	position: relative;
-	background-color: #3a2521; /* old brown */
-	background-color: #fff;
+	background-color: #5F574F;
 	background-image: url('images/texture.png');
 	border-radius: 3px;
 	margin-bottom: 2.3333333%;
@@ -521,6 +520,11 @@ em { font-style: italic; }
 	font-weight: 900;
 	color: #333;
 }
+.home-agency-intro {
+	padding-left: 3.333333333%;
+	padding-right: 3.33333333%;
+	font-size: .9em;
+}
 .mb-post-title.entry-title,
 .home h2.entry-title {
 	font-size: 1.25em; /* 20px / 16px */
@@ -541,9 +545,7 @@ body.home .post {
 	margin-bottom: 2.126759574468%; /* 20px / 640px */			
 }
 .cat-nav-inner {
-	background-color: #EBEBDF; /* old beige */
-	background-color: #fff;
-	background-image: url('images/texture.png');		
+	background-color: #fff;		
 	box-shadow: 0 1px 2px rgba(0,0,0,.2);	
 	border-radius: 3px;
 }
@@ -560,6 +562,9 @@ body.home .post {
 .home .entry-content p {
 	color: #4b4b49;
 	font-size: .875em; /* 14px / 16px */
+}
+.home #sidebar {
+	background: #fff;
 }
 .spotlight a:hover {
 	text-decoration: none;
@@ -586,16 +591,16 @@ body.home .post {
 	margin-top: 3%;
 }
 .cat-nm a {
-	padding: 3.333333333%; /* 10px / 300px */;	
-	text-shadow: 0 1px 0 rgba(0,0,0,.3);
+	padding: 1.5% 3.333333333%; /* 10px / 300px */;	
 	vertical-align: middle;	
 	display: block;
-	color: #fff;
+	color: #500000;
 	box-shadow: inset 0 5px 25px rgba(255,255,255,.4);
 	position: relative;
 }
 .cat-nm {
 	font-size: 1.125em; /* 18px / 16px */
+	margin: 0;
 }
 .cat-post-title {
 	font-size: 0.875em; /* 14px / 16px */	
@@ -609,36 +614,36 @@ body.home .post {
 .cat-nm {
 	color: #fff;
 	background-image: url('images/texture.png');
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;		
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;		
 }
 .cat-nm a:hover {
 	text-decoration: none;
 	box-shadow: inset 0 5px 25px rgba(255,255,255,.6);	
 }
-.cat-nm-business {
-	border-top: 3px solid #36415F;
-	background-color: #8C5933;	
+.cat-nm-tvmdl {
+	border-top: 5px solid #500000;
+	background-color: #BFBCB9;	
 }
-.cat-nm-environment {
-	border-top: 3px solid #30563A;
-	background-color: #5D0025;	
+.cat-nm-college {
+	border-top: 5px solid #500000;	
+	background-color: #BFBCB9;	
 }
-.cat-nm-farm-ranch {
-	border-top: 3px solid #5F3A36;
-	background-color: #975b53;		
+.cat-nm-vc {
+	border-top: 5px solid #500000;
+	background-color: #BFBCB9;			
 }
-.cat-nm-science-technology {
-	border-top: 3px solid #4C626A;
-	background-color: #1B607B;	
+.cat-nm-extension {
+	border-top: 5px solid #500000;
+	background-color: #BFBCB9;	
 }
-.cat-nm-lawn-garden {
-	border-top: 3px solid #545733;
-	background-color: #82A492;		
+.cat-nm-forest {
+	border-top: 5px solid #500000;
+	background-color: #BFBCB9;		
 }
-.cat-nm-life-health {
-	border-top: 3px solid #544057;
-	background-color: #5C8C39;	
+.cat-nm-research {
+	border-top: 5px solid #500000;
+	background-color: #BFBCB9;	
 }
 
 .cat-all-button {
@@ -810,8 +815,6 @@ h2.post-author-title {
 	float: left;
 }
 .widget {
-	border-top: 1px solid #F6F6F0;	
-	border-bottom: 1px solid #D6D6C0;
 	margin: 0 3.333333333%; /* 10px / 300px */
 	padding: 3.333333333% 0; 		
 }
@@ -826,9 +829,7 @@ h2.post-author-title {
 .footer-info-title {
 	font-size: 1.125em; /* 18px / 16px */
 	margin-bottom: .5em;
-	color: #aeaea0;
 	font-weight: 900;
-	text-shadow: 0 1px 0 rgba(255,255,255,.8);
 }
 .search-widget {
 	border: none;
@@ -922,13 +923,12 @@ a.rss:hover {
 .flickr-photos li img {
 	margin-bottom: 6%;
 }
-.site-footer {
-	background: #ebebdf url('images/texture.png') left top;	
-	background: #f0f0f0 url('images/texture.png') left top;	
+.site-footer {	
+	background: #bfbcb9 url('images/texture.png') left top;	
 	overflow: hidden;
 	margin-bottom: 3.33333333%;
-	border-radius: 3px;
-	box-shadow: 0 0 2px rgba(0,0,0,.2);		
+	border-radius: 5px;
+	box-shadow: inset 0 5px 25px rgba(255, 255, 255, .4)	
 }
 .footer-info-wrap {
 	padding: 3.3333333%;
@@ -984,8 +984,8 @@ a.rss:hover {
 		/*background: #f8f8f1 url('images/texture.png');*/
 		/*background: #fff url('http://agrilifecdn.tamu.edu/wp-content/themes/AgriFlex-AgriLife/images/agrilife-background.png') repeat-x;*/
 		/*background: #fff url('http://agrilifecdn.tamu.edu/wp-content/themes/AgriFlex-AgriLife/images/footer-background.gif');*/
-		background: #f4f4f2 url('images/lower-bg.png') repeat-x;
-		background-position-y: 150px;
+		/*background: #f4f4f2 url('images/lower-bg.png') repeat-x;*/
+		background: #e3e3e3;
 		border-top: 3px solid #d6d6c8;
 	}
 	.site-title a {
@@ -1009,7 +1009,7 @@ a.rss:hover {
 		float: left;
 	}
 	.top-agency.agrilife {
-		background: #3A2521 url('images/texture.png');
+		background: #5F574F url('images/texture.png');
 		float: right;
 		padding: 5px;
 		border-bottom-left-radius: 6px;	
@@ -1073,18 +1073,17 @@ a.rss:hover {
 	.featured-content {
 		position: relative;	
 	}
-	
 	.agency-research {
 		background-color: #5C8C39;
 	}
 	.agency-college {
-		background-color: #5D0025;
+		background-color: #500000;
 	}	
 	.agency-extension {
 		background-color: #1B607B;
 	}		
 	.agency-tfs {
-		background-color: #82a492;
+		background-color: #4F552A;
 	}
 	.agency-tvmdl {
 		background-color: #8c5933;
@@ -1096,6 +1095,9 @@ a.rss:hover {
 		float: left;
 		list-style: none;
 		padding: 0;
+	}
+	.featured-stories li {
+		margin: 10px 5px 0 45px;
 	}
 	.featured-stories a,
 	a.cat-nav-post-link {

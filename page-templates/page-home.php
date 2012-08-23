@@ -48,6 +48,24 @@ get_header(); ?>
 		</ol>
 	</div>
 		</section> 
+		
+		<div class="content-wrap">
+		<section id="content" role="main" class="two-of-3 column">
+
+				<?php the_post(); ?>
+
+				<?php get_template_part( 'content', 'page' ); ?>
+
+		</section><!-- /end #content -->
+		<section id="sidebar" role="main" class="one-of-3 column">
+			<?php if ( ! dynamic_sidebar( 'Home Page Sidebar' ) ) : ?>		
+				
+				
+			<?php endif; ?>
+		</section><!-- /end #content -->
+		</div>
+		
+		
 <?php category_navigation_section() ?>
 
 <?php /* ?>	
