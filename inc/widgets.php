@@ -549,8 +549,8 @@ function agrilife_widget_agrilifetoday_rss_output( $rss, $args = array() ) {
 		
 		// Link the image	
 		$image = '<a class="rss-img-link" href="'.$link.'" >'.$image.'</a>';
-		
-	    echo "<li>".'<span class="rss-title"><a class="rss-title-link" href="'.$link.'" >'.$title."</a></span><div class='rss-content'>{$date}{$image}{$summary}</div></li>";
+
+	    echo "<li>".'<div class="rss-head"><div class="rss-img">' . $image . '</div><div class="rss-title"><a class="rss-title-link" href="'.$link.'" >'.$title."</a><br />{$date}</div></div><div class='rss-content'>{$summary}</div></li>";
 
 	}
 	echo '</ul>';
