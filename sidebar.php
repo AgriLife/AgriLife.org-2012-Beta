@@ -8,9 +8,7 @@
  */
 
 ?>
-	<section id="sidebar" class="sidebar one-of-3 column" role="navigation">
-	
-	<?php top_sidebar_section() ?>				
+	<section id="sidebar" class="sidebar one-of-3 column" role="navigation">			
 	
 		<?php if ( ! dynamic_sidebar( 'Main Sidebar' ) ) : ?>
 

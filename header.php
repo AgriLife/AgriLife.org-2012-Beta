@@ -94,7 +94,14 @@
 		<div id="drop-nav" class="wrap">
 			<ul class="drop-nav-list">			
 				<li class="top-agency agrilife"><a href="http://agrilife.org/">Texas A&amp;M AgriLife</a></li>
-				<li class="menu-button"><a href="#sidebar">Menu</a></li>				
+				<?php 
+					wp_nav_menu( array( 
+						'container_class' => 'align-right', 
+						'theme_location' => 'top-header',
+						'container' => '', 
+						'items_wrap' => '%3$s',
+						'depth' => '1' ) 
+					); ?>				
 			</ul>				
 		</div><!-- #drop-nav -->	
 	</div>	
@@ -103,3 +110,13 @@
 		<h1 class="site-title one-of-3 ir">AgriLife.org</h1>
 		<!-- <h1 class="site-title one-of-3"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><span>AgriLife</span><img src="<?php bloginfo('stylesheet_directory') ?>/images/logo.png" alt="AgriLife Logo" title="AgriLife Logo" /></a></h1>-->
 	</header>
+	
+	<nav id="access" role="navigation">		
+	  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
+		<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'agriflex' ); ?>"><?php _e( 'Skip to content', 'agriflex' ); ?></a></div>
+		
+		<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
+
+		<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>  
+		
+	</nav><!-- .access -->

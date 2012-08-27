@@ -47,6 +47,7 @@ function flexopotamus_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menu( 'primary', __( 'Primary Menu', 'flexopotamus' ) );
+	register_nav_menu( 'top-header', __( 'Header Supporting Menu', 'flexopotamus' ) );
 
 	// This theme uses Featured Images (also known as post thumbnails)
 	add_theme_support( 'post-thumbnails' );
@@ -361,17 +362,6 @@ add_action('category_navigation_section','category_navigation',5);
 
 function category_navigation() {
      	include(MY_THEME_FOLDER . '/category-navigation-section.php');
-}
-
-// Top of sidebar
-function top_sidebar_section() {
-    do_action('top_sidebar_section');
-}
-
-add_action('top_sidebar_section','top_sidebar',5);
-
-function top_sidebar() {
-     	include(MY_THEME_FOLDER . '/top-sidebar.php');
 }
 
 
