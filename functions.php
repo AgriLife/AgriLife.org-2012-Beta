@@ -532,3 +532,7 @@ function ag_register_sidebars() {
   );
 
 }
+
+$includes_path = TEMPLATEPATH . '/inc/';
+// Include custom widgets
+require_once( $includes_path . 'widgets.php');
