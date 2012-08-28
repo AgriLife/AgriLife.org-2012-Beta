@@ -608,22 +608,6 @@ body.touch #access .menu-header li ul.sub-menu {
 .post .for-media p {
 	margin-bottom: 0;
 }
-.for-media {
-	visibility: hidden;
-	height: 0;
-	background: transparent;
-	padding: 2%;
-}
-.for-media ul li {
-	margin: 2% 0;
-	list-style: none;
-}
-.for-media.active {
-	visibility: visible;
-	background: url('images/texture.png');	
-	height: auto;
-	margin-bottom: 1.5em;	
-}
 .entry-meta a {
 	color: #b0afae;
 }
@@ -915,7 +899,6 @@ h2.post-author-title {
 /*-- Sidebar Styles --*/
 
 #sidebar {
-	background: #ebebdf url('images/texture.png') left top;	
 	margin: 1em 0 .5em;
 	border-radius: 3px;
 	box-shadow: 0 0 3px rgba(0,0,0,.2);
@@ -1104,6 +1087,8 @@ a.rss:hover {
 	
 	body {
 		background: #e3e3e3;
+		/*background: #e3e3e3 url('images/backgrounds/belt-college.png') repeat-x;*/
+		background-position-y: 160px;
 		border-top: 3px solid #d6d6c8;
 	}
 	.site-title a {
@@ -1181,6 +1166,7 @@ a.rss:hover {
 	#access {
 		padding: 2px 0;
 		background: #500000 url(http://aglifesciences-tamu-edu.wpengine.netdna-cdn.com/wp-content/themes/agrilife-2.0/images/subhead-ribbon-college.png) repeat-x 50% 30%;
+		margin: 0 -50px;
 	}
 	.menu-header {
 		border: dashed #D1AA45;
@@ -1428,10 +1414,9 @@ a.rss:hover {
 	}	
 	#sidebar {
 		float: right;
-		background: #ebebdf url('images/texture.png') left top;
-		background: #f0f0f0 url('images/texture.png') left top;
-		margin: 0;
-		box-shadow: none;			
+		margin: 1em .5em 0 0;
+		box-shadow: -2px 2px 6px rgba(0,0,0,.4);
+				
 	}
 	.search-widget {
 		background: none;
