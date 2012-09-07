@@ -97,6 +97,28 @@ function flexopotamus_page_menu_args( $args ) {
 add_filter( 'wp_page_menu_args', 'flexopotamus_page_menu_args' );
 
 /**
+ * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
+ *
+ * To override this in a child theme, remove the filter and optionally add
+ * your own function tied to the wp_page_menu_args filter hook.
+ *
+ * @since agriflex 1.0
+ */
+function agriflex_page_menu_args( $args ) {
+     $args['show_home'] = true;
+     return $args;
+}
+add_filter( 'wp_page_menu_args', 'agriflex_page_menu_args' );
+
+function agriflex_nav_menu_args( $args = 'sf-menu' )
+{
+     $args['menu_class'] = 'sf-menu menu';
+     return $args;
+} // function
+add_filter( 'wp_nav_menu_args', 'agriflex_nav_menu_args' );
+
+
+/**
  * Register our sidebars and widgetized areas. Also register the default Epherma widget.
  *
  * @since flexopotamus 1.0

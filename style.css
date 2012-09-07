@@ -346,8 +346,7 @@ em { font-style: italic; }
 	padding: .3em 1.2em;	
 }
 .site-title {
-	font-size: 2em; /* 32px / 16px */		
-	padding: 7% 0 2%;								
+	font-size: 2em; /* 32px / 16px */										
 }
 .site-title a {
 	display: block;	
@@ -371,8 +370,9 @@ em { font-style: italic; }
 .feartured-content { box-shadow: 0 1px 3px rgba(0,0,0,.2);}
 .featured-stories-container {
 	position: relative;
-	background-color: #5F574F;
+	/* background-color: #5F574F;
 	background-image: url('images/texture.png');
+	*/
 	border-radius: 3px;
 	margin-bottom: 2.3333333%;
 }
@@ -449,6 +449,8 @@ em { font-style: italic; }
 
 /* =Menu
 -------------------------------------------------------------- */
+/* =Menu
+-------------------------------------------------------------- */
 .menu-button {
 	position: absolute;
 	z-index: 999;
@@ -463,11 +465,18 @@ em { font-style: italic; }
 	cursor: pointer;
 }
 
+.clear {
+	clear: both;
+}
+
 #access {
 	position: relative;
 	display: block;	
+	padding-left: 1%;
+	padding-right: 1%;	
 }
 
+.js #branding .searchform,
 .js #access {
 	display: none;	
 } 
@@ -481,7 +490,7 @@ em { font-style: italic; }
 #access .menu-header,
 ul.menu {
 	display: block;
-	margin: .1em;		
+	margin: .5em 0 0;		
 }
 
 #access .menu-header:before,
@@ -514,7 +523,7 @@ div.menu li {
 	border: none;	
 	line-height: 1.2em;
 	overflow: hidden;
-	margin: 0 0 .1em 0;		
+	margin: 0 0 -1px 0;		
 	padding: 10px 15px;	
 	display: block;
 }
@@ -522,7 +531,7 @@ div.menu li {
 #access ul.menu li a[title='home'] {
 	display: block;
 	text-indent: -999em;
-	background: url('images/home-gold.png') no-repeat 50% 12px;
+	background: url('images/home-gold.png?v=100') no-repeat 50% 12px;
 	width: 20px;
 }
 
@@ -538,25 +547,11 @@ div.menu li {
 div.menu li {
 	float: none;
 	margin: 0;
+	border-bottom: 1px solid #E7E2CB;
 }
 
 #access  {
 	float: none;
-}
-
-body.no-touch #access ul.menu a {
-	font-size: 1.6em;
-	text-shadow: 0 1px 0 #fff;
-	display: block;
-	text-shadow: none;
-}
-
-body.mobile #access .menu-header li ul.sub-menu {
-	display: none;
-}
-
-body.touch #access .menu-header li ul.sub-menu {
-	display: none;
 }
 
 
@@ -901,7 +896,7 @@ h2.post-author-title {
 #sidebar {
 	margin: 1em 0 .5em;
 	border-radius: 3px;
-	box-shadow: 0 0 3px rgba(0,0,0,.2);
+	/*box-shadow: 0 0 3px rgba(0,0,0,.2);*/
 }
 .widget-title-remove { display: none; }
 .nav-footer {
@@ -1025,11 +1020,11 @@ a.rss:hover {
 	margin-bottom: 6%;
 }
 .site-footer {	
-	background: #bfbcb9 url('images/texture.png') left top;	
+	/* background: #bfbcb9 url('images/texture.png') left top;	*/
 	overflow: hidden;
 	margin-bottom: 3.33333333%;
 	border-radius: 5px;
-	box-shadow: inset 0 5px 25px rgba(255, 255, 255, .4)	
+	/* box-shadow: inset 0 5px 25px rgba(255, 255, 255, .4)	*/
 }
 .footer-info-wrap {
 	padding: 3.3333333%;
@@ -1124,55 +1119,264 @@ a.rss:hover {
 	
 	/* main menu */
 	#access ul.menu li {
-		margin: 0 2px 0 0;
-/*		border-top-right-radius: 6px;
-		background-color: #f5f5ee;	
-		background-color: rgba(245,245,238,.9); */
-		float: left;
-	}
-	#access ul.menu li li{
-		border-radius: 0;	
-	}	
-	#access ul.menu li.current-menu-item,
-	#access ul.menu li.current_page_parent {
-		/* background: #f1f0e7; */
-		position: relative;
-		z-index: 5;
-	}
-	#access ul.menu li.current-menu-item:hover,
-	#access ul.menu li.current_page_parent:hover {
-		/*background: #e3e1d5;*/
-	}
-	#access ul.menu li.current-menu-item:first-child:hover {
-		/* background: #f1f0e7;		*/
-	}	
-	#access ul.menu li a[title='home'] {
-		background-position: 50% 14px;
-		width: 20px;
-	}
+			margin: 0 2px 0 0;
+			border-top-right-radius: 6px;
+			background-color: #f5f5ee;	
+			background-color: rgba(245,245,238,.9);
+			float: left;
+		}
+		#access ul.menu li li{
+			border-radius: 0;	
+		}	
+		#access ul.menu li.current-menu-item,
+		#access ul.menu li.current_page_parent {
+			background: #f1f0e7;
+			position: relative;
+			z-index: 5;
+		}
+		#access ul.menu li.current-menu-item:hover,
+		#access ul.menu li.current_page_parent:hover {
+			background: #e3e1d5;
+		}
+		#access ul.menu li.current-menu-item:first-child:hover {
+			background: #f1f0e7;		
+		}	
+		#access ul.menu li a[title='home'] {
+			background-position: 50% 14px;
+			width: 20px;
+		}
 
-	#access ul.menu li a[title='home']:hover {
-		background-position: 50% -26px;
-	}	
+		#access ul.menu li a[title='home']:hover {
+			background-position: 50% -26px;
+		}	
 
-	#access ul.menu li a {
-		background: transparent;
-		color: #fff;
-	}	
+		#access ul.menu li a {
+			background: transparent;
+			background: #fff;
+			color: #666;
+		}	
 
-	#access ul.menu li a:hover {
-		color: #f0f0f0;
-	}
-	#access {
-		padding: 2px 0;
-		background: #500000 url(http://aglifesciences-tamu-edu.wpengine.netdna-cdn.com/wp-content/themes/agrilife-2.0/images/subhead-ribbon-college.png) repeat-x 50% 30%;
-		margin: 0 -50px;
-	}
-	.menu-header {
-		border: dashed #D1AA45;
-		border-width: 1px 0; 
-		
-	}
+		#access ul.menu li a:hover {
+			color: #332c2c;
+		}
+
+		.menu-button {
+			display: none;
+		}
+
+	    /*=== Drop Down Site Navigation  =========*/
+
+		#access .sf-menu li {
+			font-size: 14px;	
+			line-height: 1.7em;	
+		}
+
+		#access .sf-menu li:hover {
+			background-color: #e3e1d5;			
+		}
+
+		#access .sf-menu li a {
+			line-height: 1.2em;
+			padding: 13px 17px 11px 19px;			
+		}
+
+		#access .sf-menu li.current-menu-item,
+		#access .sf-menu li.current_page_parent {
+			border: 2px solid #e3e1d5;
+			border-bottom: none;
+			position: relative;
+			z-index: 2;
+			-webkit-box-shadow: 0 -2px 6px rgba(16,16,16,.075);
+			-moz-box-shadow: -4px -2px 6px rgba(16,16,16,.075);
+			box-shadow: 0 -2px 6px rgba(16,16,16,.075);		
+		}
+
+		#access .sf-menu ul {
+			position:	absolute;
+			background-color: #e3e1d5;
+			top: -999em;
+			width: 13em; /* left offset of submenus need to match (see below) */	
+			-webkit-box-shadow: 0 2px 4px rgba(3, 3, 3,.2);	
+			-moz-box-shadow: 0 2px 4px rgba(3, 3, 3,.2);		
+			box-shadow: 0 2px 4px rgba(3, 3, 3,.2);						
+		}	
+
+		#access .sf-menu li:hover {
+			visibility:		inherit; /* fixes IE7 'sticky bug' */
+			-webkit-transition: .3s background ease;
+			-moz-transition: .3s background ease;		
+			transition: .3s background ease;	
+		}
+
+		#access .sf-menu li a[title="home"] {
+			-webkit-transition: none;
+			-moz-transition: none;		
+			transition: none;
+		}
+
+		#access .sf-menu li a {
+			border-top-right-radius: none;			
+		}	
+
+		#access .sf-menu li:hover a {
+			position: relative;
+			z-index: 7;					
+		}	
+
+		#access .sf-menu ul li:hover {
+			visibility:		inherit; /* fixes IE7 'sticky bug' */
+			background: transparent;
+			border-top-right-radius: none;	
+		}	
+		#access .sf-menu ul li {
+			width:	100%;
+			position: relative;
+			z-index: 4;	
+			border: none;
+			font-size: 12px;
+			border-bottom: 1px solid #dcdace;	
+			background: transparent;					
+		}	
+
+		#access .sf-menu a {
+			display: block;
+			position: relative;
+			background: transparent;
+		}
+		#access .sf-menu li:hover,
+		#access .sf-menu li.sfHover {
+			z-index: 7;
+			position: relative;					
+		}
+		#access .sf-menu li:hover ul,
+		#access .sf-menu li.sfHover ul {
+			left: 0;
+			margin-left: 1px;
+			top: 3.2em; /* match top ul list item height */
+			z-index: 6;
+			position: absolute;	
+		}
+
+		#access ul.sf-menu li:hover li ul,
+		#access ul.sf-menu li.sfHover li ul {
+			top: -999em;		
+		}
+		#access ul.sf-menu li li:hover ul,
+		#access ul.sf-menu li li.sfHover ul {
+			left: 15.2em; /* match ul width */
+			top: 0;
+			margin-left: 0;
+			margin-top: 0;
+			padding-top: 0;				
+		}
+		#access ul.sf-menu li li:hover li ul,
+		#access ul.sf-menu li li.sfHover li ul {
+			top: -999em;
+		}
+		#access ul.sf-menu li li li:hover ul,
+		#access ul.sf-menu li li li.sfHover ul {
+			left: 13em; /* match ul width */
+			top: 0;
+			margin-left: 0px;	
+		}
+/*
+		body.collegeonly #access ul.menu a {
+			color:#8d0002;
+			border-color: #8d0002;
+		}
+
+		body.collegeonly #access ul.menu a:hover,
+		body.collegeonly #access ul.menu a:active {
+			color: #5b0125;
+			border-color: #5b0125;	
+		}
+
+		body.tvmdlonly #access ul.menu a {
+			color:#8c5933;
+			border-color: #8c5933;
+		}
+
+		body.tvmdlonly #access ul.menu a:hover,
+		body.tvmdlonly #access ul.menu a:active {
+			color: #674125;
+			border-color: #674125;	
+		}
+		body.tvmdlonly.fazd #access ul.menu a:hover,
+		body.tvmdlonly.fazd #access ul.menu a:active {
+			color: #d42127;
+			border-color: #d42127;	
+		}	
+
+		body.extensiononly #access ul.menu a {
+			color:#00709e;
+			border-color: #00709e;
+		}
+
+		body.extensiononly #access ul.menu a:active,
+		body.extensiononly #access ul.menu a:hover {
+			color: #002838;
+			border-color: #002838;	
+		}
+
+		body.researchonly #access ul.menu a {
+			color:#4e792f;
+			border-color: #4e792f;
+		}
+
+		body.researchonly #access ul.menu a:active,
+		body.researchonly #access ul.menu a:hover {
+			color: #1f3013;
+			border-color: #1f3013;	
+		}
+*/
+		/*** arrows **/
+		#access .sf-menu li a.sf-with-ul {
+			min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
+			background: url(images/down-arrow.png) no-repeat right 55% #fff; 
+			padding-right: 28px;					
+		}
+
+		#access .sf-menu li li a.sf-with-ul {
+			min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
+			background: url(images/right-arrow.png) no-repeat left 58% #fff;
+		}
+
+
+		#access	.sf-sub-indicator {
+			position:		absolute;
+			display:		block;
+			right:			0;
+			top:			.55em; /* IE6 only */
+			width:			8px;
+			height:			11px;
+			text-indent: 	-999em;
+			overflow:		hidden;
+
+		}
+		#access a > .sf-sub-indicator {  /* give all except IE6 the correct values */
+			top:			.8em;
+			background-position: 0 -100px; /* use translucent arrow for modern browsers*/
+		}
+		/* apply hovers to modern browsers */
+		#access a:focus > .sf-sub-indicator,
+		#access a:hover > .sf-sub-indicator,
+		#access a:active > .sf-sub-indicator,
+		#access li:hover > a > .sf-sub-indicator,
+		#access li.sfHover > a > .sf-sub-indicator {
+			background-position: -10px -100px; /* arrow hovers for modern browsers*/
+		}
+
+		/* point right for anchors in subs */
+		#access .sf-menu ul .sf-sub-indicator { background-position:  -10px 0; }
+		#access .sf-menu ul a > .sf-sub-indicator { background-position:  0 0; }
+		/* apply hovers to modern browsers */
+		#access .sf-menu ul a:focus > .sf-sub-indicator,
+		#access .sf-menu ul a:hover > .sf-sub-indicator,
+		#access .sf-menu ul a:active > .sf-sub-indicator,
+		#access .sf-menu ul li:hover > a > .sf-sub-indicator,
+		#access .sf-menu ul li.sfHover > a > .sf-sub-indicator {
+			background-position: -10px 0; /* arrow hovers for modern browsers*/
+		}
 
 	
 	.content-wrap {
@@ -1415,7 +1619,7 @@ a.rss:hover {
 	#sidebar {
 		float: right;
 		margin: 1em .5em 0 0;
-		box-shadow: -2px 2px 6px rgba(0,0,0,.4);
+		/*box-shadow: -2px 2px 6px rgba(0,0,0,.4);*/
 				
 	}
 	.search-widget {
@@ -1496,6 +1700,58 @@ a.rss:hover {
 	.agency-tfs h2.mb-post-title {
 		background: url('images/header/forest-branding.png') 0 -10px;
 	}
+	
+	/**********************************************************
+
+	Styles Users Might Use
+
+	**********************************************************/
+
+	
+	.entry-content .one-of-2 {
+		width: 48%;
+		clear: both;
+		float: left;
+		margin-bottom: 10px;
+		padding-right: 2%;		
+	}		
+	.entry-content .two-of-2 {
+		width: 48%;
+		float: left;	
+		margin-bottom: 10px;
+		padding-right: 2%;					
+	}
+	.entry-content .two-of-2 ul, .entry-content .one-of-2 ul,
+	.entry-content .one-of-3 ul, .entry-content .two-of-3 ul, .entry-content .three-of-3 ul {
+		margin-left: 1em;		
+	} 	
+	.entry-content .one-of-3 {
+		width: 30%;
+		clear: both;
+		float: left;
+		margin-bottom: 10px;
+		padding-right: 2%;						
+	}
+
+	.entry-content .two-of-3 {
+		width: 30%;
+		float: left;
+		margin-bottom: 10px;
+		padding-right: 2%;						
+	}
+
+	.entry-content .three-of-3 {
+		width: 30%;
+		float: left;
+		margin-bottom: 10px;
+		padding-right: 2%;				
+	}
+
+	/**********************************************************
+
+	END - Styles Users Might Use
+
+	**********************************************************/
 	
 						
 }	
@@ -1626,3 +1882,11 @@ a.rss:hover {
 	}
 	
 }
+
+/* ==|== comp styles =======================================================
+   For highlighting missing content
+   ========================================================================== */
+   
+
+   .missing { box-shadow: 0 0 3px rgba(255,0,0,1); background: rgba(255, 0, 0, 1);}
+
