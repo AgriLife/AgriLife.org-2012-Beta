@@ -65,8 +65,70 @@ get_header(); ?>
 		</section><!-- /end #content -->
 		</div>
 		
-		
-<?php category_navigation_section() ?>
+
+		<section class="home-widgets-lower clearfix">
+		<?php if ( ! dynamic_sidebar( 'Home: Main Widget Area' ) ) : ?>
+			
+			<aside id="pages-2" class="widget widget_pages "><h3 class="widget-title">Widget</h3>		<ul>
+						<li class="page_item page-item-25"><a href="http://localhost/~travis/wordpress/agrilifeorg/extension/">Extension</a></li>
+			<li class="page_item page-item-5 current_page_item"><a href="http://localhost/~travis/wordpress/agrilifeorg/">Home</a></li>
+			<li class="page_item page-item-2"><a href="http://localhost/~travis/wordpress/agrilifeorg/sample-page/">Sample Page</a></li>
+					</ul>
+			</aside>
+			
+			<aside id="pages-2" class="widget widget_pages "><h3 class="widget-title">Widget</h3>		<ul>
+						<li class="page_item page-item-25"><a href="http://localhost/~travis/wordpress/agrilifeorg/extension/">Extension</a></li>
+			<li class="page_item page-item-5 current_page_item"><a href="http://localhost/~travis/wordpress/agrilifeorg/">Home</a></li>
+			<li class="page_item page-item-2"><a href="http://localhost/~travis/wordpress/agrilifeorg/sample-page/">Sample Page</a></li>
+					</ul>
+			</aside>
+			
+			<aside id="pages-2" class="widget widget_pages last"><h3 class="widget-title">Widget</h3>		<ul>
+						<li class="page_item page-item-25"><a href="http://localhost/~travis/wordpress/agrilifeorg/extension/">Extension</a></li>
+			<li class="page_item page-item-5 current_page_item"><a href="http://localhost/~travis/wordpress/agrilifeorg/">Home</a></li>
+			<li class="page_item page-item-2"><a href="http://localhost/~travis/wordpress/agrilifeorg/sample-page/">Sample Page</a></li>
+					</ul>
+			</aside>					
+			<?php /* ?>
+			<article class="media-box cat-nav cat-farm-ranch one-of-3 first clearfix">
+			<div class="mb-inner cat-nav-inner">				
+				<header class="mb-head cat-nav-head">
+					<h1 class="cat-nm cat-nm-vc"><a href="#">Vice Chancellor's Office</a></h1>
+				</header>
+				<a class="mb-link cat-nav-post-link clearfix" href="../vc/">				
+					<img src="http://placekitten.com/320/130" alt="AgriLife Research" class="wp-post-image" title="AgriLife Research" />
+					<p class="mb-post-title home-agency-intro">We are all a part of the Texas A&amp;M University System because we want feed the world, improve health, enrich our youth, grow our economy and protect the environment.</p>
+				</a>
+			</div><!-- .end mb-inner -->	
+			</article><!-- .end media-box -->
+
+			<article class="media-box cat-nav cat-lawn-garden one-of-3 second clearfix">
+			<div class="mb-inner cat-nav-inner">				
+				<header class="mb-head cat-nav-head">
+					<h1 class="cat-nm cat-nm-forest"><a href="#">Texas A&amp;M Forestry Service</a></h1>
+				</header>
+				<a class="mb-link cat-nav-post-link clearfix" href="texasforestservice/">				
+					<img src="http://placekitten.com/320/130" alt="Forestry Service" class="wp-post-image" title="Forestry Service" />
+					<p class="mb-post-title home-agency-intro">The Texas A&amp;M Forest Service is the lead agency for the state for all-hazard responses, including suppression of wildfires and the management of state disasters such as the Space Shuttle Columbia recovery and Hurricanes Katrina, Rita and Ike.</p>
+				</a>
+			</div><!-- .end mb-inner -->			
+			</article><!-- .end media-box -->
+
+			<article class="media-box cat-nav cat-research one-of-3 third clearfix">
+			<div class="mb-inner cat-nav-inner">				
+				<header class="mb-head cat-nav-head">
+					<h1 class="cat-nm cat-nm-research"><a href="#">Texas A&amp;M AgriLife Research</a></h1>
+				</header>
+				<a class="mb-link cat-nav-post-link clearfix" href="agriliferesearch/">				
+					<img src="http://placekitten.com/320/130" alt="AgriLife Research" class="wp-post-image" title="AgriLife Research" />
+					<p class="mb-post-title home-agency-intro">With more than 585 research projects in agriculture, natural resources, food and life sciences, Texas A&amp;M AgriLife Research is meeting modern challenges through innovative solutions.</p>
+				</a>			
+			</div><!-- .end mb-inner -->
+			</article><!-- .end media-box -->
+			<?php */ ?>
+		<?php endif; ?>
+		</section><!-- .end cat-nav-container -->		
+
 
 <?php /* ?>	
 <div class="content-wrap">

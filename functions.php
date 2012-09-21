@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage flexopotamus
+ * @subpackage agrilifeorg
  * 
  */
 
@@ -16,11 +16,11 @@ if ( ! isset( $content_width ) )
 	$content_width = 584;
 
 /**
- * Tell WordPress to run flexopotamus_setup() when the 'after_setup_theme' hook is run.
+ * Tell WordPress to run agrilifeorg_setup() when the 'after_setup_theme' hook is run.
  */
-add_action( 'after_setup_theme', 'flexopotamus_setup' );
+add_action( 'after_setup_theme', 'agrilifeorg_setup' );
 
-if ( ! function_exists( 'flexopotamus_setup' ) ):
+if ( ! function_exists( 'agrilifeorg_setup' ) ):
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -28,26 +28,26 @@ if ( ! function_exists( 'flexopotamus_setup' ) ):
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  *
- * To override flexopotamus_setup() in a child theme, add your own flexopotamus_setup to your child theme's
+ * To override agrilifeorg_setup() in a child theme, add your own agrilifeorg_setup to your child theme's
  * functions.php file.
  *
  * @uses add_theme_support() To add support for post thumbnails, automatic feed links, and Post Formats.
  * @uses register_nav_menus() To add support for navigation menus.
  * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
- * @since flexopotamus 1.0
+ * @since agrilifeorg 1.0
  */
-function flexopotamus_setup() {
+function agrilifeorg_setup() {
 	
-	// Grab flexopotamus's custom meta featured post fields functionality.
+	// Grab agrilifeorg's custom meta featured post fields functionality.
 	require( dirname( __FILE__ ) . '/inc/custom-meta.php' );
 
 	// Add default posts and comments RSS feed links to <head>.
 	add_theme_support( 'automatic-feed-links' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menu( 'primary', __( 'Primary Menu', 'flexopotamus' ) );
-	register_nav_menu( 'top-header', __( 'Header Supporting Menu', 'flexopotamus' ) );
+	register_nav_menu( 'primary', __( 'Primary Menu', 'agrilifeorg' ) );
+	register_nav_menu( 'top-header', __( 'Header Supporting Menu', 'agrilifeorg' ) );
 
 	// This theme uses Featured Images (also known as post thumbnails)
 	add_theme_support( 'post-thumbnails' );
@@ -84,17 +84,17 @@ function flexopotamus_setup() {
 	add_action('init', 'load_js');
 	
 }
-endif; // flexopotamus_setup
+endif; // agrilifeorg_setup
 
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  */
-function flexopotamus_page_menu_args( $args ) {
+function agrilifeorg_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'flexopotamus_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'agrilifeorg_page_menu_args' );
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
@@ -121,72 +121,52 @@ add_filter( 'wp_nav_menu_args', 'agriflex_nav_menu_args' );
 /**
  * Register our sidebars and widgetized areas. Also register the default Epherma widget.
  *
- * @since flexopotamus 1.0
+ * @since agrilifeorg 1.0
  */
-function flexopotamus_widgets_init() {
+function agrilifeorg_widgets_init() {
 
 	register_sidebar( array(
-		'name' => __( 'Main Sidebar', 'flexopotamus' ),
+		'name' => __( 'Main Sidebar', 'agrilifeorg' ),
 		'id' => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
+		'after_widget' => "</div></aside>",
 		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>'
+		'after_title' => '</h3><div class="widget-wrap">'
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Home Page Sidebar', 'flexopotamus' ),
+		'name' => __( 'Home: Page Sidebar', 'agrilifeorg' ),
+		'id' => 'home-widget-sidebar',
+		'description' => __( 'The sidebar for the home page', 'agrilifeorg' ),
+		'before_widget' => '<aside id="%1$s" class="widget home-sidebar %2$s">',
+		'after_widget' => "</div></aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3><div class="widget-wrap">'
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Home: Main Widget Area', 'agrilifeorg' ),
 		'id' => 'home-widget-area',
-		'description' => __( 'The sidebar for the home page', 'flexopotamus' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
+		'description' => __( 'An optional widget area for your site footer', 'agrilifeorg' ),
+		'before_widget' => '<aside id="%1$s" class="%2$s widget home-widget-container one-of-3">',
+		'after_widget' => "</div></aside>",
 		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>'
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Footer Area One', 'flexopotamus' ),
-		'id' => 'sidebar-3',
-		'description' => __( 'An optional widget area for your site footer', 'flexopotamus' ),
-		'before_widget' => '<aside id="%1$s" class="%2$s footer-info-container one-of-3"><div class="footer-info-wrap">',
-		'after_widget' => "</div></aside>",
-		'before_title' => '<h1 class="footer-info-title widget-title-remove">',
-		'after_title' => '</h1>'
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Footer Area Two', 'flexopotamus' ),
-		'id' => 'sidebar-4',
-		'description' => __( 'An optional widget area for your site footer', 'flexopotamus' ),
-		'before_widget' => '<aside id="%1$s" class="%2$s footer-info-container one-of-3"><div class="footer-info-wrap">',
-		'after_widget' => "</div></aside>",
-		'before_title' => '<h1 class="footer-info-title widget-title-remove">',
-		'after_title' => '</h1>'
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Footer Area Three', 'flexopotamus' ),
-		'id' => 'sidebar-5',
-		'description' => __( 'An optional widget area for your site footer', 'flexopotamus' ),
-		'before_widget' => '<aside id="%1$s" class="%2$s footer-info-container one-of-3 last"><div class="footer-info-wrap">',
-		'after_widget' => "</div></aside>",
-		'before_title' => '<h1 class="footer-info-title widget-title-remove">',
-		'after_title' => '</h1>'
+		'after_title' => '</h3><div class="widget-wrap">'
 	) );
 	
 }
-add_action( 'widgets_init', 'flexopotamus_widgets_init' );
+add_action( 'widgets_init', 'agrilifeorg_widgets_init' );
 
 /**
  * Display navigation to next/previous pages when applicable
  */
-function flexopotamus_content_nav( $nav_id ) {
+function agrilifeorg_content_nav( $nav_id ) {
 	global $wp_query;
 
 	if ( $wp_query->max_num_pages > 1 ) : ?>
 		<nav id="<?php echo $nav_id; ?>">
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'flexopotamus' ) ); ?></div>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'flexopotamus' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'agrilifeorg' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'agrilifeorg' ) ); ?></div>
 		</nav><!-- #nav-above -->
 	<?php endif;
 }
@@ -194,10 +174,10 @@ function flexopotamus_content_nav( $nav_id ) {
 /**
  * Return the URL for the first link found in the post content.
  *
- * @since flexopotamus 1.0
+ * @since agrilifeorg 1.0
  * @return string|bool URL or false when no link is present.
  */
-function flexopotamus_url_grabber() {
+function agrilifeorg_url_grabber() {
 	if ( ! preg_match( '/<a\s[^>]*?href=[\'"](.+?)[\'"]/is', get_the_content(), $matches ) )
 		return false;
 
@@ -207,7 +187,7 @@ function flexopotamus_url_grabber() {
 /**
  * Count the number of footer sidebars to enable dynamic classes for the footer
  */
-function flexopotamus_footer_sidebar_class() {
+function agrilifeorg_footer_sidebar_class() {
 	$count = 0;
 
 	if ( is_active_sidebar( 'sidebar-3' ) )
@@ -237,25 +217,25 @@ function flexopotamus_footer_sidebar_class() {
 		echo 'class="' . $class . '"';
 }
 
-if ( ! function_exists( 'flexopotamus_comment' ) ) :
+if ( ! function_exists( 'agrilifeorg_comment' ) ) :
 /**
  * Template for comments and pingbacks.
  *
  * To override this walker in a child theme without modifying the comments template
- * simply create your own flexopotamus_comment(), and that function will be used instead.
+ * simply create your own agrilifeorg_comment(), and that function will be used instead.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  *
- * @since flexopotamus 1.0
+ * @since agrilifeorg 1.0
  */
-function flexopotamus_comment( $comment, $args, $depth ) {
+function agrilifeorg_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
 		case 'pingback' :
 		case 'trackback' :
 	?>
 	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'flexopotamus' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'flexopotamus' ), '<span class="edit-link">', '</span>' ); ?></p>
+		<p><?php _e( 'Pingback:', 'agrilifeorg' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'agrilifeorg' ), '<span class="edit-link">', '</span>' ); ?></p>
 	<?php
 			break;
 		default :
@@ -272,22 +252,22 @@ function flexopotamus_comment( $comment, $args, $depth ) {
 						echo get_avatar( $comment, $avatar_size );
 
 						/* translators: 1: comment author, 2: date and time */
-						printf( __( '%1$s on %2$s <span class="says">said:</span>', 'flexopotamus' ),
+						printf( __( '%1$s on %2$s <span class="says">said:</span>', 'agrilifeorg' ),
 							sprintf( '<span class="fn">%s</span>', get_comment_author_link() ),
 							sprintf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
 								esc_url( get_comment_link( $comment->comment_ID ) ),
 								get_comment_time( 'c' ),
 								/* translators: 1: date, 2: time */
-								sprintf( __( '%1$s at %2$s', 'flexopotamus' ), get_comment_date(), get_comment_time() )
+								sprintf( __( '%1$s at %2$s', 'agrilifeorg' ), get_comment_date(), get_comment_time() )
 							)
 						);
 					?>
 
-					<?php edit_comment_link( __( 'Edit', 'flexopotamus' ), '<span class="edit-link">', '</span>' ); ?>
+					<?php edit_comment_link( __( 'Edit', 'agrilifeorg' ), '<span class="edit-link">', '</span>' ); ?>
 				</div><!-- .comment-author .vcard -->
 
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'flexopotamus' ); ?></em>
+					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'agrilifeorg' ); ?></em>
 					<br />
 				<?php endif; ?>
 
@@ -296,7 +276,7 @@ function flexopotamus_comment( $comment, $args, $depth ) {
 			<div class="comment-content"><?php comment_text(); ?></div>
 
 			<div class="reply">
-				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'flexopotamus' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'agrilifeorg' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 			</div><!-- .reply -->
 		</article><!-- #comment-## -->
 
@@ -304,23 +284,23 @@ function flexopotamus_comment( $comment, $args, $depth ) {
 			break;
 	endswitch;
 }
-endif; // ends check for flexopotamus_comment()
+endif; // ends check for agrilifeorg_comment()
 
-if ( ! function_exists( 'flexopotamus_posted_on' ) ) :
+if ( ! function_exists( 'agrilifeorg_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
- * Create your own flexopotamus_posted_on to override in a child theme
+ * Create your own agrilifeorg_posted_on to override in a child theme
  *
- * @since flexopotamus 1.0
+ * @since agrilifeorg 1.0
  */
-function flexopotamus_posted_on() {
-	printf( __( '<p class="post-date"><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a></p>', 'flexopotamus' ),
+function agrilifeorg_posted_on() {
+	printf( __( '<p class="post-date"><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a></p>', 'agrilifeorg' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() ),
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		sprintf( esc_attr__( 'View all posts by %s', 'flexopotamus' ), get_the_author() ),
+		sprintf( esc_attr__( 'View all posts by %s', 'agrilifeorg' ), get_the_author() ),
 		esc_html( get_the_author() ),
 		esc_html( get_the_author_meta( 'user_email' ) ),
 		esc_html( get_the_author_meta( 'phone' ) )			
@@ -333,15 +313,15 @@ endif;
  * The first is if the site has only had one author with published posts.
  * The second is if a singular post being displayed
  *
- * @since flexopotamus 1.0
+ * @since agrilifeorg 1.0
  */
-function flexopotamus_body_classes( $classes ) {
+function agrilifeorg_body_classes( $classes ) {
 	if ( is_singular() && ! is_home() && ! is_page_template( 'showcase.php' ) && ! is_page_template( 'sidebar-page.php' ) )
 		$classes[] = 'singular';
 
 	return $classes;
 }
-add_filter( 'body_class', 'flexopotamus_body_classes' );
+add_filter( 'body_class', 'agrilifeorg_body_classes' );
 
 /**
  * Category Loop function

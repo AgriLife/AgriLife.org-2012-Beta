@@ -642,7 +642,7 @@ body.home .post {
 .recent-archives-button {
 	margin-left: 3.333333333%;
 }
-.cat-nav-container {
+.home-widgets-lower {
 	overflow: hidden;
 }
 .cat-nav {
@@ -911,7 +911,16 @@ h2.post-author-title {
 	margin: 0 3.333333333%; /* 10px / 300px */
 	padding: 0 0 3.333333333% 0; 		
 }
-.home .widget {
+.widget .widget-wrap {
+	padding: .25em 0;
+	line-height: 1em;
+	font-size: .8em;
+}
+.widget .widget-wrap ul,
+.widget .widget-wrap ol {
+	padding: 0 6%;
+}
+.home .widget .widget-wrap {
 	background: #F2EDDD;
 }
 .widget ul {
@@ -935,7 +944,7 @@ h2.post-author-title {
 }
 .widget h3.widget-title {
 	font-size: .8em;
-	margin-bottom: .5em;
+	margin-bottom: 0;
 	letter-spacing: 2px;
 	background: url('images/widgets.png') top right no-repeat transparent;
 	color: #fff;
@@ -945,6 +954,13 @@ h2.post-author-title {
 }
 .widget_social_media.widget h3.widget-title {
 	background-position: right -60px;
+}
+.widget_twitter h3.widget-title {
+	background-position: right -180px;
+}
+.agrilife_today_twitter h3.widget-title,
+.home-widgets-lower .widget:first-child h3.widget-title {
+	background-position: right -120px;
 }
 .widget h3.widget-title a {
 	color: white;
@@ -1043,7 +1059,7 @@ a.rss:hover {
 .site-footer {	
 	/* background: #bfbcb9 url('images/texture.png') left top;	*/
 	overflow: hidden;
-	margin-bottom: 3.33333333%;
+	margin: 0 auto 3.33333333% auto;
 	background: #500000;
 	box-shadow: 0 10px 25px rgba(0, 0, 0, .4);
 	padding: 0 18px;
@@ -1095,17 +1111,17 @@ a.rss:hover {
 	
 	body {
 		background: #D7D7D7 url('images/bg-main6.png') no-repeat top center;
-		background-position-y: 104px;
+		background-position: center 54px;
 	}
 	.site-title a {
 		position: relative;
 		z-index: 999;
 	}
 	#page {
-		background: transparent url('images/bg-test.jpg') no-repeat top center;
+		background: transparent url('images/bg-test2.jpg') no-repeat top center;
 	}
 	#page > .wrap {
-		padding: 0 18px;
+		padding: 0 18px 3.333333% 18px;
 		background: url('images/bg-interior-content.png') 0 195px repeat-x #fff;
 		position: relative;
 	}
@@ -1408,7 +1424,7 @@ a.rss:hover {
 		padding-bottom: 0;
 	}
 	.home #page > .wrap {
-		background: white;
+		background-position: 0 590px;
 	}
 	.home #content {
 		float: left;
@@ -1418,6 +1434,18 @@ a.rss:hover {
 		float: right;
 		background: transparent;
 		padding-top: 0;
+	}
+	.widget {
+		margin: 0;
+	}
+	.home .home-widgets-lower .widget {
+		float: left;
+		/*width: 31.914893617021%;*/
+		margin: 0 2.126759574468% 0 0;
+		padding: 0;
+	}
+	.home .home-widgets-lower .widget:last-child {
+		margin: 0;
 	}
 
 	.content-wrap:after {		
@@ -1493,6 +1521,7 @@ a.rss:hover {
 		margin-top: -20px;
 		position: relative;	
 		margin-bottom: 0;
+		min-height: 453px;
 	}
 	.featured-stories .mb-inner {
 		margin: 5px 77px;
@@ -1551,8 +1580,9 @@ a.rss:hover {
 	#feature-container {
 		display: block;
 		float: right;
-		width: 68.085106382979%; /* 640px / 940px */
+		width: 660px; /* 68.085106382979%; /* 640px / 940px */
 		position: relative;
+		margin-top: 20px;
 	}
 	#loading {
 		width: 15px;
@@ -1603,7 +1633,7 @@ a.rss:hover {
 		-webkit-transition: .3s all linear;	
 		-moz-transition: .3s all linear;
 		-ms-transition: .3s all linear;		
-		border-bottom-right-radius: 3px;					
+							
 	}
 	.slides li.active {
 		z-index: 2;
@@ -1611,27 +1641,29 @@ a.rss:hover {
 	}
 	.slides .slide-details {
 		position: absolute;
-		bottom: 5px;
-		left: 0;
+		bottom: 0;
+		right: 0;
 		background: #010101;		
 		background: rgba(0,0,0,.6);
-		padding: 4%;
+		padding: 0 1em;
 		color: #fff;
 		opacity: 0;
-		width: 66%;
+		/* width: 66%; */
+		text-align: right;
 		-webkit-transition: .7s all linear;	
 		-moz-transition: .7s all linear;	
 		-ms-transition: .7s all linear;	
 		overflow: hidden;		
 	}		
 	.slides .slide-details h2 {
-		font-size: 1.125em; /* 18px / 16px */
+		font-size: 1em;
+		font-style: italic;
 		font-weight: 100;	
 	}	
 	.slides li.active img, 
 	.slides li.active .slide-details{
 		opacity: 1;
-		bottom: 30px;		
+		bottom: 0;		
 	}					
 	#content {
 		float: right;
@@ -1642,7 +1674,7 @@ a.rss:hover {
 		/* font-size: 1.625em; /* 26px / 16px */	
 		font-weight: normal;
 	}	
-	.cat-nav-container {
+	.home-widgets-lower {
 		clear: both;
 	}	
 	.cat-nav-inner:hover {	
@@ -1675,7 +1707,7 @@ a.rss:hover {
 	#sidebar {
 		float: left;
 		margin: 0;
-		padding-top: 60px;
+		padding-top: 100px;
 		background: url('images/logo-main.png') no-repeat #F2EDDD 0 -165px;
 	}
 	.search-widget {
@@ -1923,7 +1955,7 @@ a.rss:hover {
 	}
 	
 	#sidebar,
-	.cat-nav-container,
+	.home-widgets-lower,
 	.site-footer,
 	.printfriendly {
 		display: none;
