@@ -80,6 +80,17 @@
 	 */
 	wp_head();
 ?>
+	<!-- Hook up TypeKit-->
+	<script type="text/javascript">
+	  (function() {
+	    var config = {
+	      kitId: 'uqw5svf',
+	      scriptTimeout: 3000
+	    };
+	    var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+	  })();
+	</script>
+	
 	<!-- Hook up FitVids-->
 	<script type="text/javascript">	
 		$(window).load(function() {
@@ -89,26 +100,26 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed">
-	<div id="drop-section-nav"> 		
-		<div id="drop-nav" class="wrap">
-			<ul class="drop-nav-list">			
-				<li class="top-agency agrilife"><a href="http://agrilife.org/">Texas A&amp;M AgriLife</a></li>
-				<?php 
-					wp_nav_menu( array( 
-						'container_class' => 'align-right', 
-						'theme_location' => 'top-header',
-						'container' => '', 
-						'items_wrap' => '%3$s',
-						'depth' => '1' ) 
-					); ?>				
-			</ul>				
-		</div><!-- #drop-nav -->	
-	</div>	
+
+<div id="drop-section-nav"> 		
+	<div id="drop-nav" class="wrap">
+		<ul class="drop-nav-list">			
+			<?php 
+				wp_nav_menu( array( 
+					'container_class' => 'align-right', 
+					'theme_location' => 'top-header',
+					'container' => '', 
+					'items_wrap' => '%3$s',
+					'depth' => '1' ) 
+				); ?>				
+		</ul>				
+	</div><!-- #drop-nav -->	
+</div><!-- #drop-section-nav -->
+
+<div id="page" class="hfeed">		
 	<div class='wrap clearfix'>
 	<header>
-		<h1 class="site-title one-of-3 ir">AgriLife.org</h1>
-		<!-- <h1 class="site-title one-of-3"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><span>AgriLife</span><img src="<?php bloginfo('stylesheet_directory') ?>/images/logo.png" alt="AgriLife Logo" title="AgriLife Logo" /></a></h1>-->
+		<h1 class="site-title one-of-3 ir"><span>AgriLife.org</span></h1>
 	</header>
 	
 	<nav id="access" role="navigation">		

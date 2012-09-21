@@ -16,6 +16,13 @@ get_header(); ?>
 
 <div class="content-wrap">
 	<section id="content" role="main" class="two-of-3 column">
+			<?php 
+				if (!empty($post->post_parent)) {
+					$parent_title = get_the_title($post->post_parent);
+				} else {
+					$parent_title = 'Texas A&amp;M AgriLife'; //get_the_title($post->post_parent);
+				} ?>
+			<h1 class="section-title"><?php echo $parent_title; ?></h1>
 
 				<?php the_post(); ?>
 

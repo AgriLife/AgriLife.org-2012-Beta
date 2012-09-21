@@ -4,7 +4,7 @@
 	Description: A responsive, small screen first WordPress theme for http://agrilife.org
 	Author: AgriLife Communications
 	Author URI: http://agrilife.org/communications/
-	Version: 1.0
+	Version: 1.1
 */
 
 /*
@@ -41,7 +41,7 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-html, button, input, select, textarea { font-family: sans-serif; color: #272727; }
+html, button, input, select, textarea { font-family: "camingodos-web", sans-serif; color: #272727; }
 
 body { margin: 0; font-size: 1em; line-height: 1.4; }
 
@@ -233,7 +233,9 @@ td { vertical-align: top; }
    
 
 
-/* Globals */
+/* =============================================================================
+   Global Styles
+   ========================================================================== */
 body {font-size: 100%; background: #fff; color: #4b4b49;}
 p {font-size: 1em; /* 16px */ margin-bottom: 5px;}
 a {color: #66a3bf; text-decoration: none;}
@@ -242,9 +244,10 @@ strong { font-weight: bold; }
 em { font-style: italic; }
 .entry-title a {color: #222;}
 .entry-title a:hover {color: #000;}
-.wrap {margin: auto; max-width: 1000px; padding: 0 5%;}
+.wrap, .site-footer {margin: auto; max-width: 1000px; padding: 0 5%;}
 .page {width: 97.916666666667; /* 940px / 960px */}
 #content .entry-content h1, #content .entry-content h2, #content .entry-content h3, #content .entry-content h4, #content .entry-content h5, #content .entry-content h6 { margin: 1em 0; font-weight: 900; }
+h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-weight: normal; color: #500000;}
 .entry-content ul, .entry-content ol, .entry-content dl { margin: 1em 0 1em 3em; }
 .page-id-21278 .entry-content ul { margin: 1em 0; }
 .entry-content ul li, .entry-content ol li, .entry-content dl li { margin: .25em 0; }
@@ -267,7 +270,10 @@ em { font-style: italic; }
 }
 ::-moz-selection { background: rgba(241, 208, 61,.55); color: #000; text-shadow: none; }
 ::selection { background: rgba(241, 208, 61,.55); color: #000; text-shadow: none; }
-/* Media Boxes */
+
+/* =============================================================================
+   Media Boxes
+   ========================================================================== */
 .mb-inner {
 	overflow: hidden;
 }
@@ -285,14 +291,15 @@ em { font-style: italic; }
 }
 /* End Media Boxes */
 
+
+/* Header */
 #drop-section-nav {
     position: relative;
     z-index: 3;
     margin: 0 auto;
     overflow: hidden;
-    background: #3a2521 url('images/texture.png');
     color: #fff;
-    box-shadow: 0 2px 5px rgba(6,6,6,.2);   
+    /*box-shadow: 0 2px 5px rgba(6,6,6,.2);   */
 }
 
 #drop-nav {
@@ -301,7 +308,7 @@ em { font-style: italic; }
 }
 
 #drop-section-nav #drop-nav ul {
-    padding: 4px 0;
+    padding: 0;
     margin: 0; 
 	list-style: none;
 	display: block;
@@ -312,10 +319,10 @@ em { font-style: italic; }
 	float: left;
 }
 #drop-nav .agrilife a {
-	background: url('images/logo-white.png') no-repeat left top;
+	background: url('images/logo-main.png') no-repeat left top;
 	margin-top: 2px;
-	width: 200px;
-	height: 53px;
+	width: 319px;
+	height: 95px;
 	display: block;
 	text-indent: -999em;
 }
@@ -346,7 +353,8 @@ em { font-style: italic; }
 	padding: .3em 1.2em;	
 }
 .site-title {
-	font-size: 2em; /* 32px / 16px */										
+	font-size: 2em; /* 32px / 16px */
+	margin: 0;										
 }
 .site-title a {
 	display: block;	
@@ -359,9 +367,7 @@ em { font-style: italic; }
 	margin-left: 0;
 }
 .container {margin: 10px auto;max-width: 1024px;}
-.featured-content {
-	border-radius: 3px;
-	border-radius: 3px;		
+.featured-content {		
 	margin-bottom: 1em;
 }
 #feature-container {
@@ -411,7 +417,7 @@ em { font-style: italic; }
 	margin-top: .5em;
 	padding: 1% 8%;
 	font-style: italic;
-	font-family: georgia, serif;
+	font-family: "ff-meta-serif-web-pro", georgia, serif;
 	max-width: 90%;	
 }
 #nav-above, #nav-below, #nav-single {
@@ -447,10 +453,9 @@ em { font-style: italic; }
 	border-bottom-right-radius: 1em;	
 }
 
-/* =Menu
--------------------------------------------------------------- */
-/* =Menu
--------------------------------------------------------------- */
+/* =============================================================================
+   Menu
+   ========================================================================== */
 .menu-button {
 	position: absolute;
 	z-index: 999;
@@ -489,8 +494,7 @@ em { font-style: italic; }
 
 #access .menu-header,
 ul.menu {
-	display: block;
-	margin: .5em 0 0;		
+	display: block;	
 }
 
 #access .menu-header:before,
@@ -511,7 +515,6 @@ ul.menu {
 
 #access .menu-header li,
 div.menu li {
-	font-family: 'Verdana',clean, sans-serif;
 	float: left;
 	list-style: none;
 	border-bottom: none;
@@ -519,9 +522,11 @@ div.menu li {
 }
 
 #access ul.menu a {
-	font-size: 1.15em;
-	border: none;	
+	font-family: "ff-meta-serif-web-pro", georgia, serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 	line-height: 1.2em;
+	border: none;	
 	overflow: hidden;
 	margin: 0 0 -1px 0;		
 	padding: 10px 15px;	
@@ -531,7 +536,7 @@ div.menu li {
 #access ul.menu li a[title='home'] {
 	display: block;
 	text-indent: -999em;
-	background: url('images/home-gold.png?v=100') no-repeat 50% 12px;
+	background: url('images/home.png') no-repeat 50% 12px transparent;
 	width: 20px;
 }
 
@@ -547,7 +552,6 @@ div.menu li {
 div.menu li {
 	float: none;
 	margin: 0;
-	border-bottom: 1px solid #E7E2CB;
 }
 
 #access  {
@@ -555,7 +559,9 @@ div.menu li {
 }
 
 
-/* -- Search forms -- */
+/* =============================================================================
+   Search Form
+   ========================================================================== */
 .s {
 	width: 76%;
 	border: 1px solid #ddddd4;
@@ -574,12 +580,12 @@ div.menu li {
 	outline: none;	
 }
 .post p, #content .page p {
-	font-family: "Helvetica Neue", clean, sans-serif;
+	font-family: "camingodos-web", clean, sans-serif;
 	font-weight: 300;
 	font-size: 1em; /* 16px */
 	margin-bottom: 1.125em; /* 18px / 16px */
 	line-height: 1.25em; /* 20px / 16px */
-	color: #4b4b49;
+	color: #717074;
 }
 
 .entry-meta {
@@ -612,10 +618,11 @@ div.menu li {
 }
 
 .entry-title {
+	font-family: "ff-meta-serif-web-pro", georgia, serif; color: #500000;
 	font-size: 1.375em; /* 22px / 16px */
 	margin-bottom: .5em;	
 	font-weight: 900;
-	color: #333;
+	color: #500000;
 }
 .home-agency-intro {
 	padding-left: 3.333333333%;
@@ -660,9 +667,6 @@ body.home .post {
 	color: #4b4b49;
 	font-size: .875em; /* 14px / 16px */
 }
-.home #sidebar {
-	background: #fff;
-}
 .spotlight a:hover {
 	text-decoration: none;
 }
@@ -705,9 +709,6 @@ body.home .post {
 .cat-nav-post-link {
 	color: #000;
 }	
-.mb-footer-item {
-	list-style: none;
-}
 .cat-nm {
 	color: #fff;
 	background-image: url('images/texture.png');
@@ -837,7 +838,9 @@ body.home .post {
 
 }
 
-/*-- Image Styles --*/
+/* =============================================================================
+   Image Styles
+   ========================================================================== */
 
 img {
 	max-width: 100%;
@@ -891,28 +894,25 @@ h2.post-author-title {
 	padding: 1em 0 0;
 	clear: left;
 }
-/*-- Sidebar Styles --*/
+/* =============================================================================
+   Sidebar Styles
+   ========================================================================== */
 
 #sidebar {
-	margin: 1em 0 .5em;
-	border-radius: 3px;
+	margin: 0 0 .5em 0;
 	/*box-shadow: 0 0 3px rgba(0,0,0,.2);*/
 }
+
+/* =============================================================================
+   Widget Styles
+   ========================================================================== */
 .widget-title-remove { display: none; }
-.nav-footer {
-	overflow: hidden;
-	margin-left: 1%;
-	margin-top: 7%;	
-}
-#sidebar .nav-footer-item a {
-	color: #e5e5e5;
-}
-.archives-button {
-	float: left;
-}
 .widget {
 	margin: 0 3.333333333%; /* 10px / 300px */
-	padding: 3.333333333% 0; 		
+	padding: 0 0 3.333333333% 0; 		
+}
+.home .widget {
+	background: #F2EDDD;
 }
 .widget ul {
 	color: #666; 
@@ -921,11 +921,39 @@ h2.post-author-title {
 	color: #666; 
 	font-weight: 100;
 }
-.widget-title,
-.footer-info-title {
-	font-size: 1.125em; /* 18px / 16px */
+.widget select {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 100%;
+}
+.widget.last {
+	border-bottom: none;
+}
+.widget li {
+	list-style: none;
 	margin-bottom: .5em;
-	font-weight: 900;
+}
+.widget h3.widget-title {
+	font-size: .8em;
+	margin-bottom: .5em;
+	letter-spacing: 2px;
+	background: url('images/widgets.png') top right no-repeat transparent;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 1em 0;
+}
+.widget_social_media.widget h3.widget-title {
+	background-position: right -60px;
+}
+.widget h3.widget-title a {
+	color: white;
+}
+.home .widget h3.widget-title .rsswidget img {
+	display: none;
+}
+.widget li.social-media-item {
+	margin-bottom: 0;
 }
 .search-widget {
 	border: none;
@@ -940,14 +968,7 @@ h2.post-author-title {
 	border-top: none;
 	padding-top: 0;
 }
-.widget select {
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	max-width: 100%;
-}
-.widget.last {
-	border-bottom: none;
-}
+
 .sort-drops form {
 	margin-bottom: .5em;
 }
@@ -1023,82 +1044,79 @@ a.rss:hover {
 	/* background: #bfbcb9 url('images/texture.png') left top;	*/
 	overflow: hidden;
 	margin-bottom: 3.33333333%;
-	border-radius: 5px;
-	/* box-shadow: inset 0 5px 25px rgba(255, 255, 255, .4)	*/
+	background: #500000;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, .4);
+	padding: 0 18px;
 }
-.footer-info-wrap {
-	padding: 3.3333333%;
+#footer-tamus {
+	margin-left: 10px;
+	margin-top: -20px;
+	padding: 2px;
+	position: absolute;
+	box-shadow: inset 0 5px 25px rgba(255, 255, 255, .4);
 }
-.footer-info-wrap p,
-.footer-info-wrap ul {
-	margin-bottom: 1em;
-}
-.footer-info-wrap li,
-.footer-info-wrap p {
-	font-weight: 100;
-}
-.footer-info-title {
-	padding-left: 30px;
-	background: url('images/icons.png') no-repeat left 50%;
-	width: 30px;
-	height: 30px;
-}
-.footer-info-title.photos {
-	background-position: left -46px;		
-}	
-.footer-info-title.videos {
-	background-position: left -138px;
-}	
-.footer-info-title.twitter {
-	background-position: left -278px;
-}	
-.footer-info-title.about {
-	background-position: left -90px;
-	padding-left: 23px;
-}
-.footer-info-title.contact {
-	background-position: left -186px;
-}	
-.footer-info-title.social {
-	background-position: left -232px;
-}
-.widget li,
-.footer-info-container li {
+.site-footer .req-links {
+	float:right;
 	list-style: none;
-	margin-bottom: .5em;
+	width: 85%;
 }
-.footer-info-container li {
+.site-footer li {
 	list-style: none;
-	margin-bottom: .25em;
+	float: left;
+	padding-right: 1em;
+	margin: .5em 1em .5em 0;
+	border-right: 1px solid #9F6D56;
+	line-height: .6em;
 }
-.widget li.social-media-item {
-	margin-bottom: 0;
+.site-footer li.last {
+	border-right: none;
 }
-@media all and (min-width: 42em) {
+.site-footer a {
+	font-size: .6em;
+	color: #9F6D56;
+}
+
+
+
+/* =============================================================================
+   Enhance For Desktop
+   ========================================================================== */
+
+@media all and (min-width: 1000px) {
 	
 	.js #access {
-		display: block;	
+		display: block;
+		background: url('images/nav-bg.png') no-repeat transparent;
+		margin-left: -40px;
+		margin-right: -80px;
+		z-index: 99;
+		height: 61px;
 	}
 	
 	body {
-		background: #e3e3e3;
-		/*background: #e3e3e3 url('images/backgrounds/belt-college.png') repeat-x;*/
-		background-position-y: 160px;
-		border-top: 3px solid #d6d6c8;
+		background: #D7D7D7 url('images/bg-main6.png') no-repeat top center;
+		background-position-y: 104px;
 	}
 	.site-title a {
 		position: relative;
 		z-index: 999;
 	}
+	#page {
+		background: transparent url('images/bg-test.jpg') no-repeat top center;
+	}
 	#page > .wrap {
-		margin-top: -67px;
+		padding: 0 18px;
+		background: url('images/bg-interior-content.png') 0 195px repeat-x #fff;
+		position: relative;
 	}
 	#drop-section-nav {
-		background: transparent;
-		box-shadow: none;
-		max-width: 1000px; 
-		padding: 0 5%;
+		padding: 0;
 		margin: 0 auto;
+		background: url('images/drop-section-nav-bg.png') repeat-x transparent;
+		-webkit-box-shadow: inset 0px 0px 20px rgba(50, 50, 50, 0.58);
+		-moz-box-shadow:    inset 0px 0px 20px rgba(50, 50, 50, 0.58);
+		box-shadow:         inset 0px 0px 20px rgba(50, 50, 50, 0.58);
+		
 	}
 	#drop-nav.wrap {
 		padding: 0;
@@ -1107,22 +1125,14 @@ a.rss:hover {
 		float: left;
 	}
 	.top-agency.agrilife {
-		background: #5F574F url('images/texture.png');
-		background: #500000;
-		float: right;
-		padding: 5px;
-		border-bottom-left-radius: 6px;	
-		border-bottom-right-radius: 6px;
-		margin-top: -10px;
-		box-shadow: inset 0 0 10px rgba(0,0,0,.02);						
+							
 	}
 	
 	/* main menu */
 	#access ul.menu li {
-			margin: 0 2px 0 0;
-			border-top-right-radius: 6px;
-			background-color: #f5f5ee;	
-			background-color: rgba(245,245,238,.9);
+			margin: 0;
+			background: url('images/nav-divider.png') no-repeat right center;
+			padding: 1em 2em 1em 2em;
 			float: left;
 		}
 		#access ul.menu li li{
@@ -1130,75 +1140,68 @@ a.rss:hover {
 		}	
 		#access ul.menu li.current-menu-item,
 		#access ul.menu li.current_page_parent {
-			background: #f1f0e7;
 			position: relative;
 			z-index: 5;
 		}
 		#access ul.menu li.current-menu-item:hover,
 		#access ul.menu li.current_page_parent:hover {
-			background: #e3e1d5;
+			/* background: #e3e1d5; */
 		}
 		#access ul.menu li.current-menu-item:first-child:hover {
-			background: #f1f0e7;		
+			/* background: #f1f0e7;	*/	
 		}	
 		#access ul.menu li a[title='home'] {
-			background-position: 50% 14px;
+			background-position: 0 0px;
 			width: 20px;
 		}
 
 		#access ul.menu li a[title='home']:hover {
-			background-position: 50% -26px;
+			background-position: 0 -30px;
 		}	
 
 		#access ul.menu li a {
 			background: transparent;
-			background: #fff;
-			color: #666;
+			color: #fff;
 		}	
 
 		#access ul.menu li a:hover {
-			color: #332c2c;
+			color: #E5DABB;
+			text-decoration: none;
 		}
 
 		.menu-button {
 			display: none;
 		}
 
-	    /*=== Drop Down Site Navigation  =========*/
+	    /* =============================================================================
+		   Dropdown Navigation Styles
+		   ========================================================================== */
 
 		#access .sf-menu li {
-			font-size: 14px;	
-			line-height: 1.7em;	
+			font-size: .8em;	
+			line-height: 3em;
 		}
 
 		#access .sf-menu li:hover {
-			background-color: #e3e1d5;			
+				
 		}
 
 		#access .sf-menu li a {
-			line-height: 1.2em;
-			padding: 13px 17px 11px 19px;			
+			padding: 0;			
 		}
 
 		#access .sf-menu li.current-menu-item,
 		#access .sf-menu li.current_page_parent {
-			border: 2px solid #e3e1d5;
-			border-bottom: none;
 			position: relative;
-			z-index: 2;
-			-webkit-box-shadow: 0 -2px 6px rgba(16,16,16,.075);
-			-moz-box-shadow: -4px -2px 6px rgba(16,16,16,.075);
-			box-shadow: 0 -2px 6px rgba(16,16,16,.075);		
+			z-index: 2;	
 		}
 
 		#access .sf-menu ul {
 			position:	absolute;
-			background-color: #e3e1d5;
+			background-color: #000;
+			background-color: rgba(0,0,0,0.8);
 			top: -999em;
-			width: 13em; /* left offset of submenus need to match (see below) */	
-			-webkit-box-shadow: 0 2px 4px rgba(3, 3, 3,.2);	
-			-moz-box-shadow: 0 2px 4px rgba(3, 3, 3,.2);		
-			box-shadow: 0 2px 4px rgba(3, 3, 3,.2);						
+			width: 26em; /* left offset of submenus need to match (see below) */						
 		}	
 
 		#access .sf-menu li:hover {
@@ -1208,7 +1211,7 @@ a.rss:hover {
 			transition: .3s background ease;	
 		}
 
-		#access .sf-menu li a[title="home"] {
+		#access .sf-menu li a[title='home'] {
 			-webkit-transition: none;
 			-moz-transition: none;		
 			transition: none;
@@ -1234,8 +1237,9 @@ a.rss:hover {
 			z-index: 4;	
 			border: none;
 			font-size: 12px;
-			border-bottom: 1px solid #dcdace;	
-			background: transparent;					
+			border-bottom: 1px solid #000;	
+			background: transparent;
+			padding: 1em 0;					
 		}	
 
 		#access .sf-menu a {
@@ -1248,11 +1252,23 @@ a.rss:hover {
 			z-index: 7;
 			position: relative;					
 		}
+		#access ul.menu li li a {
+			font-family: "camingodos-web",sans-serif;
+			text-transform: none;
+			letter-spacing: normal;
+			line-height: normal;
+			border: none;	
+			overflow: hidden;
+			margin: 0 0 -1px 0;		
+			padding: 1px 15px;	
+				
+		}
+		
 		#access .sf-menu li:hover ul,
 		#access .sf-menu li.sfHover ul {
 			left: 0;
 			margin-left: 1px;
-			top: 3.2em; /* match top ul list item height */
+			top: 3.3em; /* match top ul list item height */
 			z-index: 6;
 			position: absolute;	
 		}
@@ -1279,66 +1295,17 @@ a.rss:hover {
 			top: 0;
 			margin-left: 0px;	
 		}
-/*
-		body.collegeonly #access ul.menu a {
-			color:#8d0002;
-			border-color: #8d0002;
-		}
-
-		body.collegeonly #access ul.menu a:hover,
-		body.collegeonly #access ul.menu a:active {
-			color: #5b0125;
-			border-color: #5b0125;	
-		}
-
-		body.tvmdlonly #access ul.menu a {
-			color:#8c5933;
-			border-color: #8c5933;
-		}
-
-		body.tvmdlonly #access ul.menu a:hover,
-		body.tvmdlonly #access ul.menu a:active {
-			color: #674125;
-			border-color: #674125;	
-		}
-		body.tvmdlonly.fazd #access ul.menu a:hover,
-		body.tvmdlonly.fazd #access ul.menu a:active {
-			color: #d42127;
-			border-color: #d42127;	
-		}	
-
-		body.extensiononly #access ul.menu a {
-			color:#00709e;
-			border-color: #00709e;
-		}
-
-		body.extensiononly #access ul.menu a:active,
-		body.extensiononly #access ul.menu a:hover {
-			color: #002838;
-			border-color: #002838;	
-		}
-
-		body.researchonly #access ul.menu a {
-			color:#4e792f;
-			border-color: #4e792f;
-		}
-
-		body.researchonly #access ul.menu a:active,
-		body.researchonly #access ul.menu a:hover {
-			color: #1f3013;
-			border-color: #1f3013;	
-		}
-*/
+		
 		/*** arrows **/
 		#access .sf-menu li a.sf-with-ul {
 			min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
-			background: url(images/down-arrow.png) no-repeat right 55% #fff; 
+			background: url(images/down-arrow3.png) no-repeat right 0 transparent; 
 			padding-right: 28px;					
 		}
 
 		#access .sf-menu li li a.sf-with-ul {
 			min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
-			background: url(images/right-arrow.png) no-repeat left 58% #fff;
+			background: url(images/right-arrow.png) no-repeat left 58% transparent;
 		}
 
 
@@ -1378,22 +1345,82 @@ a.rss:hover {
 			background-position: -10px 0; /* arrow hovers for modern browsers*/
 		}
 
+	/* End main menu */
 	
-	.content-wrap {
-		border-radius: 3px;		
-		background: #fff;
+	
+	/* =============================================================================
+	   Agency Navigation Styles
+	   ========================================================================== */
+	#agency-nav {
+		position: absolute;
+		top:0;
+		left: 31.914893617021%;
+	}
+	#agency-nav ul {margin:0; padding:0;}
+	#agency-nav li {
+		display: block;
+		list-style: none;
+		position: absolute;
+	}
+	#agency-nav li a {
+		height: 42px;
+		width: 100px;
+		background: url('images/rodeo.png') no-repeat;
+		text-indent: -9999em;
+	}
+	#agency-nav  li.tfs-item 			{ z-index:5; }
+	#agency-nav  li.tfs-item 	a 		{ width: 146px;}
+	#agency-nav  li.tfs-item 	a:hover { background-position: 0 -84px; }
+	#agency-nav  li.tvmdl-item 	 		{ z-index:4; left: 123px;}
+	#agency-nav  li.tvmdl-item 	a 		{ width: 153px; background-position: -123px 0;}
+	#agency-nav  li.tvmdl-item 	a:hover  { background-position: -123px -42px;}
+	#agency-nav  li.ext-item			{ z-index: 3; left: 253px;}
+	#agency-nav  li.ext-item 	a 		{ width: 153px; background-position: -253px 0;}
+	#agency-nav  li.ext-item 	a:hover { background-position: -253px -84px; }
+	#agency-nav  li.res-item			{ z-index:2; left: 383px; }
+	#agency-nav  li.res-item 	a 		{ width: 153px; background-position: -383px 0;}
+	#agency-nav  li.res-item 	a:hover { background-position: -383px -42px; }
+	#agency-nav  li.col-item			{ z-index:1; left: 513px; }
+	#agency-nav  li.col-item 	a 		{ width: 165px; background-position: -513px 0;}
+	#agency-nav  li.col-item 	a:hover { background-position: -513px -84px; }
+	#agency-nav  li.tvmdl-item:hover,
+	#agency-nav  li.ext-item:hover,
+	#agency-nav  li.res-item:hover,
+	#agency-nav  li.col-item:hover 		{ z-index: 100; }
+	
+	/* =============================================================================
+	   END Agency Navigation Styles
+	   ========================================================================== */
+	
+	
+	.content-wrap {	
 		overflow: hidden;
 		margin-bottom: 1.25em;
+		margin-top: -19px;
 		padding-bottom: 1em;
-		box-shadow: 5px 5px 15px rgba(150,150,150,.08);
-		border-top: 1px solid #d5d5cf;
-		border-top: 1px solid rgba(180,180,180,.3);		
 		position: relative;
 		z-index: 2;		
 	}
+	.home .content-wrap {
+		background: url('images/just-the-tip.png') no-repeat;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	.home #page > .wrap {
+		background: white;
+	}
+	.home #content {
+		float: left;
+		padding-top: 0;
+	}
+	.home #sidebar {
+		float: right;
+		background: transparent;
+		padding-top: 0;
+	}
 
-	.content-wrap:after {
-		border-radius: 3px;			
+	.content-wrap:after {		
 		content: " ";
 		position: absolute;
 		display:block;
@@ -1423,11 +1450,21 @@ a.rss:hover {
 		width: 33%;
 	}
 	/* End Media Boxes for larger screens */
+	
 	.site-title {
-		padding-top: 3.5%;	
+		margin-top: -49px;
+		background: url('images/logo-main.png') no-repeat top center;
+		width: 319px;
+		height: 115px;
+		position: relative;
+		z-index: 99;	
 	}	
 	.site-title a {		
-		margin: 0 3.333333333%; /* 10px / 300px */		
+		/* margin: 0 3.333333333%; /* 10px / 300px */		
+	}
+	
+	.home .site-title {
+		height: 95px;
 	}
 	#drop-nav ul li.menu-button a {
 		display: none;
@@ -1435,30 +1472,50 @@ a.rss:hover {
 	#drop-nav ul.drop-nav-list li.menu-item {
 		float: right;
 		display: inline;
-		font: italic 1.1em "minion-pro-1","minion-pro-2", 'Cambria', georgia, serif;
-		line-height: 2.8em;
+		font: .7em "camingodos-web",sans-serif;;
+		line-height: 4em;
 		margin-right: 1em;
+	}
+	ul.drop-nav-list li.menu-item a {
+		color: #9F6D56;
+		margin-right: 1em;
+	}
+	ul.drop-nav-list li.menu-item:after {
+		content: '/';
+		color: #9F6D56;
+	}
+	ul.drop-nav-list li:first-child:after {
+		content: '';
 	}
 	
 	.featured-content {
+		background: url('images/featured-content-bg.png') #fff repeat-y;
+		margin-top: -20px;
 		position: relative;	
+		margin-bottom: 0;
 	}
-	.agency-research {
+	.featured-stories .mb-inner {
+		margin: 5px 77px;
+	}
+	.agency-research .mb-inner a h2 {
 		background-color: #5C8C39;
 	}
-	.agency-college {
+	.agency-college .mb-inner a h2 {
 		background-color: #500000;
 	}	
-	.agency-extension {
+	.agency-extension .mb-inner a h2 {
 		background-color: #1B607B;
 	}		
-	.agency-tfs {
+	.agency-tfs .mb-inner a h2 {
 		background-color: #4F552A;
 	}
-	.agency-tvmdl {
+	.agency-tvmdl .mb-inner a h2 {
 		background-color: #8c5933;
 	}
-			
+	
+	.featured-stories-container {
+		margin-bottom: 0;
+	}		
 	ol.featured-stories  {
 		position: relative;
 		z-index: 3;
@@ -1467,7 +1524,7 @@ a.rss:hover {
 		padding: 0;
 	}
 	.featured-stories li {
-		margin: 10px 5px 0 45px;
+	
 	}
 	.featured-stories a,
 	a.cat-nav-post-link {
@@ -1577,12 +1634,13 @@ a.rss:hover {
 		bottom: 30px;		
 	}					
 	#content {
-		float: left;
+		float: right;
 		padding-top: .6em;
 	}
 	.entry-title {
 		text-rendering: optimizeLegibility;
-		font-size: 1.625em; /* 26px / 16px */	
+		/* font-size: 1.625em; /* 26px / 16px */	
+		font-weight: normal;
 	}	
 	.cat-nav-container {
 		clear: both;
@@ -1594,14 +1652,12 @@ a.rss:hover {
 		font-size: 1em; /* 16px */
 		position: relative;
 	}			
-	.cat-nav,
-	.footer-info-container {
+	.cat-nav {
 		float: left;
 		margin-right: 2.126759574468%; /* 20px / 640px */				
 	}
 	.cat-nav.third,
-	.cat-nav.last,
-	.footer-info-container.last {
+	.cat-nav.last {
 		margin-right: 0;
 	}
 	.cat-post-title {
@@ -1617,10 +1673,10 @@ a.rss:hover {
 		max-width: 100%;	
 	}	
 	#sidebar {
-		float: right;
-		margin: 1em .5em 0 0;
-		/*box-shadow: -2px 2px 6px rgba(0,0,0,.4);*/
-				
+		float: left;
+		margin: 0;
+		padding-top: 60px;
+		background: url('images/logo-main.png') no-repeat #F2EDDD 0 -165px;
 	}
 	.search-widget {
 		background: none;
@@ -1634,14 +1690,23 @@ a.rss:hover {
 	}		
 	.post, #content .page, #comments {
 		margin-left: 1.612903225806%; /* 10px / 620px */
+		margin-left: 0;
 		padding-right: 0;
-		padding-top: 3%;
-		padding-left: 5%;
+		padding-top: 60px;
 	}
 	.post p, #content .page p {
-		font-size: 1.125em; /* 18px / 16px */
+		font-size: 1em;
 		margin-bottom: 1.25em; /* 20px / 16px */
 		line-height: 1.375em; /* 22px / 16px */
+	}
+	h1.section-title {
+		color: #A3A2A5;
+		text-transform: uppercase;
+		font-size: 2.6em;
+		letter-spacing: 3px;
+		position: absolute;
+		padding: 0;
+		margin-top: 40px;
 	}
 	.recent-stories .post {
 		padding: 3.3333333%;
@@ -1679,33 +1744,31 @@ a.rss:hover {
 		margin-top: -2px;
 	}
 	h2.mb-post-title {
-		margin: 0;
-		width: 175px;
-		height: 55px;
+		margin: 0 0 3px 0;
+		width: 165px;
+		height: 70px;
 		display: block;
 		text-indent: -9999px;
 	}
 	.agency-college h2.mb-post-title{
-		background: url('images/header/college-branding.png') 0 -10px;
+		background: url('images/logo-col.png') 10px 19px no-repeat;
 	}
 	.agency-extension h2.mb-post-title{
-		background: url('images/header/extension-branding.png') 0 -10px;
+		background: url('images/logo-ext.png') 15px 10px no-repeat;
 	}
 	.agency-research h2.mb-post-title{
-		background: url('images/header/research-branding.png') 0 -10px;
+		background: url('images/logo-res.png') 15px 10px no-repeat;
 	}
 	.agency-tvmdl h2.mb-post-title{
-		background: url('images/header/tvmdl-branding.png') 0 -10px;
+		background: url('images/logo-tvmdl.png') 20px 5px no-repeat;
 	}
 	.agency-tfs h2.mb-post-title {
-		background: url('images/header/forest-branding.png') 0 -10px;
+		background: url('images/logo-tfs.png') 14px 17px no-repeat;
 	}
 	
-	/**********************************************************
-
-	Styles Users Might Use
-
-	**********************************************************/
+	/* =============================================================================
+	   Styles user can incorporate into content
+	   ========================================================================== */
 
 	
 	.entry-content .one-of-2 {
@@ -1747,11 +1810,9 @@ a.rss:hover {
 		padding-right: 2%;				
 	}
 
-	/**********************************************************
-
-	END - Styles Users Might Use
-
-	**********************************************************/
+	/* =============================================================================
+	   End - Styles user can incorporate into content
+	   ========================================================================== */
 	
 						
 }	
@@ -1889,4 +1950,3 @@ a.rss:hover {
    
 
    .missing { box-shadow: 0 0 3px rgba(255,0,0,1); background: rgba(255, 0, 0, 1);}
-
