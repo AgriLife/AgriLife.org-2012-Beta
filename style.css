@@ -245,7 +245,7 @@ em { font-style: italic; }
 .entry-title a {color: #222;}
 .entry-title a:hover {color: #000;}
 .wrap, .site-footer {margin: auto; max-width: 1000px; padding: 0 5%;}
-.page {width: 97.916666666667; /* 940px / 960px */}
+.page {width: 100%;}
 #content .entry-content h1, #content .entry-content h2, #content .entry-content h3, #content .entry-content h4, #content .entry-content h5, #content .entry-content h6 { margin: 1em 0; font-weight: 900; }
 h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-weight: normal; color: #500000;}
 .entry-content ul, .entry-content ol, .entry-content dl { margin: 1em 0 1em 3em; }
@@ -1424,7 +1424,7 @@ a.rss:hover {
 		padding-bottom: 0;
 	}
 	.home #page > .wrap {
-		background-position: 0 590px;
+		background-position: 0 540px;
 	}
 	.home #content {
 		float: left;
@@ -1444,7 +1444,7 @@ a.rss:hover {
 		margin: 0 2.126759574468% 0 0;
 		padding: 0;
 	}
-	.home .home-widgets-lower .widget:last-child {
+	.home .home-widgets-lower .widget-3-col-end {
 		margin: 0;
 	}
 
@@ -1725,6 +1725,7 @@ a.rss:hover {
 		margin-left: 0;
 		padding-right: 0;
 		padding-top: 60px;
+		font-weight: 300;
 	}
 	.post p, #content .page p {
 		font-size: 1em;
@@ -1797,6 +1798,27 @@ a.rss:hover {
 	.agency-tfs h2.mb-post-title {
 		background: url('images/logo-tfs.png') 14px 17px no-repeat;
 	}
+	
+	/* =============================================================================
+	   Agency Landing Page Styles
+	   ========================================================================== */
+	h1.landing-extension {
+		background: url('images/logo-ext.png') 15px 15px no-repeat #1B607B;
+		text-indent: -9999px;
+		width: 100%;
+		margin-top: 10px;
+		padding: 10px 0;
+	}
+	.landing-widgets-lower .widget {
+		float: left;
+		margin: 0 2.126759574468% 0 0;
+		background: #F2EDDD;
+	}
+	.landing-widgets-lower .widget {
+		
+	}
+	
+	
 	
 	/* =============================================================================
 	   Styles user can incorporate into content

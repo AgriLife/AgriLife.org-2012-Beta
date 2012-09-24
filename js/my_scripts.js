@@ -204,12 +204,23 @@ function gestureStart() {
  * Begin Custom Scripts
  *
  */
-
+// Variables for respond.js and slideshow
 var $footer = $('#footer'),
 	$themeURL = $footer.data('theme'),	
 	$currentPage = $footer.data('page'),
 	loaded = 0;
-	
+
+// Load respond.js if needed
+Modernizr.load([
+  {
+    // The test: does the browser understand Media Queries?
+    test : Modernizr.mq('only all'),
+    // If not, load the respond.js file
+    nope : ''+$themeURL+'js/respond/respond.min.js'
+  }
+]);
+
+// Home slideshow
 // ajaxLoop.js
 jQuery(function($){
 	var display = $('#feature-container').css('display');
@@ -226,7 +237,7 @@ jQuery(function($){
 	                url        : ""+$themeURL+"slides.php",
 	                success    : function(data){
 	                    $data = $(data);
-						console.log($data);
+						// console.log($data);
 	                    if($data.length){
 	                        $data.hide();
 	                        $content.append($data);
@@ -291,6 +302,9 @@ jQuery(function($){
 		});	
  	}	
 
+/*
+* End Slideshow
+*/
 
 
 /*

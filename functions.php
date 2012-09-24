@@ -72,7 +72,7 @@ function agrilifeorg_setup() {
 	
 		// Add Modernizr to theme. Custom build detects video, audio, flexbox, touch events and adds respond.js for media queries support in older browsers.
 	   	wp_enqueue_script('modernizr',
-	       	get_bloginfo('template_directory') . '/js/modernizr.js' , array('jquery'), '2.0.6', false);
+	       	get_bloginfo('template_directory') . '/js/modernizr.custom.20917.js' , array('jquery'), '2.6.2', false);
 							
 	       // enqueue your compressed js in one file and add to bottom of document
 	   	wp_enqueue_script('my_scripts',
@@ -131,7 +131,7 @@ function agrilifeorg_widgets_init() {
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</div></aside>",
 		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3><div class="widget-wrap">'
+		'after_title' => '</h3><div class="widget-wrap"><!-- fnord-->'
 	) );
 
 	register_sidebar( array(
@@ -147,8 +147,18 @@ function agrilifeorg_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Home: Main Widget Area', 'agrilifeorg' ),
 		'id' => 'home-widget-area',
-		'description' => __( 'An optional widget area for your site footer', 'agrilifeorg' ),
+		'description' => __( 'Main three-column widget area on home page.', 'agrilifeorg' ),
 		'before_widget' => '<aside id="%1$s" class="%2$s widget home-widget-container one-of-3">',
+		'after_widget' => "</div></aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3><div class="widget-wrap">'
+	) );
+	
+	register_sidebar( array(
+		'name' => __( 'Extension Landing Page: Main Widget Area', 'agrilifeorg' ),
+		'id' => 'extension-widget-area',
+		'description' => __( 'Main Widget Area on Extension Page', 'agrilifeorg' ),
+		'before_widget' => '<aside id="%1$s" class="%2$s widget one-of-2">',
 		'after_widget' => "</div></aside>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3><div class="widget-wrap">'
@@ -156,6 +166,35 @@ function agrilifeorg_widgets_init() {
 	
 }
 add_action( 'widgets_init', 'agrilifeorg_widgets_init' );
+
+
+/**
+ * add classes to every even/odd widget
+ * add class to every third widget
+ */
+function my_filter_dynamic_sidebar_params_even_odd($params){
+
+    static $sidebar_widget_count = array();
+    $sidebar_id = $params[0]["id"];
+    if (! isset($sidebar_widget_count[$sidebar_id])){
+        $sidebar_widget_count[$sidebar_id] = 0;
+    }
+    $before_widget = $params[0]['before_widget'];
+    $class = $sidebar_widget_count[$sidebar_id] % 2 ? 
+        "widget-odd" : "widget-even";
+	$class = ($sidebar_widget_count[$sidebar_id] + 1) % 3 ? 
+        "" : "widget-3-col-end";
+    //$class .= " widget-index-" . $sidebar_widget_count[$sidebar_id];
+    //$class .= " widget-in-$sidebar_id";
+    $before_widget = str_replace("class=\"", 
+        "class=\"$class ", $before_widget);
+    $params[0]['before_widget'] = $before_widget;
+    $sidebar_widget_count[$sidebar_id]++;
+    return $params;
+}
+
+add_filter("dynamic_sidebar_params", "my_filter_dynamic_sidebar_params_even_odd");
+
 
 /**
  * Display navigation to next/previous pages when applicable
@@ -184,38 +223,6 @@ function agrilifeorg_url_grabber() {
 	return esc_url_raw( $matches[1] );
 }
 
-/**
- * Count the number of footer sidebars to enable dynamic classes for the footer
- */
-function agrilifeorg_footer_sidebar_class() {
-	$count = 0;
-
-	if ( is_active_sidebar( 'sidebar-3' ) )
-		$count++;
-
-	if ( is_active_sidebar( 'sidebar-4' ) )
-		$count++;
-
-	if ( is_active_sidebar( 'sidebar-5' ) )
-		$count++;
-
-	$class = '';
-
-	switch ( $count ) {
-		case '1':
-			$class = 'one';
-			break;
-		case '2':
-			$class = 'two';
-			break;
-		case '3':
-			$class = 'three';
-			break;
-	}
-
-	if ( $class )
-		echo 'class="' . $class . '"';
-}
 
 if ( ! function_exists( 'agrilifeorg_comment' ) ) :
 /**

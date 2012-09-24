@@ -3,7 +3,7 @@
  * The template for displaying content in the single.php template
  *
  * @package WordPress
- * @subpackage flexopotamus
+ * @subpackage agrilifeorg
  * 
  */
 ?>
@@ -14,7 +14,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php flexopotamus_posted_on(); ?>
+			<?php agrilifeorg_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>	
 		<?php $media_info = get_post_meta( $post->ID,'cmb_media_info', TRUE ); ?>
@@ -30,21 +30,21 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'flexopotamus' ) . '</span>', 'after' => '</div>' ) ); ?>
+		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'agrilifeorg' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
 		
 		<?php
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( __( ', ', 'flexopotamus' ) );
+			$categories_list = get_the_category_list( __( ', ', 'agrilifeorg' ) );
 
 			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', __( ', ', 'flexopotamus' ) );
+			$tag_list = get_the_tag_list( '', __( ', ', 'agrilifeorg' ) );
 			if ( '' != $tag_list ) {
-				$utility_text = __( '<p class="post-categories">Category: %1$s</p> <p class="post-tags">Tags: %2$s</p>', 'flexopotamus' );
+				$utility_text = __( '<p class="post-categories">Category: %1$s</p> <p class="post-tags">Tags: %2$s</p>', 'agrilifeorg' );
 			} elseif ( '' != $categories_list ) {
-				$utility_text = __( '<p class="post-tags">Tags: %2$s</p>', 'flexopotamus' );
+				$utility_text = __( '<p class="post-tags">Tags: %2$s</p>', 'agrilifeorg' );
 			}
 
 			printf(

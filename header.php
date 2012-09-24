@@ -50,8 +50,9 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>?4" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
-<script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.custom.25341.js" type="text/javascript"></script>
+  
 <![endif]-->
+<!-- <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/ie8.css" /> -->
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
