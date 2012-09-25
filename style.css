@@ -237,7 +237,7 @@ td { vertical-align: top; }
    Global Styles
    ========================================================================== */
 body {font-size: 100%; background: #fff; color: #4b4b49;}
-p {font-size: 1em; /* 16px */ margin-bottom: 5px;}
+p {font-size: 1em; /* 16px */ margin-bottom: 5px; font-weight: 300; line-height: 1.4em;}
 a {color: #66a3bf; text-decoration: none;}
 a:hover {color: #4c7a8f; text-decoration: underline;}
 strong { font-weight: bold; }
@@ -377,7 +377,6 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 .featured-stories-container {
 	position: relative;
 	/* background-color: #5F574F;
-	background-image: url('images/texture.png');
 	*/
 	border-radius: 3px;
 	margin-bottom: 2.3333333%;
@@ -396,7 +395,6 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 }
 .section-title {
 	font-size: 0.875em; /* 14px / 16px */
-	background: url('images/texture.png') repeat-x left 50%;
 	margin-top: 3%;
 	padding: 1.612903225806%;
 	text-transform: uppercase;
@@ -432,7 +430,6 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 .nav-next a {
 	font-size: 0.875em; /* 14px / 16px */	
 	padding: .5em .75em;
-	background: #f1f1eb url('images/texture.png') repeat-x left 50%;
 	float: left;
 	color: #72726f;	
 	font-weight: 100;	
@@ -585,7 +582,7 @@ div.menu li {
 	font-size: 1em; /* 16px */
 	margin-bottom: 1.125em; /* 18px / 16px */
 	line-height: 1.25em; /* 20px / 16px */
-	color: #717074;
+	color: #4B4B49;
 }
 
 .entry-meta {
@@ -711,7 +708,6 @@ body.home .post {
 }	
 .cat-nm {
 	color: #fff;
-	background-image: url('images/texture.png');
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;		
 }
@@ -867,7 +863,6 @@ img {
 	border-top: 1px dashed #ddd;
 	border-bottom: 1px dashed #ddd;	
 	margin-bottom: 1.25em;
-	background: #fff url('images/texture.png');	
 }
 #author-avatar {
 	margin: 0 3% 0 0;
@@ -975,7 +970,6 @@ h2.post-author-title {
 	border: none;
 	margin: 0 0 .5em;
 	padding: 3.333333333%; 	
-	background: #d6d6c8 url('images/texture.png');
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;	
 }
@@ -1057,7 +1051,6 @@ a.rss:hover {
 	margin-bottom: 6%;
 }
 .site-footer {	
-	/* background: #bfbcb9 url('images/texture.png') left top;	*/
 	overflow: hidden;
 	margin: 0 auto 3.33333333% auto;
 	background: #500000;
@@ -1739,7 +1732,7 @@ a.rss:hover {
 		letter-spacing: 3px;
 		position: absolute;
 		padding: 0;
-		margin-top: 40px;
+		margin-top: 36px;
 	}
 	.recent-stories .post {
 		padding: 3.3333333%;
@@ -1802,13 +1795,26 @@ a.rss:hover {
 	/* =============================================================================
 	   Agency Landing Page Styles
 	   ========================================================================== */
-	h1.landing-extension {
-		background: url('images/logo-ext.png') 15px 15px no-repeat #1B607B;
+	/* headings */
+	.landing-page h1.section-title {
 		text-indent: -9999px;
 		width: 100%;
 		margin-top: 10px;
 		padding: 10px 0;
 	}
+	h1.landing-extension { background: url('images/logo-ext.png') 15px 15px no-repeat #1B607B;}
+	h1.landing-research { background: url('images/logo-res.png') 15px 15px no-repeat #5C8C39;}
+	h1.landing-college { background: url('images/logo-col.png') 15px 25px no-repeat #500000;}
+	h1.landing-tfs { background: url('images/logo-tfs.png') 15px 20px no-repeat #4F552A;}
+	h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat #8C5933;}
+	
+	.landing-contact { 
+		color: #4B4B49;
+		text-transform: uppercase;
+		font-weight: 900;
+		font-family: "camingodos-web",sans-serif;
+	}
+	
 	.landing-widgets-lower .widget {
 		float: left;
 		margin: 0 2.126759574468% 0 0;
@@ -1816,12 +1822,29 @@ a.rss:hover {
 	.landing-widgets-lower .widget-wrap {
 		background: #F2EDDD;
 	}
-	.page-template-page-templatesextension-landing-php #page > .wrap {
+	/* Adjust landing page backgrounds */
+	.page-template-page-templatesextension-landing-php 	#page > .wrap,
+	.page-template-page-templatesresearch-landing-php	#page > .wrap,
+	.page-template-page-templatescollege-landing-php 	#page > .wrap,
+	.page-template-page-templatestfs-landing-php		#page > .wrap,
+	.page-template-page-templatestvmdl-landing-php		#page > .wrap {
 		background: url('images/bg-interior-content.png') 0 227px repeat-x white;
 	}
-	.page-template-page-templatesextension-landing-php #content .page {
+	.page-template-page-templatesextension-landing-php 	#content .page,
+	.page-template-page-templatesresearch-landing-php	#content .page,
+	.page-template-page-templatescollege-landing-php	#content .page,
+	.page-template-page-templatestfs-landing-php		#content .page,
+	.page-template-page-templatestvmdl-landing-php		#content .page {
 		margin-top: 40px;
 	}
+	/* toggle agency nav
+	.page-template-page-templatesextension-landing-php #agency-nav li.ext-item a { 
+		background-position: -253px -84px;
+	}
+	.page-template-page-templatesextension-landing-php #agency-nav li.ext-item {
+		z-index: 101;
+	}
+	*/
 	.landing-widgets-lower .widget-odd {
 		margin: 0;
 	}

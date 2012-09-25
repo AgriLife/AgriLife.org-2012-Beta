@@ -5,7 +5,7 @@
 
 get_header(); ?>
 
-<div class="content-wrap">
+<div class="content-wrap landing-page">
 	<section id="content" role="main" class="two-of-3 column">
 			
 			<h1 class="section-title landing-extension">Texas A&amp;M AgriLife Extension</h1>
@@ -13,26 +13,9 @@ get_header(); ?>
 				<?php the_post(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
-
-				<?php // comments_template( '', true ); ?>
 				
 				<div class="landing-widgets-lower">
 				<?php if ( ! dynamic_sidebar( 'Extension Landing Page: Main Widget Area' ) ) : ?>
-
-					<aside id="pages-2" class="widget widget_pages "><h3 class="widget-title">Widget</h3>		<ul>
-								<li class="page_item page-item-25"><a href="http://localhost/~travis/wordpress/agrilifeorg/extension/">Extension</a></li>
-					<li class="page_item page-item-5 current_page_item"><a href="http://localhost/~travis/wordpress/agrilifeorg/">Home</a></li>
-					<li class="page_item page-item-2"><a href="http://localhost/~travis/wordpress/agrilifeorg/sample-page/">Sample Page</a></li>
-							</ul>
-					</aside>
-
-					<aside id="pages-2" class="widget widget_pages "><h3 class="widget-title">Widget</h3>		<ul>
-								<li class="page_item page-item-25"><a href="http://localhost/~travis/wordpress/agrilifeorg/extension/">Extension</a></li>
-					<li class="page_item page-item-5 current_page_item"><a href="http://localhost/~travis/wordpress/agrilifeorg/">Home</a></li>
-					<li class="page_item page-item-2"><a href="http://localhost/~travis/wordpress/agrilifeorg/sample-page/">Sample Page</a></li>
-							</ul>
-					</aside>					
-
 				<?php endif; ?>
 				</div>
 				
@@ -43,7 +26,7 @@ get_header(); ?>
 			<div class="widget-wrap director-bio-wrap">
 				<img src="<?php bloginfo('template_directory'); ?>/images/landing/steele.jpg" alt="Dr. Doug Steele" class="director-mug" title="Dr. Doug Steele" />
 				<h2>Dr. Doug Steele</h2>
-				<h4>Contact</h4>
+				<h4 class="landing-contact">Contact</h4>
 				<p>Agriculture and Life Sciences Building <br />
 					600 John Kimbrough Boulevard, Suite 509<br />
 					College Station, TX 77843-7101</p>

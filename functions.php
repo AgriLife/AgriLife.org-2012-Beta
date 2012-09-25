@@ -74,7 +74,7 @@ function agrilifeorg_setup() {
 	   	wp_enqueue_script('modernizr',
 	       	get_bloginfo('template_directory') . '/js/modernizr.custom.20917.js' , array('jquery'), '2.6.2', false);
 							
-	       // enqueue your compressed js in one file and add to bottom of document
+	    // enqueue your compressed js in one file and add to bottom of document
 	   	wp_enqueue_script('my_scripts',
 	       	get_bloginfo('template_directory') . '/js/my_scripts.js', array('jquery'), '1.0', true);
 	       
@@ -128,7 +128,7 @@ function agrilifeorg_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Main Sidebar', 'agrilifeorg' ),
 		'id' => 'sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s interior-sidebar">',
 		'after_widget' => "</div></aside>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3><div class="widget-wrap"><!-- fnord-->'
@@ -154,6 +154,7 @@ function agrilifeorg_widgets_init() {
 		'after_title' => '</h3><div class="widget-wrap">'
 	) );
 	
+	//Extension
 	register_sidebar( array(
 		'name' => __( 'Extension Landing Page: Main Widget Area', 'agrilifeorg' ),
 		'id' => 'extension-widget-area',
@@ -163,8 +164,6 @@ function agrilifeorg_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3><div class="widget-wrap">'
 	) );
-	
-	//Extension
 	register_sidebar(
 	    array(
 	      'id' => 'sidebar_extension',
@@ -178,6 +177,15 @@ function agrilifeorg_widgets_init() {
 	);
 
 	// Research
+	register_sidebar( array(
+		'name' => __( 'Research Landing Page: Main Widget Area', 'agrilifeorg' ),
+		'id' => 'research-widget-area',
+		'description' => __( 'Main Widget Area on Research Page', 'agrilifeorg' ),
+		'before_widget' => '<aside id="%1$s" class="%2$s widget one-of-2">',
+		'after_widget' => "</div></aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3><div class="widget-wrap">'
+	) );
 	register_sidebar(
 	    array(
 	      'id' => 'sidebar_research',
@@ -190,22 +198,40 @@ function agrilifeorg_widgets_init() {
 	    )
 	);
 
-	  // College
-	  register_sidebar(
-	    array(
-	      'id' => 'sidebar_college',
-	      'name' => 'Sidebar - College',
-	      'description' => __('Sidebar Widget Area on College pages'),
-	      'before_widget' => '<aside id="%1$s" class="%2$s widget interior-sidebar">',
-		  'after_widget' => "</div></aside>",
-		  'before_title' => '<h3 class="widget-title">',
-		  'after_title' => '</h3><div class="widget-wrap">'
-	    )
-	  );
+	// College
+	register_sidebar( array(
+		'name' => __( 'College Landing Page: Main Widget Area', 'agrilifeorg' ),
+		'id' => 'college-widget-area',
+		'description' => __( 'Main Widget Area on College Page', 'agrilifeorg' ),
+		'before_widget' => '<aside id="%1$s" class="%2$s widget one-of-2">',
+		'after_widget' => "</div></aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3><div class="widget-wrap">'
+	) );
+	register_sidebar(
+	  array(
+	    'id' => 'sidebar_college',
+	    'name' => 'Sidebar - College',
+	    'description' => __('Sidebar Widget Area on College pages'),
+	    'before_widget' => '<aside id="%1$s" class="%2$s widget interior-sidebar">',
+	 'after_widget' => "</div></aside>",
+	 'before_title' => '<h3 class="widget-title">',
+	 'after_title' => '</h3><div class="widget-wrap">'
+	  )
+	);
 
-	  // Forestry
-	  register_sidebar(
-	    array(
+	// Forestry
+	register_sidebar( array(
+		'name' => __( 'Forest Landing Page: Main Widget Area', 'agrilifeorg' ),
+		'id' => 'tfs-widget-area',
+		'description' => __( 'Main Widget Area on Forest Page', 'agrilifeorg' ),
+		'before_widget' => '<aside id="%1$s" class="%2$s widget one-of-2">',
+		'after_widget' => "</div></aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3><div class="widget-wrap">'
+	) );
+	register_sidebar(
+    	array(
 	      'id' => 'sidebar_forestry',
 	      'name' => 'Sidebar - Forestry',
 	      'description' => __('Sidebar Widget Area on Forestry pages'),
@@ -214,9 +240,18 @@ function agrilifeorg_widgets_init() {
 		  'before_title' => '<h3 class="widget-title">',
 		  'after_title' => '</h3><div class="widget-wrap">'
 	    )
-	  );
+	 );
 
-	  // TVMDL 
+	// TVMDL 
+	register_sidebar( array(
+		'name' => __( 'TVMDL Landing Page: Main Widget Area', 'agrilifeorg' ),
+		'id' => 'tvmdl-widget-area',
+		'description' => __( 'Main Widget Area on TVMDL Page', 'agrilifeorg' ),
+		'before_widget' => '<aside id="%1$s" class="%2$s widget one-of-2">',
+		'after_widget' => "</div></aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3><div class="widget-wrap">'
+	) );
 	  register_sidebar(
 	    array(
 	      'id' => 'sidebar_tvmdl',
@@ -246,9 +281,9 @@ function my_filter_dynamic_sidebar_params_even_odd($params){
     }
     $before_widget = $params[0]['before_widget'];
     $class = $sidebar_widget_count[$sidebar_id] % 2 ? 
-        "widget-odd" : "widget-even";
+        " widget-odd " : " widget-even ";
 	$class .= ($sidebar_widget_count[$sidebar_id] + 1) % 3 ? 
-        "" : "widget-3-col-end";
+        "" : " widget-3-col-end ";
     //$class .= " widget-index-" . $sidebar_widget_count[$sidebar_id];
     //$class .= " widget-in-$sidebar_id";
     $before_widget = str_replace("class=\"", 

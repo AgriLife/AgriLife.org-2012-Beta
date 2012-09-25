@@ -50,11 +50,10 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>?4" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
-	<link href="<?php bloginfo('template_directory'); ?>/js/respond/cross-domain/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
-	<link href="/beta/wp-content/themes/AgriLife-Beta/js/respond/cross-domain/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
-	<script src="/beta/wp-content/themes/AgriLife-Beta/js/respond/cross-domain/respond.proxy.js"></script>
+
 <![endif]-->
 <!-- <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/ie8.css" /> -->
+<!--  -->
 <script type="text/javascript">
 
   var _gaq = _gaq || [];

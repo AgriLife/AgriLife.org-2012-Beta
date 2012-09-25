@@ -333,7 +333,7 @@ body {
 	background: transparent;
 	padding-top: 0;
 }
-.widget {
+.home #sidebar .widget {
 	margin: 0;
 }
 .home .home-widgets-lower .widget {
@@ -342,7 +342,7 @@ body {
 	margin: 0 2.126759574468% 0 0;
 	padding: 0;
 }
-.home .home-widgets-lower .widget:last-child {
+.home .home-widgets-lower .widget-3-col-end {
 	margin: 0;
 }
 
@@ -637,7 +637,7 @@ h1.section-title {
 	letter-spacing: 3px;
 	position: absolute;
 	padding: 0;
-	margin-top: 40px;
+	margin-top: 36px;
 }
 .recent-stories .post {
 	padding: 3.3333333%;
@@ -698,6 +698,78 @@ h2.mb-post-title {
 }
 
 /* =============================================================================
+   Agency Landing Page Styles
+   ========================================================================== */
+/* headings */
+.landing-page h1.section-title {
+	text-indent: -9999px;
+	width: 100%;
+	margin-top: 10px;
+	padding: 10px 0;
+}
+h1.landing-extension { background: url('images/logo-ext.png') 15px 15px no-repeat #1B607B;}
+h1.landing-research { background: url('images/logo-res.png') 15px 15px no-repeat #5C8C39;}
+h1.landing-college { background: url('images/logo-col.png') 15px 25px no-repeat #500000;}
+h1.landing-tfs { background: url('images/logo-tfs.png') 15px 20px no-repeat #4F552A;}
+h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat #8C5933;}
+
+.landing-contact { 
+	color: #4B4B49;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-family: "camingodos-web",sans-serif;
+}
+
+.landing-widgets-lower .widget {
+	float: left;
+	margin: 0 2.126759574468% 0 0;
+}
+.landing-widgets-lower .widget-wrap {
+	background: #F2EDDD;
+}
+/* Adjust landing page backgrounds */
+.page-template-page-templatesextension-landing-php 	#page > .wrap,
+.page-template-page-templatesresearch-landing-php	#page > .wrap,
+.page-template-page-templatescollege-landing-php 	#page > .wrap,
+.page-template-page-templatestfs-landing-php		#page > .wrap,
+.page-template-page-templatestvmdl-landing-php		#page > .wrap {
+	background: url('images/bg-interior-content.png') 0 227px repeat-x white;
+}
+.page-template-page-templatesextension-landing-php 	#content .page,
+.page-template-page-templatesresearch-landing-php	#content .page,
+.page-template-page-templatescollege-landing-php	#content .page,
+.page-template-page-templatestfs-landing-php		#content .page,
+.page-template-page-templatestvmdl-landing-php		#content .page {
+	margin-top: 40px;
+}
+/* toggle agency nav
+.page-template-page-templatesextension-landing-php #agency-nav li.ext-item a { 
+	background-position: -253px -84px;
+}
+.page-template-page-templatesextension-landing-php #agency-nav li.ext-item {
+	z-index: 101;
+}
+*/
+.landing-widgets-lower .widget-odd {
+	margin: 0;
+}
+.interior-sidebar.widget .widget-wrap {
+	padding: 1em 1.5em;
+	background: #f0f0f0;
+}
+.interior-sidebar.widget .widget-wrap.director-bio-wrap {
+	background: transparent;
+}
+.director-mug {
+	margin: 0.7em 25px;
+}
+.director-bio-btn {
+	margin: 1.5em 20px 0 20px;
+}
+
+
+
+/* =============================================================================
    Styles user can incorporate into content
    ========================================================================== */
 
@@ -745,4 +817,3 @@ h2.mb-post-title {
    End - Styles user can incorporate into content
    ========================================================================== */
 
-					
