@@ -164,6 +164,71 @@ function agrilifeorg_widgets_init() {
 		'after_title' => '</h3><div class="widget-wrap">'
 	) );
 	
+	//Extension
+	register_sidebar(
+	    array(
+	      'id' => 'sidebar_extension',
+	      'name' => 'Sidebar - Extension',
+	      'description' => __( 'Sidebar Widget Area on Extension Pages', 'agrilifeorg' ),
+		  'before_widget' => '<aside id="%1$s" class="%2$s widget interior-sidebar">',
+		  'after_widget' => "</div></aside>",
+		  'before_title' => '<h3 class="widget-title">',
+		  'after_title' => '</h3><div class="widget-wrap">'
+	    )
+	);
+
+	// Research
+	register_sidebar(
+	    array(
+	      'id' => 'sidebar_research',
+	      'name' => 'Sidebar - Research',
+	      'description' => __('Sidebar Widget Area on Research pages'),
+	      'before_widget' => '<aside id="%1$s" class="%2$s widget interior-sidebar">',
+		  'after_widget' => "</div></aside>",
+		  'before_title' => '<h3 class="widget-title">',
+		  'after_title' => '</h3><div class="widget-wrap">'
+	    )
+	);
+
+	  // College
+	  register_sidebar(
+	    array(
+	      'id' => 'sidebar_college',
+	      'name' => 'Sidebar - College',
+	      'description' => __('Sidebar Widget Area on College pages'),
+	      'before_widget' => '<aside id="%1$s" class="%2$s widget interior-sidebar">',
+		  'after_widget' => "</div></aside>",
+		  'before_title' => '<h3 class="widget-title">',
+		  'after_title' => '</h3><div class="widget-wrap">'
+	    )
+	  );
+
+	  // Forestry
+	  register_sidebar(
+	    array(
+	      'id' => 'sidebar_forestry',
+	      'name' => 'Sidebar - Forestry',
+	      'description' => __('Sidebar Widget Area on Forestry pages'),
+	      'before_widget' => '<aside id="%1$s" class="%2$s widget interior-sidebar">',
+		  'after_widget' => "</div></aside>",
+		  'before_title' => '<h3 class="widget-title">',
+		  'after_title' => '</h3><div class="widget-wrap">'
+	    )
+	  );
+
+	  // TVMDL 
+	  register_sidebar(
+	    array(
+	      'id' => 'sidebar_tvmdl',
+	      'name' => 'Sidebar - TVMDL',
+	      'description' => __('Sidebar Widget Area on TVMDL pages'),
+	      'before_widget' => '<aside id="%1$s" class="%2$s widget interior-sidebar">',
+		  'after_widget' => "</div></aside>",
+		  'before_title' => '<h3 class="widget-title">',
+		  'after_title' => '</h3><div class="widget-wrap">'
+	    )
+	  );
+
 }
 add_action( 'widgets_init', 'agrilifeorg_widgets_init' );
 
@@ -182,7 +247,7 @@ function my_filter_dynamic_sidebar_params_even_odd($params){
     $before_widget = $params[0]['before_widget'];
     $class = $sidebar_widget_count[$sidebar_id] % 2 ? 
         "widget-odd" : "widget-even";
-	$class = ($sidebar_widget_count[$sidebar_id] + 1) % 3 ? 
+	$class .= ($sidebar_widget_count[$sidebar_id] + 1) % 3 ? 
         "" : "widget-3-col-end";
     //$class .= " widget-index-" . $sidebar_widget_count[$sidebar_id];
     //$class .= " widget-in-$sidebar_id";
@@ -223,6 +288,38 @@ function agrilifeorg_url_grabber() {
 	return esc_url_raw( $matches[1] );
 }
 
+/**
+ * Count the number of footer sidebars to enable dynamic classes for the footer
+ */
+function agrilifeorg_footer_sidebar_class() {
+	$count = 0;
+
+	if ( is_active_sidebar( 'sidebar-3' ) )
+		$count++;
+
+	if ( is_active_sidebar( 'sidebar-4' ) )
+		$count++;
+
+	if ( is_active_sidebar( 'sidebar-5' ) )
+		$count++;
+
+	$class = '';
+
+	switch ( $count ) {
+		case '1':
+			$class = 'one';
+			break;
+		case '2':
+			$class = 'two';
+			break;
+		case '3':
+			$class = 'three';
+			break;
+	}
+
+	if ( $class )
+		echo 'class="' . $class . '"';
+}
 
 if ( ! function_exists( 'agrilifeorg_comment' ) ) :
 /**
@@ -458,78 +555,6 @@ function dropdown_generate_tag_cloud( $tags, $args = '' ) {
 	endswitch;
 
 	return apply_filters( 'dropdown_generate_tag_cloud', $return, $tags, $args );
-}
-
-// Register sidebars for each branch of AgriLife */
-// Extension
-add_action( 'widgets_init', 'ag_register_sidebars');
-function ag_register_sidebars() {
-  
-  //Extension
-  register_sidebar(
-    array(
-      'id' => 'sidebar_extension',
-      'name' => 'Sidebar - Extension',
-      'description' => __('These widgets will only show on the Extension page'),
-      'before_widget' => '<div id="%1#s" class="extension-widget">',
-      'after_widget' => '</div>',
-      'before_title' => '<h3 class="widget-title">',
-      'after_title' => '</h3>',
-    )
-  );
-
-  // Research
-  register_sidebar(
-    array(
-      'id' => 'sidebar_research',
-      'name' => 'Sidebar - Research',
-      'description' => __('These widgets will only show on the Research page'),
-      'before_widget' => '<div id="%1#s" class="research-widget">',
-      'after_widget' => '</div>',
-      'before_title' => '<h3 class="widget-title">',
-      'after_title' => '</h3>',
-    )
-  );
-
-  // College
-  register_sidebar(
-    array(
-      'id' => 'sidebar_college',
-      'name' => 'Sidebar - College',
-      'description' => __('These widgets will only show on the College page'),
-      'before_widget' => '<div id="%1#s" class="college-widget">',
-      'after_widget' => '</div>',
-      'before_title' => '<h3 class="widget-title">',
-      'after_title' => '</h3>',
-    )
-  );
-
-  // Forestry
-  register_sidebar(
-    array(
-      'id' => 'sidebar_forestry',
-      'name' => 'Sidebar - Forestry',
-      'description' => __('These widgets will only show on the Forestry page'),
-      'before_widget' => '<div id="%1#s" class="forestry-widget">',
-      'after_widget' => '</div>',
-      'before_title' => '<h3 class="widget-title">',
-      'after_title' => '</h3>',
-    )
-  );
-
-  // TVMDL 
-  register_sidebar(
-    array(
-      'id' => 'sidebar_tvmdl',
-      'name' => 'Sidebar - TVMDL',
-      'description' => __('These widgets will only show on the TVMDL page'),
-      'before_widget' => '<div id="%1#s" class="tvmdl-widget">',
-      'after_widget' => '</div>',
-      'before_title' => '<h3 class="widget-title">',
-      'after_title' => '</h3>',
-    )
-  );
-
 }
 
 $includes_path = TEMPLATEPATH . '/inc/';

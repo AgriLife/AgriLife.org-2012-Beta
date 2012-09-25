@@ -1435,7 +1435,7 @@ a.rss:hover {
 		background: transparent;
 		padding-top: 0;
 	}
-	.widget {
+	.home #sidebar .widget {
 		margin: 0;
 	}
 	.home .home-widgets-lower .widget {
@@ -1812,10 +1812,31 @@ a.rss:hover {
 	.landing-widgets-lower .widget {
 		float: left;
 		margin: 0 2.126759574468% 0 0;
+	}
+	.landing-widgets-lower .widget-wrap {
 		background: #F2EDDD;
 	}
-	.landing-widgets-lower .widget {
-		
+	.page-template-page-templatesextension-landing-php #page > .wrap {
+		background: url('images/bg-interior-content.png') 0 227px repeat-x white;
+	}
+	.page-template-page-templatesextension-landing-php #content .page {
+		margin-top: 40px;
+	}
+	.landing-widgets-lower .widget-odd {
+		margin: 0;
+	}
+	.interior-sidebar.widget .widget-wrap {
+		padding: 1em 1.5em;
+		background: #f0f0f0;
+	}
+	.interior-sidebar.widget .widget-wrap.director-bio-wrap {
+		background: transparent;
+	}
+	.director-mug {
+		margin: 0.7em 25px;
+	}
+	.director-bio-btn {
+		margin: 1.5em 20px 0 20px;
 	}
 	
 	

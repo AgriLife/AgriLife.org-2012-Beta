@@ -38,10 +38,22 @@ get_header(); ?>
 				
 	</section><!-- /end #content -->
 	
-	
-	</section><!-- .end home-widget-lower -->
-
-	<?php dynamic_sidebar( 'sidebar_extension' ); ?>
+	<section id="sidebar" class="sidebar one-of-3 column" role="navigation">
+		<aside id="director_bio" class="widget interior-sidebar">
+			<div class="widget-wrap director-bio-wrap">
+				<img src="<?php bloginfo('template_directory'); ?>/images/landing/steele.jpg" alt="Dr. Doug Steele" class="director-mug" title="Dr. Doug Steele" />
+				<h2>Dr. Doug Steele</h2>
+				<h4>Contact</h4>
+				<p>Agriculture and Life Sciences Building <br />
+					600 John Kimbrough Boulevard, Suite 509<br />
+					College Station, TX 77843-7101</p>
+				
+				<a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/landing/btn-maroon-steele.png" alt="Dr. Doug Steele Bio" class="director-bio-btn" title="Dr. Doug Steele" /></a>
+				
+			</div>
+		</aside>
+		<?php dynamic_sidebar( 'sidebar_extension' ); ?>
+	</section>
 	
 </div><!-- /.content-wrap -->
 

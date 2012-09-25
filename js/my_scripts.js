@@ -211,14 +211,16 @@ var $footer = $('#footer'),
 	loaded = 0;
 
 // Load respond.js if needed
+/*
 Modernizr.load([
   {
     // The test: does the browser understand Media Queries?
     test : Modernizr.mq('only all'),
     // If not, load the respond.js file
-    nope : ''+$themeURL+'js/respond/respond.min.js'
+    nope : [''+$themeURL+'js/respond/respond.min.js', ''+$themeURL+'js/respond/respond.min.js']
   }
 ]);
+*/
 
 // Home slideshow
 // ajaxLoop.js
