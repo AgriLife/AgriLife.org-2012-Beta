@@ -33,6 +33,7 @@ get_header(); ?>
 					College Station, TX 77843-7101</p>
 				
 				<a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/landing/learn-steele.png" alt="Dr. Doug Steele Bio" class="director-bio-btn" title="Dr. Doug Steele" /></a>
+				<a href="http://agrilifeextension.tamu.edu/"><img src="<?php bloginfo('template_directory'); ?>/images/landing/exploreExtension.png" alt="Texas A&amp;M AgriLife Extension Service" class="agency-link-btn" title="Texas A&amp;M AgriLife Extension Service" /></a>
 				
 			</div>
 		</aside>
@@ -40,5 +41,5 @@ get_header(); ?>
 	</section>
 	
 </div><!-- /.content-wrap -->
-
+<?php get_sidebar('agencies'); ?>
 <?php get_footer(); ?>

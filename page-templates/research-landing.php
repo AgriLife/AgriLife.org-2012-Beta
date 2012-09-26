@@ -8,7 +8,7 @@ get_header(); ?>
 <div class="content-wrap landing-page">
 	<section id="content" role="main" class="two-of-3 column">
 			
-			<h1 class="section-title landing-research">Texas A&amp;M AgriLife Extension</h1>
+			<h1 class="section-title landing-research">Texas A&amp;M AgriLife Research</h1>
 
 				<?php the_post(); ?>
 
@@ -36,8 +36,7 @@ get_header(); ?>
 			</div>
 		</aside>
 		<?php dynamic_sidebar( 'sidebar_research' ); ?>
-	</section>
-	
+	</section>	
 </div><!-- /.content-wrap -->
-
+<?php get_sidebar('agencies'); ?>
 <?php get_footer(); ?>

@@ -38,7 +38,6 @@ get_header(); ?>
 		</aside>
 		<?php dynamic_sidebar( 'sidebar_forestry' ); ?>
 	</section>
-	
 </div><!-- /.content-wrap -->
-
+<?php get_sidebar('agencies'); ?>
 <?php get_footer(); ?>
