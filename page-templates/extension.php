@@ -20,7 +20,6 @@ get_header(); ?>
 	</section><!-- /end #content -->
 
 <?php dynamic_sidebar( 'sidebar_extension' ); ?>
-<?php get_sidebar('agencies'); ?>
 </div><!-- /.content-wrap -->
-
+<?php get_sidebar('agencies'); ?>
 <?php get_footer(); ?>
