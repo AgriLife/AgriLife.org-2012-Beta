@@ -1,14 +1,14 @@
 <?php
 /**
- * The template for displaying search forms in flexopotamus
+ * The template for displaying search forms in agrilifeorg
  *
  * @package WordPress
- * @subpackage flexopotamus
- * @since flexopotamus 1.0
+ * @subpackage agrilifeorg
+ * @since agrilifeorg 1.0
  */
 ?>
 	<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-		<label for="s" class="assistive-text"><?php _e( 'Search', 'flexopotamus' ); ?></label>
-		<input type="text" class="field" name="s" id="s" placeholder="<?php esc_attr_e( 'Search', 'flexopotamus' ); ?>" />
-		<input type="submit" class="submit" name="submit" id="searchsubmit" value="<?php esc_attr_e( 'Search', 'flexopotamus' ); ?>" />
+		<label for="s" class="assistive-text"><?php _e( 'Search', 'agrilifeorg' ); ?></label>
+		<input type="text" class="field" name="s" id="s" placeholder="<?php esc_attr_e( 'Search', 'agrilifeorg' ); ?>" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="<?php esc_attr_e( 'Search', 'agrilifeorg' ); ?>" />
 	</form>

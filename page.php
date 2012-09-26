@@ -8,8 +8,8 @@
  * different template.
  *
  * @package WordPress
- * @subpackage flexopotamus
- * @since flexopotamus 1.0
+ * @subpackage agrilifeorg
+ * @since agrilifeorg 1.0
  */
 
 get_header(); ?>
@@ -34,7 +34,7 @@ get_header(); ?>
 	</section><!-- /end #content -->
 
 <?php get_sidebar(); ?>
-	
+<?php get_sidebar('agencies'); ?>
 </div><!-- /.content-wrap -->
 
 <?php get_footer(); ?>
