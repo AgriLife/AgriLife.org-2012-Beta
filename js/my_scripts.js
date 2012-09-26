@@ -348,14 +348,15 @@ $('.no-touch .menu-header .sf-menu li').hover(function() {
  */
 $(document).ready( function() {
   $('#menu-about .sub-menu').hide();
-});
-$(document).ready( function() {
+
   $('#menu-about .menu-item').hover(
     function() {
-      $(this).children('ul').delay(200).slideDown('medium', function() {});
+        $(this).has('ul').addClass('down');
+        $(this).children('ul').delay(200).slideDown('medium', function() {});
     },
     function() {
-      $(this).children('ul').delay(400).slideUp('medium', function() {});
+        $(this).has('ul').removeClass('down');
+        $(this).children('ul').delay(400).slideUp('medium', function() {});
     }
     );
 });
