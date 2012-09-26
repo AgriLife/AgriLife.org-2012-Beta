@@ -3,8 +3,8 @@
  * The Template for displaying all single posts.
  *
  * @package WordPress
- * @subpackage flexopotamus
- * @since flexopotamus 1.0
+ * @subpackage agrilifeorg
+ * @since agrilifeorg 1.0
  */
 
 get_header(); ?>
@@ -16,8 +16,8 @@ get_header(); ?>
 					<?php get_template_part( 'content', 'single' ); ?>
 
 					<nav id="nav-single">
-						<span class="nav-previous"><?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> Prev', 'flexopotamus' ) ); ?></span>
-						<span class="nav-next"><?php next_post_link( '%link', __( 'Next <span class="meta-nav">&rarr;</span>', 'flexopotamus' ) ); ?></span>
+						<span class="nav-previous"><?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> Prev', 'agrilifeorg' ) ); ?></span>
+						<span class="nav-next"><?php next_post_link( '%link', __( 'Next <span class="meta-nav">&rarr;</span>', 'agrilifeorg' ) ); ?></span>
 					</nav><!-- #nav-single -->
 
 				<?php endwhile; // end of the loop. ?>
@@ -25,7 +25,7 @@ get_header(); ?>
 	</section><!-- /end #content -->
 
 <?php get_sidebar(); ?>
-	
+<?php get_sidebar('agencies'); ?>	
 </div><!-- /.content-wrap -->
 
 <?php get_footer(); ?>

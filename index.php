@@ -9,7 +9,7 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage flexopotamus
+ * @subpackage agrilifeorg
  */
 
 get_header(); ?>
@@ -25,17 +25,17 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php flexopotamus_content_nav( 'nav-below' ); ?>
+				<?php //agrilifeorg_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 
 				<article id="post-0" class="post no-results not-found">
 					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( 'Nothing Found', 'flexopotamus' ); ?></h1>
+						<h1 class="entry-title"><?php _e( 'Nothing Found', 'agrilifeorg' ); ?></h1>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
-						<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'flexopotamus' ); ?></p>
+						<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'agrilifeorg' ); ?></p>
 						<?php get_search_form(); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-0 -->

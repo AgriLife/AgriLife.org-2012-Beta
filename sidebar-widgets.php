@@ -3,7 +3,7 @@
  * The aside widget area.
  *
  * @package WordPress
- * @subpackage flexopotamus
+ * @subpackage agrilifeorg
  */
 ?>
 
@@ -21,14 +21,14 @@
 		if ( ! dynamic_sidebar( 'aside-widget-area' ) ) : ?>
 
 				<li id="archives" class="widget-container">
-					<h3 class="widget-title"><?php _e( 'Archives', 'flexopotamus' ); ?></h3>
+					<h3 class="widget-title"><?php _e( 'Archives', 'agrilifeorg' ); ?></h3>
 					<ul>
 						<?php wp_get_archives( 'type=monthly' ); ?>
 					</ul>
 				</li>
 
 				<li id="archives" class="widget-container">
-					<h3 class="widget-title"><?php _e( 'Recent Posts', 'flexopotamus' ); ?></h3>
+					<h3 class="widget-title"><?php _e( 'Recent Posts', 'agrilifeorg' ); ?></h3>
 					<ul>
 						<?php wp_get_archives( 'type=postbypost' ); ?>
 					</ul>

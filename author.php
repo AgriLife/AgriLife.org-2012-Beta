@@ -3,7 +3,7 @@
  * The template for displaying Author Archive pages.
  *
  * @package WordPress
- * @subpackage flexopotamus
+ * @subpackage agrilifeorg
  */
 
 get_header(); ?>
@@ -23,7 +23,7 @@ get_header(); ?>
 				?>
 
 				<header class="page-header">
-					<h1 class="page-title section-title author"><?php printf( __( 'Author Archives: %s', 'flexopotamus' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h1>
+					<h1 class="page-title section-title author"><?php printf( __( 'Author Archives: %s', 'agrilifeorg' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h1>
 				</header>
 
 				<?php
@@ -40,10 +40,10 @@ get_header(); ?>
 				if ( get_the_author_meta( 'description' ) ) : ?>
 				<div id="author-info">
 					<div id="author-avatar">
-						<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'flexopotamus_author_bio_avatar_size', 60 ) ); ?>
+						<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'agrilifeorg_author_bio_avatar_size', 60 ) ); ?>
 					</div><!-- #author-avatar -->
 					<div id="author-description">
-						<h2 class="post-author-title"><?php printf( __( 'About %s', 'flexopotamus' ), get_the_author() ); ?></h2>
+						<h2 class="post-author-title"><?php printf( __( 'About %s', 'agrilifeorg' ), get_the_author() ); ?></h2>
 						<p><?php the_author_meta( 'description' ); ?></p>
 					</div><!-- #author-description	-->
 				</div><!-- #entry-author-info -->
@@ -62,17 +62,17 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php flexopotamus_content_nav( 'nav-below' ); ?>
+				<?php agrilifeorg_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 
 				<article id="post-0" class="post no-results not-found">
 					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( 'Nothing Found', 'flexopotamus' ); ?></h1>
+						<h1 class="entry-title"><?php _e( 'Nothing Found', 'agrilifeorg' ); ?></h1>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
-						<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'flexopotamus' ); ?></p>
+						<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'agrilifeorg' ); ?></p>
 						<?php get_search_form(); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-0 -->
@@ -82,7 +82,7 @@ get_header(); ?>
 	</section><!-- /end #content -->
 
 <?php get_sidebar(); ?>
-	
+<?php get_sidebar('agencies'); ?>	
 </div><!-- /.content-wrap -->
 
 <?php get_footer(); ?>

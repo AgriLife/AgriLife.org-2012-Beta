@@ -3,8 +3,8 @@
  * The template for displaying Search Results pages.
  *
  * @package WordPress
- * @subpackage flexopotamus
- * @since flexopotamus 1.0
+ * @subpackage agrilifeorg
+ * @since agrilifeorg 1.0
  */
 
 get_header(); ?>
@@ -15,7 +15,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h1 class="page-title section-title"><?php printf( __( 'Search Results for: %s', 'flexopotamus' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+					<h1 class="page-title section-title"><?php printf( __( 'Search Results for: %s', 'agrilifeorg' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				</header>
 
 				<?php /* Start the Loop */ ?>
@@ -31,17 +31,17 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php flexopotamus_content_nav( 'nav-below' ); ?>
+				<?php agrilifeorg_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 
 				<article id="post-0" class="post no-results not-found">
 					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( 'Nothing Found', 'flexopotamus' ); ?></h1>
+						<h1 class="entry-title"><?php _e( 'Nothing Found', 'agrilifeorg' ); ?></h1>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
-						<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'flexopotamus' ); ?></p>
+						<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'agrilifeorg' ); ?></p>
 						<?php get_search_form(); ?>
 						<hr />
 						<p>You can also, <a href="http://agnews.tamu.edu/dailynews/index.php?type=topic">search the archive</a> on our old site.</p>
@@ -53,7 +53,7 @@ get_header(); ?>
 	</section><!-- /end #content -->
 
 <?php get_sidebar(); ?>
-	
+<?php get_sidebar('agencies'); ?>	
 </div><!-- /.content-wrap -->
 
 <?php get_footer(); ?>

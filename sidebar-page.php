@@ -4,8 +4,8 @@
  * Description: A Page Template that adds a sidebar to pages
  *
  * @package WordPress
- * @subpackage flexopotamus
- * @since flexopotamus 1.0
+ * @subpackage agrilifeorg
+ * @since agrilifeorg 1.0
  */
 
 get_header(); ?>

@@ -3,8 +3,8 @@
  * The template used to display Tag Archive pages
  *
  * @package WordPress
- * @subpackage flexopotamus
- * @since flexopotamus 1.0
+ * @subpackage agrilifeorg
+ * @since agrilifeorg 1.0
  */
 
 get_header(); ?>
@@ -14,7 +14,7 @@ get_header(); ?>
 
 				<header class="page-header">
 					<h1 class="page-title section-title"><?php
-						printf( __( 'Tag Archives: %s', 'flexopotamus' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+						printf( __( 'Tag Archives: %s', 'agrilifeorg' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 					?></h1>
 
 					<?php
@@ -37,17 +37,17 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php flexopotamus_content_nav( 'nav-below' ); ?>
+				<?php agrilifeorg_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 
 				<article id="post-0" class="post no-results not-found">
 					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( 'Nothing Found', 'flexopotamus' ); ?></h1>
+						<h1 class="entry-title"><?php _e( 'Nothing Found', 'agrilifeorg' ); ?></h1>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
-						<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'flexopotamus' ); ?></p>
+						<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'agrilifeorg' ); ?></p>
 						<?php get_search_form(); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-0 -->
@@ -57,7 +57,7 @@ get_header(); ?>
 	</section><!-- /end #content -->
 
 <?php get_sidebar(); ?>
-	
+<?php get_sidebar('agencies'); ?>	
 </div><!-- /.content-wrap -->
 
 <?php get_footer(); ?>

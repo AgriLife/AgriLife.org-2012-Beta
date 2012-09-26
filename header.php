@@ -5,8 +5,8 @@
  * Displays all of the <head> section and everything up till <div id="main">
  *
  * @package WordPress
- * @subpackage flexopotamus
- * @since flexopotamus 1.0
+ * @subpackage agrilifeorg
+ * @since agrilifeorg 1.0
  */
 ?><!DOCTYPE html>
 <!--[if IE 6]>
@@ -43,7 +43,7 @@
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . sprintf( __( 'Page %s', 'flexopotamus' ), max( $paged, $page ) );
+		echo ' | ' . sprintf( __( 'Page %s', 'agrilifeorg' ), max( $paged, $page ) );
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
