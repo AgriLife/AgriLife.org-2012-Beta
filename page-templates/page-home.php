@@ -4,9 +4,10 @@
 get_header(); ?>
 
 		<section class="featured-content clearfix">
-			<div id="feature-container">
-	             <img id="loading" src="<?php bloginfo('stylesheet_directory'); ?>/images/ajax-loader.gif" alt="image to indicate loading of the featured images" />
-			</div>
+<?php
+$slider = new AgriLife_FlexSlider;
+echo $slider->make_slider();
+?>
 			<div class="one-of-3 clearfix featured-stories-container"> 
 			<ol class="featured-stories"> 
 			<?php 
