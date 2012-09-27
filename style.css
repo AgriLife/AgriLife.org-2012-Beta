@@ -1093,13 +1093,24 @@ a.rss:hover {
 	color: #9F6D56;
 }
 
-
+/* headings */
+.landing-page h1.section-title {
+	text-indent: -9999px;
+	width: 100%;
+	margin-top: 10px;
+	padding: 30px 0;
+}
+h1.landing-extension { background: url('images/logo-ext.png') 15px 15px no-repeat #1B607B;}
+h1.landing-research { background: url('images/logo-res.png') 15px 15px no-repeat #5C8C39;}
+h1.landing-college { background: url('images/logo-col.png') 15px 25px no-repeat #500000;}
+h1.landing-tfs { background: url('images/logo-tfs.png') 15px 20px no-repeat #4F552A;}
+h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat #8C5933;}
 
 /* =============================================================================
    Enhance For Desktop
    ========================================================================== */
 
-@media all and (min-width: 960px) {
+@media all and (min-width: 1000px) {
 	
 	
 	
@@ -1753,18 +1764,9 @@ a.rss:hover {
 	/* =============================================================================
 	   Agency Landing Page Styles
 	   ========================================================================== */
-	/* headings */
 	.landing-page h1.section-title {
-		text-indent: -9999px;
-		width: 100%;
-		margin-top: 10px;
 		padding: 10px 0;
 	}
-	h1.landing-extension { background: url('images/logo-ext.png') 15px 15px no-repeat #1B607B;}
-	h1.landing-research { background: url('images/logo-res.png') 15px 15px no-repeat #5C8C39;}
-	h1.landing-college { background: url('images/logo-col.png') 15px 25px no-repeat #500000;}
-	h1.landing-tfs { background: url('images/logo-tfs.png') 15px 20px no-repeat #4F552A;}
-	h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat #8C5933;}
 	#director_bio h2{ line-height: 1em;}
 	.landing-contact { 
 		color: #4B4B49;

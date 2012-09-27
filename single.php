@@ -27,5 +27,5 @@ get_header(); ?>
 <?php get_sidebar(); ?>
 
 </div><!-- /.content-wrap -->
-<?php get_sidebar('agencies'); ?>
+
 <?php get_footer(); ?>

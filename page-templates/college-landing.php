@@ -37,5 +37,5 @@ get_header(); ?>
 	</section>
 	
 </div><!-- /.content-wrap -->
-<?php get_sidebar('agencies'); ?>
+
 <?php get_footer(); ?>

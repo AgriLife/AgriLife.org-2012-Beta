@@ -44,7 +44,7 @@ query_posts(array(
 						<li id="slide<?php echo $count; ?>">
 							<a href="<?php the_permalink(); ?>" id="slide#<?php echo $count; ?>">
 								<?php //the_post_thumbnail('feature-large'); ?>
-								<img src="http://placekitten.com/660/400" />
+								<img src="http://agrilife.org/beta/files/2012/09/Nectarine-sliced.jpg" />
 								<div class="slide-details">
 									<h2><?php the_title(); ?></h2>
 								</div>

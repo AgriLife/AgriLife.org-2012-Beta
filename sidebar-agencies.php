@@ -9,7 +9,7 @@
 ?>
 
 <?php if ( !is_front_page() ) : ?>
-<div id="agency-nav" class="two-of-3">
+<div id="agency-nav" class="two-of-3" role="complementary">
 	<ul>
 		<li class="top-agency tfs-item"><a href="<?php echo site_url('/agrilife-agencies/tfs/') ?>" class="ir"><span class="state-agency-name">Texas A&amp;M Forest Service</span></a></li>
 		<li class="top-agency tvmdl-item"><a href="<?php echo site_url('/agrilife-agencies/tvmdl/') ?>" class="ir"><span class="state-agency-name">Texas A&amp;M Veterinary Medical Diagnostics Laboratory</span></a></li>								

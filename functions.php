@@ -51,7 +51,7 @@ function agrilifeorg_setup() {
 
 	// This theme uses Featured Images (also known as post thumbnails)
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'feature-large', 680, 376, true );	
+	add_image_size( 'feature-large', 660, 400, true );	
 	add_image_size( 'feature-thumb', 86, 86, true );
 	
 

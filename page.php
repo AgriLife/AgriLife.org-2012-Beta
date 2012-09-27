@@ -14,10 +14,12 @@
 
 get_header(); ?>
 
-<div class="content-wrap">
-	<section id="content" role="main" class="two-of-3 column">
+<div class="content-wrap" role="main">
+	<section id="content"  class="two-of-3 column">
 			<?php 
-				if (!empty($post->post_parent)) {
+				if (!empty($post->post_parent) && ($parent = get_post($post->post_parent)) && !empty($parent->post_parent) ) {
+					$parent_title = get_the_title($parent->post_parent);
+				} elseif (!empty($post->post_parent)) {
 					$parent_title = get_the_title($post->post_parent);
 				} else {
 					$parent_title = 'Texas A&amp;M AgriLife'; //get_the_title($post->post_parent);
@@ -35,5 +37,5 @@ get_header(); ?>
 
 <?php get_sidebar(); ?>
 </div><!-- /.content-wrap -->
-<?php get_sidebar('agencies'); ?>
+
 <?php get_footer(); ?>

@@ -110,7 +110,7 @@ get_header(); ?>
 	</section><!-- /end #content -->
 
 <?php get_sidebar(); ?>
-<?php get_sidebar('agencies'); ?>	
+	
 </div><!-- /.content-wrap -->
 
 <?php get_footer(); ?>
