@@ -595,3 +595,5 @@ function dropdown_generate_tag_cloud( $tags, $args = '' ) {
 $includes_path = TEMPLATEPATH . '/inc/';
 // Include custom widgets
 require_once( $includes_path . 'widgets.php');
+// Include flexslider
+require_once( $includes_path . 'flexslider/flexslider.php' );

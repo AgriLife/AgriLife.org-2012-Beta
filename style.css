@@ -1616,81 +1616,6 @@ a.rss:hover {
 		top: 100px;
 		position: absolute;
 	}
-	.slides {
-		position: relative;	
-		list-style: none;
-		width: 100%;
-		overflow: hidden;
-		padding: 0;
-		margin: 0;
-	}
-	.slides:after,
-	.featured-stories:after {
-		visibility: hidden;
-		display: block;
-		content: "";
-		clear: both;
-		height: 0;
-		margin-bottom: -4px;				
-	}		
-	.slides li {
-		position: absolute;
-		top: 0;
-		left: 0;		
-		-webkit-transition: .3s all linear;	
-		-moz-transition: .3s all linear;		
-	}
-	.slides li a h2 {
-		font-weight: 100;
-		color: #ddd;			
-	}	
-	.slides li a:hover {
-		text-decoration: none;	
-		color: #fff;	
-	}
-	.slides li a:hover h2 {
-		text-decoration: none;	
-		color: #fff;	
-	}	
-	.slides img {
-		width: 100%;
-		height: auto;
-		opacity: 0;
-		-webkit-transition: .3s all linear;	
-		-moz-transition: .3s all linear;
-		-ms-transition: .3s all linear;		
-							
-	}
-	.slides li.active {
-		z-index: 2;
-		position: relative;
-	}
-	.slides .slide-details {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		background: #010101;		
-		background: rgba(0,0,0,.6);
-		padding: 0 1em;
-		color: #fff;
-		opacity: 0;
-		/* width: 66%; */
-		text-align: right;
-		-webkit-transition: .7s all linear;	
-		-moz-transition: .7s all linear;	
-		-ms-transition: .7s all linear;	
-		overflow: hidden;		
-	}		
-	.slides .slide-details h2 {
-		font-size: 1em;
-		font-style: italic;
-		font-weight: 100;	
-	}	
-	.slides li.active img, 
-	.slides li.active .slide-details{
-		opacity: 1;
-		bottom: 0;		
-	}					
 	#content {
 		float: right;
 		padding-top: .6em;
@@ -1955,6 +1880,18 @@ a.rss:hover {
 @media all and (min-width: 900px) {
 	.cat-nm {font-size: 1.25em; /* 18px / 16px */}
 	.cat-post-title {font-size: 1em; /* 16px */}					
+}
+
+/* ========================
+ * Fun slideshow stuff!
+ * ======================= */
+.feature-container {
+  width: 630px;
+  margin-left: 330px;
+}
+
+.featured-stories-container {
+  margin-top: -500px;
 }
 
 
