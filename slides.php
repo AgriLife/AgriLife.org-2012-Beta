@@ -9,8 +9,23 @@ $numPosts = (isset($_GET['numPosts'])) ? $_GET['numPosts'] : 0;
 $page = (isset($_GET['pageNumber'])) ? $_GET['pageNumber'] : 0;
 $metaKey = (isset($_GET['metaKey'])) ? $_GET['metaKey'] : 0;
 $metaValue = (isset($_GET['metaValue'])) ? $_GET['metaValue'] : 0;
-$categoryId = (isset($_GET['categoryId'])) ? $_GET['categoryId'] : 0;
 
+$agencies = array(
+  'extension',
+  'research',
+  'college',
+  'tfs',
+  'tvmdl'
+);
+
+foreach( $agencies as $a ) {
+  $cats[] = get_category_by_slug( $a );
+}
+
+// Setup arguments for the posts query
+$cat_args = array(
+  ''
+);
 query_posts(array(
 	'posts_per_page' => $numPosts,
 	'paged'          => $page,
@@ -22,6 +37,7 @@ query_posts(array(
 	// our loop
 	if (have_posts()) {
 		$count = 1; ?>
+<?php print_r($cats); ?>
 		<ul class="slides">	
 		<?php while (have_posts()){ 
 			the_post();	?>	 
