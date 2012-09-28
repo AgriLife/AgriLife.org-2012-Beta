@@ -1292,7 +1292,7 @@ h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat 
 			font-size: 12px;
 			border-bottom: 1px solid #000;	
 			background: transparent;
-			padding: 1em 0;					
+			padding: 0;					
 		}	
 
 		#access .sf-menu a {
@@ -1313,7 +1313,7 @@ h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat 
 			border: none;	
 			overflow: hidden;
 			margin: 0 0 -1px 0;		
-			padding: 1px 15px;	
+			padding: 1em 15px;	
 				
 		}
 		
