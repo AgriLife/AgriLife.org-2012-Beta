@@ -129,7 +129,7 @@ function agrilifeorg_widgets_init() {
 		'name' => __( 'Main Sidebar', 'agrilifeorg' ),
 		'id' => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s interior-sidebar">',
-		'after_widget' => "</div></aside>",
+		'after_widget' => "</div><!-- .widget-wrap --></aside>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3><div class="widget-wrap"><!-- fnord-->'
 	) );
@@ -139,7 +139,7 @@ function agrilifeorg_widgets_init() {
 		'id' => 'home-widget-sidebar',
 		'description' => __( 'The sidebar for the home page', 'agrilifeorg' ),
 		'before_widget' => '<aside id="%1$s" class="widget home-sidebar %2$s">',
-		'after_widget' => "</div></aside>",
+		'after_widget' => "</div><!-- .widget-wrap --></aside>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3><div class="widget-wrap">'
 	) );
@@ -149,7 +149,7 @@ function agrilifeorg_widgets_init() {
 		'id' => 'home-widget-area',
 		'description' => __( 'Main three-column widget area on home page.', 'agrilifeorg' ),
 		'before_widget' => '<aside id="%1$s" class="%2$s widget home-widget-container one-of-3">',
-		'after_widget' => "</div></aside>",
+		'after_widget' => "</div><!-- .widget-wrap --></aside>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3><div class="widget-wrap">'
 	) );
@@ -160,7 +160,7 @@ function agrilifeorg_widgets_init() {
 		'id' => 'extension-widget-area',
 		'description' => __( 'Main Widget Area on Extension Page', 'agrilifeorg' ),
 		'before_widget' => '<aside id="%1$s" class="%2$s widget one-of-2">',
-		'after_widget' => "</div></aside>",
+		'after_widget' => "</div><!-- .widget-wrap --></aside>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3><div class="widget-wrap">'
 	) );
@@ -170,7 +170,7 @@ function agrilifeorg_widgets_init() {
 	      'name' => 'Sidebar - Extension',
 	      'description' => __( 'Sidebar Widget Area on Extension Pages', 'agrilifeorg' ),
 		  'before_widget' => '<aside id="%1$s" class="%2$s widget interior-sidebar">',
-		  'after_widget' => "</div></aside>",
+		  'after_widget' => "</div><!-- .widget-wrap --></aside>",
 		  'before_title' => '<h3 class="widget-title">',
 		  'after_title' => '</h3><div class="widget-wrap">'
 	    )
@@ -182,7 +182,7 @@ function agrilifeorg_widgets_init() {
 		'id' => 'research-widget-area',
 		'description' => __( 'Main Widget Area on Research Page', 'agrilifeorg' ),
 		'before_widget' => '<aside id="%1$s" class="%2$s widget one-of-2">',
-		'after_widget' => "</div></aside>",
+		'after_widget' => "</div><!-- .widget-wrap --></aside>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3><div class="widget-wrap">'
 	) );
@@ -192,7 +192,7 @@ function agrilifeorg_widgets_init() {
 	      'name' => 'Sidebar - Research',
 	      'description' => __('Sidebar Widget Area on Research pages'),
 	      'before_widget' => '<aside id="%1$s" class="%2$s widget interior-sidebar">',
-		  'after_widget' => "</div></aside>",
+		  'after_widget' => "</div><!-- .widget-wrap --></aside>",
 		  'before_title' => '<h3 class="widget-title">',
 		  'after_title' => '</h3><div class="widget-wrap">'
 	    )
@@ -204,7 +204,7 @@ function agrilifeorg_widgets_init() {
 		'id' => 'college-widget-area',
 		'description' => __( 'Main Widget Area on College Page', 'agrilifeorg' ),
 		'before_widget' => '<aside id="%1$s" class="%2$s widget one-of-2">',
-		'after_widget' => "</div></aside>",
+		'after_widget' => "</div><!-- .widget-wrap --></aside>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3><div class="widget-wrap">'
 	) );
@@ -214,7 +214,7 @@ function agrilifeorg_widgets_init() {
 	    'name' => 'Sidebar - College',
 	    'description' => __('Sidebar Widget Area on College pages'),
 	    'before_widget' => '<aside id="%1$s" class="%2$s widget interior-sidebar">',
-	 'after_widget' => "</div></aside>",
+	 'after_widget' => "</div><!-- .widget-wrap --></aside>",
 	 'before_title' => '<h3 class="widget-title">',
 	 'after_title' => '</h3><div class="widget-wrap">'
 	  )
@@ -226,7 +226,7 @@ function agrilifeorg_widgets_init() {
 		'id' => 'tfs-widget-area',
 		'description' => __( 'Main Widget Area on Forest Page', 'agrilifeorg' ),
 		'before_widget' => '<aside id="%1$s" class="%2$s widget one-of-2">',
-		'after_widget' => "</div></aside>",
+		'after_widget' => "</div><!-- .widget-wrap --></aside>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3><div class="widget-wrap">'
 	) );
@@ -236,7 +236,7 @@ function agrilifeorg_widgets_init() {
 	      'name' => 'Sidebar - Forestry',
 	      'description' => __('Sidebar Widget Area on Forestry pages'),
 	      'before_widget' => '<aside id="%1$s" class="%2$s widget interior-sidebar">',
-		  'after_widget' => "</div></aside>",
+		  'after_widget' => "</div><!-- .widget-wrap --></aside>",
 		  'before_title' => '<h3 class="widget-title">',
 		  'after_title' => '</h3><div class="widget-wrap">'
 	    )
@@ -248,7 +248,7 @@ function agrilifeorg_widgets_init() {
 		'id' => 'tvmdl-widget-area',
 		'description' => __( 'Main Widget Area on TVMDL Page', 'agrilifeorg' ),
 		'before_widget' => '<aside id="%1$s" class="%2$s widget one-of-2">',
-		'after_widget' => "</div></aside>",
+		'after_widget' => "</div><!-- .widget-wrap --></aside>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3><div class="widget-wrap">'
 	) );
@@ -258,7 +258,7 @@ function agrilifeorg_widgets_init() {
 	      'name' => 'Sidebar - TVMDL',
 	      'description' => __('Sidebar Widget Area on TVMDL pages'),
 	      'before_widget' => '<aside id="%1$s" class="%2$s widget interior-sidebar">',
-		  'after_widget' => "</div></aside>",
+		  'after_widget' => "</div><!-- .widget-wrap --></aside>",
 		  'before_title' => '<h3 class="widget-title">',
 		  'after_title' => '</h3><div class="widget-wrap">'
 	    )

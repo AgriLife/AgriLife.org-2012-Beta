@@ -260,17 +260,27 @@ $('.no-touch .menu-header .sf-menu li').hover(function() {
  * Begin about menu behavior
  */
 $(document).ready( function() {
-  $('#menu-about .sub-menu').hide();
-
-  $('#menu-about .menu-item').hover(
-    function() {
-        $(this).has('ul').addClass('down');
-        $(this).children('ul').delay(200).slideDown('medium', function() {});
-    },
-    function() {
-        $(this).has('ul').removeClass('down');
-        $(this).children('ul').delay(400).slideUp('medium', function() {});
-    }
+	var timer = null;
+	
+  	$('.widget_nav_menu.interior-sidebar .sub-menu').hide();
+  	
+	$('.widget_nav_menu.interior-sidebar .menu-item').hover(
+		function() {
+		//	timer = setTimeout(function() {
+		//		timer = null;
+	            $(this).has('ul').addClass('down');
+	        	$(this).children('ul').delay(50).slideDown('medium', function() {});
+	    //    }, 500)
+        
+	    },
+	    function() {
+			if (timer) {
+			      clearTimeout(timer);
+	              timer = null;
+	        }
+	        $(this).has('ul').removeClass('down');
+	        $(this).children('ul').delay(50).slideUp('medium', function() {});
+	    }
     );
 });
 // End Custom scripts
