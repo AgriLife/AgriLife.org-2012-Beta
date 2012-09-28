@@ -374,28 +374,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 	z-index: 99;
 }
 .container {margin: 10px auto;max-width: 1024px;}
-.featured-content {		
-	margin-bottom: 1em;
-}
-#feature-container {
-	display: none;	
-}
-.feartured-content { box-shadow: 0 1px 3px rgba(0,0,0,.2);}
-.featured-stories-container {
-	position: relative;
-	/* background-color: #5F574F;
-	*/
-	border-radius: 3px;
-	margin-bottom: 2.3333333%;
-}
-.featured-stories ol {
-	padding: 0;
-}
-.featured-stories a {
-	color: #333;
-	color: rgba(0,0,0,.65);
-	text-shadow: 0 1px 0 rgba(255,255,255,.5);	
-}
+
 #content {
 	overflow: hidden;
 	clear: both;
@@ -1195,6 +1174,164 @@ h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat 
 .widget_nav_menu.interior-sidebar li.down li.down { background: url(images/arrow-down-2.png) no-repeat 16px 1.1em; }
 .widget_nav_menu.interior-sidebar li.down li.down li.down { background: url(images/arrow-down-2.png) no-repeat 26px 1.1em; }
 
+/* ========================
+ * Fun slideshow stuff!
+ * ======================= */
+#feature-container {
+	display: none;	
+}
+.featured-content {
+	background: transparent;
+	position: relative;	
+	margin-bottom: 1em;
+}
+.featured-stories-container {
+	border-radius: 3px;
+	margin-bottom: 2.3333333%;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.featured-stories ol {
+	padding: 0;
+}
+.featured-stories a {
+	color: #333;
+	color: rgba(0,0,0,.65);
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);	
+}
+.featured-stories li {
+	float: left;
+}
+
+.feature-container {
+  	width: 100%;
+	top: 200px;
+}
+
+.featured-stories .mb-inner {
+	margin: 5px 77px;
+}
+.agency-research .mb-inner a h2 {
+	background-color: #5C8C39;
+}
+.agency-college .mb-inner a h2 {
+	background-color: #500000;
+}	
+.agency-extension .mb-inner a h2 {
+	background-color: #1B607B;
+}		
+.agency-tfs .mb-inner a h2 {
+	background-color: #4F552A;
+}
+.agency-tvmdl .mb-inner a h2 {
+	background-color: #8c5933;
+}
+
+h2.mb-post-title {
+	margin: 0 0 3px 0;
+	width: 165px;
+	height: 70px;
+	display: block;
+	text-indent: -9999px;
+}
+.agency-college h2.mb-post-title{
+	background: url('images/logo-col.png') 10px 19px no-repeat;
+}
+.agency-extension h2.mb-post-title{
+	background: url('images/logo-ext.png') 15px 10px no-repeat;
+}
+.agency-research h2.mb-post-title{
+	background: url('images/logo-res.png') 15px 10px no-repeat;
+}
+.agency-tvmdl h2.mb-post-title{
+	background: url('images/logo-tvmdl.png') 20px 5px no-repeat;
+}
+.agency-tfs h2.mb-post-title {
+	background: url('images/logo-tfs.png') 14px 17px no-repeat;
+}
+/*
+ * jQuery FlexSlider v2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+.flexslider {margin: 0; padding: 0;}
+.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider {margin: 0 0 60px; background: #fff; border: 4px solid #fff; position: relative; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; box-shadow: 0 1px 4px rgba(0,0,0,.2); -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2); -moz-box-shadow: 0 1px 4px rgba(0,0,0,.2); -o-box-shadow: 0 1px 4px rgba(0,0,0,.2); zoom: 1;}
+.flex-viewport {
+	max-height: 2000px; 
+	-webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;
+	margin-top: 25px;
+	}
+.loading .flex-viewport {max-height: 300px;}
+.flexslider .slides {zoom: 1;}
+
+.carousel li {margin-right: 5px}
+
+
+/* Direction Nav */
+.flex-direction-nav {*height: 0; display: none;}
+.flex-direction-nav a {width: 30px; height: 30px; margin: -20px 0 0; display: block; background: url(../images/bg_direction_nav.png) no-repeat 0 0; position: absolute; top: 50%; cursor: pointer; text-indent: -9999px; opacity: 0; -webkit-transition: all .3s ease;}
+.flex-direction-nav .flex-next {background-position: 100% 0; right: -36px; }
+.flex-direction-nav .flex-prev {left: -36px;}
+.flexslider:hover .flex-next {opacity: 0.8; right: 5px;}
+.flexslider:hover .flex-prev {opacity: 0.8; left: 5px;}
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {opacity: 1;}
+.flex-direction-nav .flex-disabled {opacity: .3!important; filter:alpha(opacity=30); cursor: default;}
+
+/* Control Nav */
+.flex-control-nav {width: 100%; position: relative; bottom: 0px; text-align: center;}
+.flex-control-nav li {margin: 0 6px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-paging li a {width: 11px; height: 11px; display: block; background: #666; background: rgba(0,0,0,0.5); cursor: pointer; text-indent: -9999px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; box-shadow: inset 0 0 3px rgba(0,0,0,0.3);}
+.flex-control-paging li a:hover { background: #333; background: rgba(0,0,0,0.7); }
+.flex-control-paging li a.flex-active { background: #000; background: rgba(0,0,0,0.9); cursor: default; }
+
+.flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
+.flex-control-thumbs li {width: 25%; float: left; margin: 0;}
+.flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
+.flex-control-thumbs img:hover {opacity: 1;}
+.flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
+
+@media screen and (max-width: 860px) {
+  .flex-direction-nav .flex-prev {opacity: 1; left: 0;}
+  .flex-direction-nav .flex-next {opacity: 1; right: 0;}
+}
+/* END FlexSlider Default Theme
+*********************************/
 
 /* =============================================================================
    Enhance For Desktop
@@ -1574,6 +1711,24 @@ h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat 
 	.home .home-widgets-lower .widget-3-col-end {
 		margin: 0;
 	}
+	
+	/* Flexslider Slideshow for deasktop */
+	.featured-content {
+		background: url('images/featured-content-bg.png') #fff repeat-y;
+		margin-top: -20px;
+		position: relative;	
+		margin-bottom: 0;
+		min-height: 453px;
+	}
+	.feature-container {
+		position: relative;
+		width: 660px;
+		left: 34%;
+		top: 0;
+	}
+	.flex-caption {
+		position: absolute;
+	}
 
 	.content-wrap:after {		
 		content: " ";
@@ -1643,34 +1798,11 @@ h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat 
 		content: '';
 	}
 	
-	.featured-content {
-		background: url('images/featured-content-bg.png') #fff repeat-y;
-		margin-top: -20px;
-		position: relative;	
-		margin-bottom: 0;
-		min-height: 453px;
-	}
-	.featured-stories .mb-inner {
-		margin: 5px 77px;
-	}
-	.agency-research .mb-inner a h2 {
-		background-color: #5C8C39;
-	}
-	.agency-college .mb-inner a h2 {
-		background-color: #500000;
-	}	
-	.agency-extension .mb-inner a h2 {
-		background-color: #1B607B;
-	}		
-	.agency-tfs .mb-inner a h2 {
-		background-color: #4F552A;
-	}
-	.agency-tvmdl .mb-inner a h2 {
-		background-color: #8c5933;
-	}
+	
 	
 	.featured-stories-container {
 		margin-bottom: 0;
+		position: absolute;
 	}		
 	ol.featured-stories  {
 		position: relative;
@@ -1824,32 +1956,6 @@ h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat 
 		border-bottom: none;
 	}
 
-	.cat-all-button {
-		font-size: 0.75em; /* 12px / 16px */
-		margin-top: -2px;
-	}
-	h2.mb-post-title {
-		margin: 0 0 3px 0;
-		width: 165px;
-		height: 70px;
-		display: block;
-		text-indent: -9999px;
-	}
-	.agency-college h2.mb-post-title{
-		background: url('images/logo-col.png') 10px 19px no-repeat;
-	}
-	.agency-extension h2.mb-post-title{
-		background: url('images/logo-ext.png') 15px 10px no-repeat;
-	}
-	.agency-research h2.mb-post-title{
-		background: url('images/logo-res.png') 15px 10px no-repeat;
-	}
-	.agency-tvmdl h2.mb-post-title{
-		background: url('images/logo-tvmdl.png') 20px 5px no-repeat;
-	}
-	.agency-tfs h2.mb-post-title {
-		background: url('images/logo-tfs.png') 14px 17px no-repeat;
-	}
 	
 	/* =============================================================================
 	   Agency Landing Page Styles
@@ -1973,19 +2079,6 @@ h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat 
 	.cat-nm {font-size: 1.25em; /* 18px / 16px */}
 	.cat-post-title {font-size: 1em; /* 16px */}					
 }
-
-/* ========================
- * Fun slideshow stuff!
- * ======================= */
-.feature-container {
-  width: 630px;
-  margin-left: 330px;
-}
-
-.featured-stories-container {
-  margin-top: -500px;
-}
-
 
 
 /* ==|== non-semantic helper classes ========================================

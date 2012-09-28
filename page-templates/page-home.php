@@ -9,45 +9,44 @@ $slider = new AgriLife_FlexSlider;
 echo $slider->make_slider();
 ?>
 			<div class="one-of-3 clearfix featured-stories-container"> 
-			<ol class="featured-stories"> 
-			<?php 
-			global $post, $do_not_duplicate;
-			$do_not_duplicate = array(); // set befor loop variable as array
-			//$my_query = new WP_Query('meta_key=feature-homepage&meta_value=1&posts_per_page=3');
-			$my_query = new WP_Query('posts_per_page=5');
-			$count = 0;
-			while ($my_query->have_posts()) : $my_query->the_post();
-  			$do_not_duplicate[] = $post->ID; // remember ID's in loop
-  			$category = get_the_category();
-	  		$count++;
-	  		?>
-			<li class="media-box slideshow-thumb-item item-<?php echo $count;?> agency-<?php echo $category[0]->slug; ?>">
+			<ol class="featured-stories">
+				<li class=" agency-extension">
+					<div class="mb-inner">
+						<a href="<?php echo site_url('/agrilife-agencies/extension/') ?>" class="mb-link">
+							<h2 class="mb-post-title cat-post-title">Texas A&amp;M AgriLife Extension Service</h2>
+						</a>
+					</div>				
+				</li>				
+				<li class="agency-research">
 				<div class="mb-inner">
-				
-					
-					<a href="<?php the_permalink();?>" id="l<?php echo $count;?>" class="mb-link">
-						<?php
-						/* <pre><?php print_r($category);?></pre>
-						if ( has_post_thumbnail() ) {
-			  				the_post_thumbnail('feature-thumb'); 
-						} else  { 
-							echo '<img src="'.get_bloginfo("template_url").'/images/AgriLife-default-post-image.png" alt="AgriLife Logo" title="AgriLife" class="attachment-feature-thumb wp-post-image" />'; 
-				}	*/
-					
-					
-					//echo $category[0]->slug;
-					
-					//echo '<img src="'.get_bloginfo("template_url").'/images/logo-'.$category[0]->slug.'.png" alt="'.$category[0]->cat_name.' Logo" title="'.$category[0]->cat_name.' Logo" class="home-slideshow-logo" />';
-				
-					?>	
-						<h2 class="mb-post-title cat-post-title"><?php the_title(); ?></h2>
+					<a href="<?php echo site_url('/agrilife-agencies/research/') ?>" id="l2" class="mb-link">
+						<h2 class="mb-post-title cat-post-title">Texas A&amp;M AgriLife Research</h2>
 					</a>
 				</div>				
 			</li>				
-																			
-			<?php endwhile;  wp_reset_query(); ?>					
-		</ol>
-	</div>
+			<li class="agency-college">
+				<div class="mb-inner">
+					<a href="<?php echo site_url('/agrilife-agencies/college/') ?>" class="mb-link">
+						<h2 class="mb-post-title cat-post-title">Texas A&amp;M College of Agriculture and Life Sciences</h2>
+					</a>
+				</div>				
+			</li>				
+			<li class="agency-tfs">
+				<div class="mb-inner">
+					<a href="<?php echo site_url('/agrilife-agencies/tfs/') ?>" id="l4" class="mb-link">
+						<h2 class="mb-post-title cat-post-title">Texas A&amp;M Forest Service</h2>
+					</a>
+				</div>				
+			</li>				
+			<li class="agency-tvmdl">
+				<div class="mb-inner">
+					<a href="<?php echo site_url('/agrilife-agencies/tvmdl/') ?>" id="l5" class="mb-link">
+						<h2 class="mb-post-title cat-post-title">Texas A&amp;M Veterinary Medical Diagnostic Clinic</h2>
+					</a>
+				</div>				
+			</li>		
+			</ol>
+		</div>
 		</section> 
 		
 		<div class="content-wrap">

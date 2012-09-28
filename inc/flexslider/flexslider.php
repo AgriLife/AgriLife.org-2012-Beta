@@ -14,7 +14,7 @@ class AgriLife_FlexSlider {
     // Queue up the Flexslider JS & CSS
     wp_enqueue_script( 'flexslider', $path . '/js/jquery.flexslider-min.js' );
     wp_enqueue_script( 'flex_init', $path . '/js/flex-init.js' );
-    wp_enqueue_style( 'flexslider_css', $path . '/css/flexslider.css' );
+    //wp_enqueue_style( 'flexslider_css', $path . '/css/flexslider.css' );
 
     
   }
@@ -109,7 +109,7 @@ class AgriLife_FlexSlider {
 
   private function get_thumb( $id ) {
   
-    $img = get_the_post_thumbnail( $id, 'large');
+    $img = get_the_post_thumbnail( $id, 'feature-large');
 
     return $img;
   
