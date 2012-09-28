@@ -1106,6 +1106,96 @@ h1.landing-college { background: url('images/logo-col.png') 15px 25px no-repeat 
 h1.landing-tfs { background: url('images/logo-tfs.png') 15px 20px no-repeat #4F552A;}
 h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat #8C5933;}
 
+.phone { color: #4B4B49;}
+
+/* ==|== AgriLife Today RSS widget styles ===================================
+   Most of these are copied over from the current AgriFlex theme
+   ========================================================================== */
+/* agrilife today widget */
+.agrilifetoday.widget li {
+	margin: 6px 0;
+	padding-bottom: 6px;
+	border-bottom: 1px dashed #999;
+	position: relative;
+}
+
+.widget.agrilifetoday ul {
+  padding: 0;
+}
+
+.agrilifetoday .rss-img-link {
+  position: absolute;
+  left: -4px;
+  top: 6px;
+}
+.agrilifetoday .rss-content {
+	position: static;
+	margin-left: 30px;
+}
+
+.agrilifetoday .rss-img-link img {
+  width: 30px;
+}
+
+.agrilifetoday .rss-title {
+  display: block;
+  margin-left: 30px;
+}
+
+.agrilifetoday .rss-title a {
+  color: #555;
+  font-weight: 100;
+}
+
+.agrilifetoday .rss-date {
+  color: #500000;
+  font-weight: 300;
+}
+
+.agrilifetoday .rss-content p {
+  font-size: .9em;
+  margin-bottom: 5px;
+  font-weight: 100;
+}
+.widget_nav_menu.interior-sidebar .widget-wrap {
+	padding: 0;
+	background: transparent;
+}
+.widget_nav_menu.interior-sidebar ul {
+	padding: 0;
+	margin: 0;
+}
+.widget_nav_menu.interior-sidebar ul ul {
+	
+}
+.widget_nav_menu.interior-sidebar li {
+	background: url(images/arrow-right-2.png) no-repeat 6px 1.1em;
+	border-bottom: 1px dashed #DAD6C7;
+	text-indent: 25px;
+	-webkit-transition: .3s background ease;
+	-moz-transition: .3s background ease;		
+	transition: .3s background ease;
+	margin: 0;
+}
+.widget_nav_menu.interior-sidebar li a {
+	display: block;
+	padding: 1em 0;
+	font-style: italic;
+}
+.widget_nav_menu.interior-sidebar li li {
+	border: none;
+	background: url(images/arrow-right-2.png) no-repeat 16px 1.1em;
+	text-indent: 35px;
+}
+.widget_nav_menu.interior-sidebar li li li {
+	background: url(images/arrow-right-2.png) no-repeat 26px 1.1em;
+	text-indent: 45px;
+}
+.widget_nav_menu.interior-sidebar li.down {	background: url(images/arrow-down-2.png) no-repeat 6px 1.1em; }
+.widget_nav_menu.interior-sidebar li.down li.down { background: url(images/arrow-down-2.png) no-repeat 16px 1.1em; }
+.widget_nav_menu.interior-sidebar li.down li.down li.down { background: url(images/arrow-down-2.png) no-repeat 26px 1.1em; }
+
+
 /* =============================================================================
    Enhance For Desktop
    ========================================================================== */
@@ -1897,92 +1987,6 @@ h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat 
 }
 
 
-/* ==|== AgriLife Today RSS widget styles ===================================
-   Most of these are copied over from the current AgriFlex theme
-   ========================================================================== */
-/* agrilife today widget */
-.agrilifetoday.widget li {
-	margin: 6px 0;
-	padding-bottom: 6px;
-	border-bottom: 1px dashed #999;
-	position: relative;
-}
-
-.widget.agrilifetoday ul {
-  padding: 0;
-}
-
-.agrilifetoday .rss-img-link {
-  position: absolute;
-  left: -4px;
-  top: 6px;
-}
-.agrilifetoday .rss-content {
-	position: static;
-	margin-left: 30px;
-}
-
-.agrilifetoday .rss-img-link img {
-  width: 30px;
-}
-
-.agrilifetoday .rss-title {
-  display: block;
-  margin-left: 30px;
-}
-
-.agrilifetoday .rss-title a {
-  color: #555;
-  font-weight: 100;
-}
-
-.agrilifetoday .rss-date {
-  color: #500000;
-  font-weight: 300;
-}
-
-.agrilifetoday .rss-content p {
-  font-size: .9em;
-  margin-bottom: 5px;
-  font-weight: 100;
-}
-.widget_nav_menu.interior-sidebar .widget-wrap {
-	padding: 0;
-	background: transparent;
-}
-.widget_nav_menu.interior-sidebar ul {
-	padding: 0;
-	margin: 0;
-}
-.widget_nav_menu.interior-sidebar ul ul {
-	
-}
-.widget_nav_menu.interior-sidebar li {
-	background: url(images/arrow-right-2.png) no-repeat 6px 1.1em;
-	border-bottom: 1px dashed #DAD6C7;
-	text-indent: 25px;
-	-webkit-transition: .3s background ease;
-	-moz-transition: .3s background ease;		
-	transition: .3s background ease;
-	margin: 0;
-}
-.widget_nav_menu.interior-sidebar li a {
-	display: block;
-	padding: 1em 0;
-	font-style: italic;
-}
-.widget_nav_menu.interior-sidebar li li {
-	border: none;
-	background: url(images/arrow-right-2.png) no-repeat 16px 1.1em;
-	text-indent: 35px;
-}
-.widget_nav_menu.interior-sidebar li li li {
-	background: url(images/arrow-right-2.png) no-repeat 26px 1.1em;
-	text-indent: 45px;
-}
-.widget_nav_menu.interior-sidebar li.down {	background: url(images/arrow-down-2.png) no-repeat 6px 1.1em; }
-.widget_nav_menu.interior-sidebar li.down li.down { background: url(images/arrow-down-2.png) no-repeat 16px 1.1em; }
-.widget_nav_menu.interior-sidebar li.down li.down li.down { background: url(images/arrow-down-2.png) no-repeat 26px 1.1em; }
 
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.

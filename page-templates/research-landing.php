@@ -30,6 +30,8 @@ get_header(); ?>
 				<p>Agriculture and Life Sciences Building <br />
 				600 John Kimbrough Boulevard, Suite 512 <br />
 				College Station, Texas 77843</p>
+				<h4 class="landing-contact">Phone</h4>
+				<a class="phone" href="tel://979.845.8486">979.845.8486</a>
 				
 				<a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/landing/btn-maroon-steele.png" alt="Dr. Nessler Bio" class="director-bio-btn" title="Dr. Nessler" /></a>
 				

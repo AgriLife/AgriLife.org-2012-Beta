@@ -27,7 +27,12 @@ get_header(); ?>
 				<img src="<?php bloginfo('template_directory'); ?>/images/landing/steele.jpg" alt="Dr. Dugas" class="director-mug" title="Dr. Dugas" />
 				<h2>William A. &quot;Bill&quot; Dugas, Ph.D</h2>
 				<h4 class="landing-contact">Contact</h4>
-				<p></p>
+				<p>Agriculture and Life Sciences Building<br />
+				600 John Kimbrough Blvd., Suite 515<br />
+				2402 TAMU<br />
+				College Station, TX 77843-2402</p>
+				<h4 class="landing-contact">Phone</h4>
+				<a class="phone" href="tel://979.845.3712">979.845.3712</a>
 				
 				<a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/landing/btn-maroon-steele.png" alt="Dr. Dugas Bio" class="director-bio-btn" title="Dr. Dugas" /></a>
 				

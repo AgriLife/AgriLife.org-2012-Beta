@@ -29,6 +29,8 @@ get_header(); ?>
 				<h4 class="landing-contact">Contact</h4>
 				<p>1 Sippel Rd.<br />
 				College Station, TX 77843</p>
+				<h4 class="landing-contact">Phone</h4>
+				<a class="phone" href="tel://979.845.3414">979.845.3414</a>
 				
 				<a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/landing/btn-maroon-steele.png" alt="Dr. Tammy Beckham Bio" class="director-bio-btn" title="Dr. Tammy Beckham" /></a>
 				

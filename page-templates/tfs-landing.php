@@ -31,6 +31,8 @@ get_header(); ?>
 				301 Tarrow Street, Suite 364<br />
 				2136 TAMU<br />
 				College Station, Texas 77840-7896</p>
+				<h4 class="landing-contact">Phone</h4>
+				<a class="phone" href="tel://979.458.6600">979.458.6600</a>
 				
 				<a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/landing/btn-maroon-steele.png" alt="Tom G. Boggus Bio" class="director-bio-btn" title="Tom G. Boggus" /></a>
 				
