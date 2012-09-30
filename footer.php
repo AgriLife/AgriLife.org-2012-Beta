@@ -9,7 +9,7 @@
  */
 ?>
 	<?php get_sidebar('agencies'); ?>
-	<footer class="site-footer" id="footer" data-url="<?php bloginfo('wpurl'); ?>/" data-theme="<?php bloginfo('template_directory'); ?>/" data-page="<?php echo $catId ?>" role="contentinfo">
+	<footer class="site-footer clearfix" id="footer" data-url="<?php bloginfo('wpurl'); ?>/" data-theme="<?php bloginfo('template_directory'); ?>/" data-page="<?php echo $catId ?>" role="contentinfo">
 		<img src="<?php bloginfo('stylesheet_directory'); ?>/images/footer-tamus.png" id="footer-tamus" alt="Texas A&amp;M University System Member" title="Texas A&amp;M University System Member" width="104" height="78" />
 		<ul class="req-links">
 			<li><a href="#">Compact with Texans</a></li>

@@ -47,7 +47,7 @@
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>?4" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>?5" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 
@@ -123,7 +123,10 @@
 	<header>
 		<h1 class="site-title one-of-3 ir"><span>AgriLife.org</span></h1>
 	</header>
-	
+	<?php if ( !is_front_page() ) : ?>
+		<div class="agency-button"><a href="#agency-nav">Our Entities</a></div>
+	<?php endif; ?>
+	<div class="menu-button"><a href="#">Menu</a></div>
 	<nav id="access" role="navigation">		
 	  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
 		<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'agriflex' ); ?>"><?php _e( 'Skip to content', 'agriflex' ); ?></a></div>

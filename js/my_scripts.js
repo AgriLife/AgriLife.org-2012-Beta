@@ -282,5 +282,54 @@ $(document).ready( function() {
 	        $(this).children('ul').delay(50).slideUp('medium', function() {});
 	    }
     );
+
+
+
+	// Toggle for nav menu	
+	$('.menu-button').click(function() {
+		$('#access, .searchform').slideToggle('medium');			
+	});
+
+	// Toggle click for sub-menus on touch screens
+	$('.touch .sf-with-ul').click(function() {
+		$(this).find('.sub-menu').hide.slideToggle('medium');
+	});
+	
+	/*
+     * Set up the superfish arguments for non-touch screens
+     */
+    $( '.no-touch .menu-header .sf-menu' ).superfish( {
+        delay: 200,   // 0.05 second delay on mouseout
+        animation:   { opacity: 'show', height: 'show' },   // fade-in and slide-down animation
+        speed: 250 // Dropdown our menu fast
+    } );
+
+	//background menu animation for non-touch screens
+	$('.no-touch .menu-header .sf-menu li').hover(function() {
+		$(this).find('ul.sub-menu .menu-item a').stop(true, true)
+		.css({
+			right: "-15px",
+			opacity: "0"
+			})
+		.animate({
+			right: "0",
+			opacity: "1",
+			easing:"easeInExpo"
+		},400);
+	}, function() {
+		$(this).find('ul.sub-menu .menu-item a').stop(true, true)
+		.css({
+			right: "0",
+			opacity: "1"
+			})
+		.animate({
+			right: "-15px",
+			opacity: "0",
+			easing:"easeInExpo"
+		},300);		
+	});
+
+
+
 });
 // End Custom scripts

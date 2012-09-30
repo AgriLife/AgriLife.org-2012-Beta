@@ -236,7 +236,7 @@ td { vertical-align: top; }
 /* =============================================================================
    Global Styles
    ========================================================================== */
-body {font-size: 100%; background: #fff; color: #4b4b49;}
+body {font-size: 100%; background: #fff; color: #222;}
 p {font-size: 1em; /* 16px */ margin-bottom: 5px; font-weight: 300; line-height: 1.4em;}
 a {color: #66a3bf; text-decoration: none;}
 a:hover {color: #4c7a8f; text-decoration: underline;}
@@ -439,18 +439,32 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 /* =============================================================================
    Menu
    ========================================================================== */
-.menu-button {
+.menu-button a,
+.agency-button a {
+	color: #fff;
+}
+.menu-button,
+.agency-button {
 	position: absolute;
 	z-index: 999;
-	top: -.75em;
-	right: 0;
-	padding: 1.5em 1.25em 1em;
+	top: 1em;
+	padding: 1em 2em 1em;
 	border-radius: .75em;
 	color: white;
 	background: #444;
 	background: rgba(1,1,1,.3);
-	margin-right: 5%;
+	background: #333;
+	background: rgba(1,1,1,.8);
+	/*background: #500000;
+	background: rgba(80,0,0,.8);*/
+	
 	cursor: pointer;
+}
+.menu-button {
+	right: -.5em;
+}
+.agency-button {
+	left: -.5em;
 }
 
 .clear {
@@ -568,7 +582,7 @@ div.menu li {
 	font-size: 1em; /* 16px */
 	margin-bottom: 1.125em; /* 18px / 16px */
 	line-height: 1.25em; /* 20px / 16px */
-	color: #4B4B49;
+	color: #222;
 }
 
 .entry-meta {
@@ -647,7 +661,7 @@ body.home .post {
 }
 .spotlight a p,
 .home .entry-content p {
-	color: #4b4b49;
+	color: #222;
 	font-size: .875em; /* 14px / 16px */
 }
 .spotlight a:hover {
@@ -845,7 +859,7 @@ img {
 #author-info {
 	padding: 1.25em;
 	overflow: hidden;
-	color: #666;
+	color: #222;
 	border-top: 1px dashed #ddd;
 	border-bottom: 1px dashed #ddd;	
 	margin-bottom: 1.25em;
@@ -906,10 +920,10 @@ h2.post-author-title {
 	background: #F2EDDD;
 }
 .widget ul {
-	color: #666; 
+	color: #222; 
 }
 .widget ul li a {
-	color: #666; 
+	color: #222; 
 	font-weight: 100;
 }
 .widget select {
@@ -1085,7 +1099,7 @@ h1.landing-college { background: url('images/logo-col.png') 15px 25px no-repeat 
 h1.landing-tfs { background: url('images/logo-tfs.png') 15px 20px no-repeat #4F552A;}
 h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat #8C5933;}
 
-.phone { color: #4B4B49;}
+.phone { color: #222;}
 
 /* ==|== AgriLife Today RSS widget styles ===================================
    Most of these are copied over from the current AgriFlex theme
@@ -1250,6 +1264,33 @@ h2.mb-post-title {
 .agency-tfs h2.mb-post-title {
 	background: url('images/logo-tfs.png') 14px 17px no-repeat;
 }
+
+
+/*
+ * Agency Nav for mobile
+ */
+#agency-nav {
+	float: left;
+}
+#agency-nav li {
+	float: left;
+}
+#agency-nav li a {
+	height: 70px;
+	width: 165px;
+	text-indent: -9999em;
+	display: block;
+	margin: 2em 1em;
+}
+#agency-nav  li.tfs-item 	a 		{ background: url('images/logo-tfs.png') 14px 17px no-repeat #4F552A; }
+#agency-nav  li.tvmdl-item 	a 		{ background: url('images/logo-tvmdl.png') 20px 5px no-repeat #8c5933;}
+#agency-nav  li.ext-item 	a 		{ background: url('images/logo-ext.png') 15px 10px no-repeat #1B607B; }
+#agency-nav  li.res-item 	a 		{ background: url('images/logo-res.png') 15px 10px no-repeat #5C8C39; }
+#agency-nav  li.col-item 	a 		{ background: url('images/logo-col.png') 10px 19px no-repeat #500000; }
+
+
+
+
 /*
  * jQuery FlexSlider v2.0
  * http://www.woothemes.com/flexslider/
@@ -1449,7 +1490,8 @@ html[xmlns] .slides {display: block;}
 			text-decoration: none;
 		}
 
-		.menu-button {
+		.menu-button,
+		.agency-button {
 			display: none;
 		}
 
@@ -1635,19 +1677,27 @@ html[xmlns] .slides {display: block;}
 		position: absolute;
 		top:0;
 		left: 31.914893617021%;
+		float: none;
 	}
 	#agency-nav ul {margin:0; padding:0;}
 	#agency-nav li {
 		display: block;
 		list-style: none;
 		position: absolute;
+		float: none;
 	}
 	#agency-nav li a {
 		height: 42px;
 		width: 100px;
+		margin: 0;
 		background: url('images/rodeo.png') no-repeat;
 		text-indent: -9999em;
 	}
+	#agency-nav  li.tfs-item 	a,
+	#agency-nav  li.tvmdl-item 	a,
+	#agency-nav  li.ext-item 	a,
+	#agency-nav  li.res-item 	a,
+	#agency-nav  li.col-item 	a { background: url('images/rodeo.png') }
 	#agency-nav  li.tfs-item 			{ z-index:5; }
 	#agency-nav  li.tfs-item 	a 		{ width: 146px;}
 	#agency-nav  li.tfs-item 	a:hover { background-position: 0 -84px; }
@@ -1965,7 +2015,7 @@ html[xmlns] .slides {display: block;}
 	}
 	#director_bio h2{ line-height: 1em;}
 	.landing-contact { 
-		color: #4B4B49;
+		color: #222;
 		text-transform: uppercase;
 		font-weight: 900;
 		font-family: "camingodos-web",sans-serif;
