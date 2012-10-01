@@ -1592,6 +1592,7 @@ html[xmlns] .slides {display: block;}
 		#access .sf-menu li.sfHover ul {
 			left: 0;
 			margin-left: 1px;
+			margin-top: -1px;
 			top: 3.3em; /* match top ul list item height */
 			z-index: 6;
 			position: absolute;	
