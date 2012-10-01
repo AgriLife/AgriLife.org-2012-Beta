@@ -30,7 +30,7 @@
 		<div class="entry-summary">
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
-
+<!-- 
 		<footer class="entry-meta">
 		<?php
 			/* translators: used between list items, there is a space after the comma */
@@ -52,5 +52,5 @@
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )
 			);
 		?>
-		</footer><!-- #entry-meta -->
+		</footer>--><!-- #entry-meta -->
 	</article><!-- #post-<?php the_ID(); ?> -->

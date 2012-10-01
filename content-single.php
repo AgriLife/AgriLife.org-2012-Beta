@@ -32,7 +32,7 @@
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'agrilifeorg' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
-
+<!--
 	<footer class="entry-meta">
 		
 		<?php
@@ -57,5 +57,7 @@
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) )
 			);
 		?>
-	</footer><!-- .entry-meta -->
+	</footer>
+	-->
+	<!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->

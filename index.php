@@ -15,6 +15,8 @@
 get_header(); ?>
 <div class="content-wrap">
 	<section id="content" role="main" class="two-of-3 column">
+		
+		<h1 class="section-title">News and Updates</h1>
 
 			<?php if ( have_posts() ) : ?>
 
