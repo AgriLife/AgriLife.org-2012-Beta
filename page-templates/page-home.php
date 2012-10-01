@@ -12,35 +12,35 @@ echo $slider->make_slider();
 			<ol class="featured-stories">
 				<li class=" agency-extension">
 					<div class="mb-inner">
-						<a href="<?php echo site_url('/agrilife-agencies/extension/') ?>" class="mb-link">
+						<a href="<?php echo site_url('/agrilife-agencies/extension-home/') ?>" class="mb-link">
 							<h2 class="mb-post-title cat-post-title">Texas A&amp;M AgriLife Extension Service</h2>
 						</a>
 					</div>				
 				</li>				
 				<li class="agency-research">
 				<div class="mb-inner">
-					<a href="<?php echo site_url('/agrilife-agencies/research/') ?>" id="l2" class="mb-link">
+					<a href="<?php echo site_url('/agrilife-agencies/research-home/') ?>" id="l2" class="mb-link">
 						<h2 class="mb-post-title cat-post-title">Texas A&amp;M AgriLife Research</h2>
 					</a>
 				</div>				
 			</li>				
 			<li class="agency-college">
 				<div class="mb-inner">
-					<a href="<?php echo site_url('/agrilife-agencies/college/') ?>" class="mb-link">
+					<a href="<?php echo site_url('/agrilife-agencies/college-home/') ?>" class="mb-link">
 						<h2 class="mb-post-title cat-post-title">Texas A&amp;M College of Agriculture and Life Sciences</h2>
 					</a>
 				</div>				
 			</li>				
 			<li class="agency-tfs">
 				<div class="mb-inner">
-					<a href="<?php echo site_url('/agrilife-agencies/tfs/') ?>" id="l4" class="mb-link">
+					<a href="<?php echo site_url('/agrilife-agencies/tfs-home/') ?>" id="l4" class="mb-link">
 						<h2 class="mb-post-title cat-post-title">Texas A&amp;M Forest Service</h2>
 					</a>
 				</div>				
 			</li>				
 			<li class="agency-tvmdl">
 				<div class="mb-inner">
-					<a href="<?php echo site_url('/agrilife-agencies/tvmdl/') ?>" id="l5" class="mb-link">
+					<a href="<?php echo site_url('/agrilife-agencies/tvmdl-home/') ?>" id="l5" class="mb-link">
 						<h2 class="mb-post-title cat-post-title">Texas A&amp;M Veterinary Medical Diagnostic Clinic</h2>
 					</a>
 				</div>				

@@ -25,7 +25,7 @@ get_header(); ?>
 		<aside id="director_bio" class="widget interior-sidebar">
 			<div class="widget-wrap director-bio-wrap">
 				<img src="<?php bloginfo('template_directory'); ?>/images/landing/boggus.jpg" alt="Tom G. Boggus" class="director-mug" title="Tom G. Boggus" />
-				<h2>Tom G. Boggus</h2>
+				<h2>Tom G. Boggus,<br />Director</h2>
 				<h4 class="landing-contact">Contact</h4>
 				<p>200 Technology Way, Suite 1281 <br />
 				2136 TAMU<br />
@@ -33,7 +33,7 @@ get_header(); ?>
 				<h4 class="landing-contact">Phone</h4>
 				<a class="phone" href="tel://979.458.6600">979.458.6600</a>
 				
-				<a href="http://agrilife.org/beta/about/leadership/tom-boggus/"><img src="<?php bloginfo('template_directory'); ?>/images/landing/learn-boggus.png" alt="Tom G. Boggus Bio" class="director-bio-btn" title="Tom G. Boggus" /></a>
+				<a href="http://agrilife.org/about/leadership/tom-boggus/"><img src="<?php bloginfo('template_directory'); ?>/images/landing/learn-boggus.png" alt="Tom G. Boggus Bio" class="director-bio-btn" title="Tom G. Boggus" /></a>
 				<a href="http://texasforestservice.tamu.edu/main/default.aspx" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/landing/explore-tfs.png" alt="Texas A&amp;M Forest Service" class="agency-link-btn" title="Texas A&amp;M Forest Service" /></a>
 				
 			</div>

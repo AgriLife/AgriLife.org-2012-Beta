@@ -34,7 +34,7 @@ get_header(); ?>
 				<h4 class="landing-contact">Phone</h4>
 				<a class="phone" href="tel://979.845.7800">979.845.7800</a>
 				
-				<a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/landing/learn-steele.png" alt="Dr. Doug Steele Bio" class="director-bio-btn" title="Dr. Doug Steele" /></a>
+				<a href="http://agrilife.org/about/leadership/douglassteele/"><img src="<?php bloginfo('template_directory'); ?>/images/landing/learn-steele.png" alt="Dr. Doug Steele Bio" class="director-bio-btn" title="Dr. Doug Steele" /></a>
 				<a href="http://agrilifeextension.tamu.edu/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/landing/explore-extension.png" alt="Texas A&amp;M AgriLife Extension Service" class="agency-link-btn" title="Texas A&amp;M AgriLife Extension Service" /></a>
 				
 			</div>
