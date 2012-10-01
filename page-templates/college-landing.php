@@ -35,7 +35,7 @@ get_header(); ?>
 				<a class="phone" href="tel://979.845.3712">979.845.3712</a>
 				
 				<a href="http://agrilife.org/beta/about/leadership/markhussey/"><img src="<?php bloginfo('template_directory'); ?>/images/landing/learn-hussey.png" alt="Dr. Hussey Bio" class="director-bio-btn" title="Dr. Hussey" /></a>
-				<a href="http://aglifesciences.tamu.edu/"><img src="<?php bloginfo('template_directory'); ?>/images/landing/explore-college.png" alt="Texas A&amp;M AgriLife Research" class="agency-link-btn" title="Texas A&amp;M AgriLife Research" /></a>
+				<a href="http://aglifesciences.tamu.edu/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/landing/explore-college.png" alt="Texas A&amp;M AgriLife Research" class="agency-link-btn" title="Texas A&amp;M AgriLife Research" /></a>
 				
 			</div>
 		</aside>
