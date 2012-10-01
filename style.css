@@ -236,7 +236,7 @@ td { vertical-align: top; }
 /* =============================================================================
    Global Styles
    ========================================================================== */
-body {font-size: 100%; background: #fff; color: #222;}
+body {font-size: 100%; background: #fff; color: #555;}
 p {font-size: 1em; /* 16px */ margin-bottom: 5px; font-weight: 400; line-height: 1.4em;}
 a {color: #66a3bf; text-decoration: none;}
 a:hover {color: #4c7a8f; text-decoration: underline;}
@@ -906,7 +906,7 @@ h2.post-author-title {
 }
 .widget .widget-wrap {
 	padding: .25em 0;
-	line-height: 1em;
+	line-height: 1.2em;
 	font-size: .8em;
 	background: #F2EDDD;
 }
@@ -955,6 +955,14 @@ h2.post-author-title {
 .agrilife_today_twitter h3.widget-title,
 .home-widgets-lower .widget:first-child h3.widget-title {
 	background-position: right -120px;
+}
+.widget_twitter .widget-wrap ul {
+	padding: 0;
+	margin: 0 0 .5em;
+}
+.widget_twitter li {
+	padding: .5em 6% 1em;
+	border-bottom: 1px dashed #999;
 }
 .widget h3.widget-title a {
 	color: white;
