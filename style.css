@@ -1350,6 +1350,12 @@ html[xmlns] .slides {display: block;}
 
 .carousel li {margin-right: 5px}
 
+.flex-caption {
+	color: white;
+	background: #000;
+	max-width: 660px;
+}
+
 
 /* Direction Nav */
 .flex-direction-nav {*height: 0; display: none;}
@@ -1778,7 +1784,7 @@ html[xmlns] .slides {display: block;}
 		margin: 0;
 	}
 	
-	/* Flexslider Slideshow for deasktop */
+	/* Flexslider Slideshow for desktop */
 	.featured-content {
 		background: url('images/featured-content-bg.png') #fff repeat-y;
 		margin-top: -20px;
@@ -1796,12 +1802,11 @@ html[xmlns] .slides {display: block;}
 		position: absolute;
 		color: white;
 		background: #000;
-		background: rgba(1,1,1,.8);
+		background: rgba(1,1,1,.6);
 		bottom: 0;
-		width: 660px;
-		padding: .5em 1em;
+		width: 620px;
+		padding: .5em 20px;
 	}
-
 	.content-wrap:after {		
 		content: " ";
 		position: absolute;
@@ -1988,7 +1993,7 @@ html[xmlns] .slides {display: block;}
 	h1.section-title {
 		color: #A3A2A5;
 		text-transform: uppercase;
-		font-size: 2.6em;
+		font-size: 2.4em;
 		letter-spacing: 3px;
 		position: absolute;
 		padding: 0;
