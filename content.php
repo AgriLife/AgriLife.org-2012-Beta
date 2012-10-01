@@ -38,11 +38,9 @@
 
 			/* translators: used between list items, there is a space after the comma */
 			$tag_list = get_the_tag_list( '', __( ', ', 'agrilifeorg' ) );
-			if ( '' != $tag_list ) {
-				$utility_text = __( '<p class="post-categories">Category: %1$s</p> <p class="post-tags">Tags: %2$s</p>', 'agrilifeorg' );
-			} elseif ( '' != $categories_list ) {
-				$utility_text = __( '<p class="post-tags">Tags: %2$s</p>', 'agrilifeorg' );
-			}
+			if ( '' != $categories_list  ) {
+				$utility_text = __( '<p class="post-categories">Category: %1$s</p>', 'agrilifeorg' );
+			} 
 
 			printf(
 				$utility_text,
