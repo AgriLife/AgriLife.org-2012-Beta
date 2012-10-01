@@ -12,8 +12,8 @@ class AgriLife_FlexSlider {
 
     $path = get_bloginfo('template_url') . '/inc/flexslider';
     // Queue up the Flexslider JS & CSS
-    wp_enqueue_script( 'flexslider', $path . '/js/jquery.flexslider-min.js' );
-    wp_enqueue_script( 'flex_init', $path . '/js/flex-init.js' );
+    //wp_enqueue_script( 'flexslider', $path . '/js/jquery.flexslider-min.js' );
+    //wp_enqueue_script( 'flex_init', $path . '/js/flex-init.js' );
     //wp_enqueue_style( 'flexslider_css', $path . '/css/flexslider.css' );
 
     
@@ -28,7 +28,7 @@ class AgriLife_FlexSlider {
 
     foreach( $slides as $slide ) {
       $slider .= '<li>';
-      $slider .= $slide['img'];
+      $slider .= '<a href="'.$slide['permalink'].'">'.$slide['img'].'</a>';
       $slider .= '<p class="flex-caption">' . $slide['caption'] . '</p>';
       $slider .= '</li>';
     }
@@ -79,8 +79,9 @@ class AgriLife_FlexSlider {
         setup_postdata( $post );
 
         $slides[] = array(
-          'img'     => $this->get_thumb( $post[0]->ID ),
-          'caption' => $this->get_title( $post[0]->post_title )
+          'img'     	=> $this->get_thumb( $post[0]->ID ),
+          'caption' 	=> $this->get_title( $post[0]->post_title ),
+		  'permalink'	=> get_permalink($post[0]->ID)
         );
 
     }
