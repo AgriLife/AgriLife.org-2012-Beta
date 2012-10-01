@@ -24,7 +24,7 @@ get_header(); ?>
 	<section id="sidebar" class="sidebar one-of-3 column" role="navigation">
 		<aside id="director_bio" class="widget interior-sidebar">
 			<div class="widget-wrap director-bio-wrap">
-				<img src="<?php bloginfo('template_directory'); ?>/images/landing/steele.jpg" alt="Dr. Craig Nessler" class="director-mug" title="Dr. Craig Nessler" />
+				<img src="<?php bloginfo('template_directory'); ?>/images/landing/nessler.jpg" alt="Dr. Craig Nessler" class="director-mug" title="Dr. Craig Nessler" />
 				<h2>Dr. Craig Nessler</h2>
 				<h4 class="landing-contact">Contact</h4>
 				<p>Agriculture and Life Sciences Building <br />
@@ -33,7 +33,8 @@ get_header(); ?>
 				<h4 class="landing-contact">Phone</h4>
 				<a class="phone" href="tel://979.845.8486">979.845.8486</a>
 				
-				<a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/landing/btn-maroon-steele.png" alt="Dr. Nessler Bio" class="director-bio-btn" title="Dr. Nessler" /></a>
+				<a href="http://agrilife.org/beta/about/leadership/craignessler/"><img src="<?php bloginfo('template_directory'); ?>/images/landing/learn-nessler.png" alt="Dr. Nessler Bio" class="director-bio-btn" title="Dr. Nessler" /></a>
+				<a href="http://agriliferesearch.tamu.edu/"><img src="<?php bloginfo('template_directory'); ?>/images/landing/explore-research.png" alt="Texas A&amp;M AgriLife Research" class="agency-link-btn" title="Texas A&amp;M AgriLife Research" /></a>
 				
 			</div>
 		</aside>

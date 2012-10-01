@@ -1589,6 +1589,7 @@ html[xmlns] .slides {display: block;}
 		#access .sf-menu li li a.sf-with-ul {
 			min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
 			background: url(images/right-arrow.png) no-repeat left 58% transparent;
+			padding: 1em 2em 1em 1.3em;
 		}
 		#access .sf-menu li li a.sf-with-ul:hover {
 			background-position: left 58%;

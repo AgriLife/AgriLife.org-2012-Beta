@@ -24,17 +24,18 @@ get_header(); ?>
 	<section id="sidebar" class="sidebar one-of-3 column" role="navigation">
 		<aside id="director_bio" class="widget interior-sidebar">
 			<div class="widget-wrap director-bio-wrap">
-				<img src="<?php bloginfo('template_directory'); ?>/images/landing/steele.jpg" alt="Dr. Dugas" class="director-mug" title="Dr. Dugas" />
-				<h2>William A. &quot;Bill&quot; Dugas, Ph.D</h2>
+				<img src="<?php bloginfo('template_directory'); ?>/images/landing/hussey.jpg" alt="Dr. Hussey" class="director-mug" title="Dr. Hussey" />
+				<h2>Dr. Mark A. Hussey</h2>
 				<h4 class="landing-contact">Contact</h4>
 				<p>Agriculture and Life Sciences Building<br />
-				600 John Kimbrough Blvd., Suite 515<br />
-				2402 TAMU<br />
-				College Station, TX 77843-2402</p>
+				600 John Kimbrough Blvd., Suite 510<br />
+				2142 TAMU<br />
+				College Station, TX 77843-2142</p>
 				<h4 class="landing-contact">Phone</h4>
 				<a class="phone" href="tel://979.845.3712">979.845.3712</a>
 				
-				<a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/landing/btn-maroon-steele.png" alt="Dr. Dugas Bio" class="director-bio-btn" title="Dr. Dugas" /></a>
+				<a href="http://agrilife.org/beta/about/leadership/markhussey/"><img src="<?php bloginfo('template_directory'); ?>/images/landing/learn-hussey.png" alt="Dr. Hussey Bio" class="director-bio-btn" title="Dr. Hussey" /></a>
+				<a href="http://aglifesciences.tamu.edu/"><img src="<?php bloginfo('template_directory'); ?>/images/landing/explore-college.png" alt="Texas A&amp;M AgriLife Research" class="agency-link-btn" title="Texas A&amp;M AgriLife Research" /></a>
 				
 			</div>
 		</aside>
