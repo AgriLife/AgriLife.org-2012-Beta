@@ -121,7 +121,7 @@
 <div id="page" class="hfeed">		
 	<div class='wrap clearfix'>
 	<header>
-		<h1 class="site-title one-of-3 ir"><span>AgriLife.org</span></h1>
+		<h1 class="site-title one-of-3 ir"><a href="<?php echo site_url('/') ?>">AgriLife.org</a></h1>
 	</header>
 	<?php if ( !is_front_page() ) : ?>
 		<div class="agency-button"><a href="#agency-nav">Our Entities</a></div>
