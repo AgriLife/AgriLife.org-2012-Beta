@@ -1118,21 +1118,22 @@ h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat 
 
 .agrilifetoday .rss-img-link {
   position: absolute;
-  left: -4px;
-  top: 6px;
+  left: 2%;
+  top: 0;
+  width: 10%;
 }
 .agrilifetoday .rss-content {
 	position: static;
-	margin-left: 30px;
+	margin-left: 15%;
 }
 
 .agrilifetoday .rss-img-link img {
-  width: 30px;
+  width: 100%;
 }
 
 .agrilifetoday .rss-title {
   display: block;
-  margin-left: 30px;
+  margin-left: 15%;
 }
 
 .agrilifetoday .rss-title a {
@@ -1384,7 +1385,7 @@ html[xmlns] .slides {display: block;}
 	
 	.site-footer {	
 		overflow: hidden;
-		margin: 0 auto 3.33333333% auto;
+		margin: 2em auto 3.33333333% auto;
 		background: #500000;
 		box-shadow: 0 10px 25px rgba(0, 0, 0, .4);
 		padding: 0 18px;
