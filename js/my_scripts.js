@@ -307,6 +307,7 @@ $(document).ready( function() {
       animation: 'slide',
       controlsContainer: '.flex-container'
     });
+	$('ul.slides').removeClass('invisible');
 	/* End Flexslider invocation */
 	
 	var timer = null;

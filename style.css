@@ -619,6 +619,9 @@ div.menu li {
 	font-weight: 900;
 	color: #500000;
 }
+.blog .entry-title a {
+	color: #500000;
+}
 .home-agency-intro {
 	padding-left: 3.333333333%;
 	padding-right: 3.33333333%;

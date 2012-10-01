@@ -24,7 +24,7 @@ class AgriLife_FlexSlider {
     $slides = $this->query_features();
 
     $slider = '<div class="feature-container">';
-    $slider .= '<ul class="slides">';
+    $slider .= '<ul class="slides invisible">';
 
     foreach( $slides as $slide ) {
       $slider .= '<li>';
