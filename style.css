@@ -1378,7 +1378,7 @@ html[xmlns] .slides {display: block;}
 		z-index: 999;
 	}
 	#page {
-		background: transparent url('images/bg-test2.jpg') no-repeat top center;
+		background: transparent url('images/backgrounds/sugarcane2.jpg') no-repeat top center;
 	}
 	#page > .wrap {
 		padding: 0 18px 3.333333% 18px;
