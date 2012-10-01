@@ -74,7 +74,7 @@ a:hover, a:active { outline: 0; }
 
 abbr[title] { border-bottom: 1px dotted; }
 
-b, strong { font-weight: bold; }
+b, strong { font-weight: bold; font-weight: 900 }
 
 blockquote { margin: 1em 40px; }
 
@@ -84,7 +84,7 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
 
 ins { background: #ff9; color: #000; text-decoration: none; }
 
-mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: 900; }
 
 /* Redeclare monospace font family: h5bp.com/j */
 pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
@@ -237,10 +237,10 @@ td { vertical-align: top; }
    Global Styles
    ========================================================================== */
 body {font-size: 100%; background: #fff; color: #222;}
-p {font-size: 1em; /* 16px */ margin-bottom: 5px; font-weight: 300; line-height: 1.4em;}
+p {font-size: 1em; /* 16px */ margin-bottom: 5px; font-weight: 400; line-height: 1.4em;}
 a {color: #66a3bf; text-decoration: none;}
 a:hover {color: #4c7a8f; text-decoration: underline;}
-strong { font-weight: bold; }
+strong { font-weight: 900; }
 em { font-style: italic; }
 .entry-title a {color: #222;}
 .entry-title a:hover {color: #000;}
@@ -385,7 +385,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 	padding: 1.612903225806%;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-weight: 100;
+	font-weight: 400;
 	color: #72726f;	
 	text-shadow: 0 1px 0 rgba(255, 255, 255, .9);	
 }
@@ -418,7 +418,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 	padding: .5em .75em;
 	float: left;
 	color: #72726f;	
-	font-weight: 100;	
+	font-weight: 400;	
 	text-shadow: 0 1px 0 rgba(255, 255, 255, .9);	
 }
 .nav-previous a:hover,
@@ -578,7 +578,7 @@ div.menu li {
 }
 .post p, #content .page p {
 	font-family: "camingodos-web", clean, sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 1em; /* 16px */
 	margin-bottom: 1.125em; /* 18px / 16px */
 	line-height: 1.25em; /* 20px / 16px */
@@ -745,7 +745,7 @@ body.home .post {
 	padding: 6px 12px 6px 8px;
 	color: #ddd;
 	font-size: 0.875em; /* 14px / 16px */
-	font-weight: 100;
+	font-weight: 400;
 	margin-top: -3px;
 }
 .cat-nm a:hover .cat-all-button {
@@ -870,7 +870,7 @@ img {
 }
 #author-description {
 	line-height: 1.4em;
-	font-weight: 300;
+	font-weight: 400;
 }
 h2.post-author-title {
 	margin-bottom: .5em;
@@ -924,7 +924,7 @@ h2.post-author-title {
 }
 .widget ul li a {
 	color: #222; 
-	font-weight: 100;
+	font-weight: 400;
 }
 .widget select {
 	text-overflow: ellipsis;
@@ -1137,18 +1137,18 @@ h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat 
 
 .agrilifetoday .rss-title a {
   color: #555;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .agrilifetoday .rss-date {
   color: #500000;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .agrilifetoday .rss-content p {
   font-size: .9em;
   margin-bottom: 5px;
-  font-weight: 100;
+  font-weight: 400;
 }
 .widget_nav_menu.interior-sidebar .widget-wrap {
 	padding: 0;
@@ -1453,7 +1453,7 @@ html[xmlns] .slides {display: block;}
 	#access ul.menu li {
 			margin: 0;
 			background: url('images/nav-divider.png') no-repeat right center;
-			padding: 1em 2em 1em 2em;
+			padding: 0 18px 0 0;
 			float: left;
 		}
 		#access ul.menu li li{
@@ -1472,17 +1472,19 @@ html[xmlns] .slides {display: block;}
 			/* background: #f1f0e7;	*/	
 		}	
 		#access ul.menu li a[title='home'] {
-			background-position: 0 0px;
+			background-position: 10px 12px;
 			width: 20px;
+			padding: 1em 1em;
 		}
 
 		#access ul.menu li a[title='home']:hover {
-			background-position: 0 -30px;
+			background-position: 10px -18px;
 		}	
 
 		#access ul.menu li a {
 			background: transparent;
 			color: #fff;
+			padding: 1em 2.2em 1em 2em;	
 		}	
 
 		#access ul.menu li a:hover {
@@ -1621,8 +1623,11 @@ html[xmlns] .slides {display: block;}
 		/*** arrows **/
 		#access .sf-menu li a.sf-with-ul {
 			min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
-			background: url(images/down-arrow3.png) no-repeat right 0 transparent; 
-			padding-right: 28px;					
+			background: url(images/down-arrow4.png) no-repeat right 13px transparent; 
+			padding: 1em 2em 1em 2em;				
+		}
+		#access .sf-menu li a.sf-with-ul:hover {
+			background-position: right -103px;
 		}
 
 		#access .sf-menu li li a.sf-with-ul {
@@ -1959,7 +1964,7 @@ html[xmlns] .slides {display: block;}
 		margin-left: 0;
 		padding-right: 0;
 		padding-top: 60px;
-		font-weight: 300;
+		font-weight: 400;
 	}
 	.post p, #content .page p {
 		font-size: 1em;
