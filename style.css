@@ -1786,6 +1786,12 @@ html[xmlns] .slides {display: block;}
 	}
 	.flex-caption {
 		position: absolute;
+		color: white;
+		background: #000;
+		background: rgba(1,1,1,.8);
+		bottom: 0;
+		width: 660px;
+		padding: .5em 1em;
 	}
 
 	.content-wrap:after {		
