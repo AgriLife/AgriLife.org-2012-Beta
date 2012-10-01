@@ -360,9 +360,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 }
 .site-title a {
 	display: block;	
-}
-.site-title span {
-	display: none;
+	height: 2.5em;		
 }
 .site-title {
 	margin: -49px auto 0 auto;
@@ -1829,9 +1827,6 @@ html[xmlns] .slides {display: block;}
 		position: relative;
 		z-index: 99;	
 	}	
-	.site-title a {		
-		/* margin: 0 3.333333333%; /* 10px / 300px */		
-	}
 	
 	.home .site-title {
 		height: 95px;
