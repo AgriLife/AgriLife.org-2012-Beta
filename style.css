@@ -402,6 +402,12 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 	font-family: "ff-meta-serif-web-pro", georgia, serif;
 	max-width: 90%;	
 }
+.post-thumbnail {
+  float: left;
+  padding: 3px;
+  margin: 4px 5px 5px 0;
+  border: 1px solid #ccc;
+}
 #nav-above, #nav-below, #nav-single {
 	overflow: hidden;
 	margin: 1em auto 0;
@@ -1903,7 +1909,7 @@ html[xmlns] .slides {display: block;}
 	}	
 	a.cat-nav-post-link:hover .cat-post-title {
 		color: #000;
-	}
+	}  
 	.post p.wp-caption-text {
 		padding: 1% 0;
 		max-width: 100%;	
