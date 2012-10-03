@@ -949,7 +949,7 @@ h2.post-author-title {
 	font-size: .8em;
 	margin-bottom: 0;
 	letter-spacing: 2px;
-	background: url('images/widgets.png') top right no-repeat transparent;
+	background: url('images/widgets2.png') top right no-repeat transparent;
 	color: #fff;
 	text-align: center;
 	text-transform: uppercase;
@@ -1061,7 +1061,7 @@ h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat 
 /* ==|== AgriLife Today RSS widget styles ===================================
    Most of these are copied over from the current AgriFlex theme
    ========================================================================== */
-/* agrilife today widget */
+
 .agrilifetoday.widget li {
 	margin: 6px 0;
 	padding-bottom: 6px;
@@ -1082,6 +1082,7 @@ h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat 
 .agrilifetoday .rss-content {
 	position: static;
 	margin-left: 15%;
+	height: 70px;
 }
 
 .agrilifetoday .rss-img-link img {
@@ -1927,6 +1928,11 @@ html[xmlns] .slides {display: block;}
 	.search-widget {
 		background: none;
 		margin-bottom: 0;
+	}
+	.agrilifetoday .rss-content {
+		position: static;
+		margin-left: 15%;
+		height: inherit;
 	}
 	.top-button {	
 		display: none;	
