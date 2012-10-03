@@ -27,7 +27,7 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php //agrilifeorg_content_nav( 'nav-below' ); ?>
+				<?php agrilifeorg_content_nav( 'nav-below' ); ?>
 
 			<?php else : ?>
 

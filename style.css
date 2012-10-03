@@ -910,7 +910,7 @@ h2.post-author-title {
    ========================================================================== */
 .widget-title-remove { display: none; }
 .widget {
-	margin: 0 3.333333333%; /* 10px / 300px */
+	margin: 0;
 	padding: 0 0 3.333333333% 0; 		
 }
 .widget .widget-wrap {
@@ -1305,6 +1305,8 @@ html[xmlns] .slides {display: block;}
 	color: white;
 	background: #000;
 	max-width: 660px;
+	margin: 0;
+	padding: .5em 1em;
 }
 
 
@@ -1695,7 +1697,9 @@ html[xmlns] .slides {display: block;}
 	/* =============================================================================
 	   END Agency Navigation Styles
 	   ========================================================================== */
-	
+	.widget {
+		margin: 0 3.333333333%; /* 10px / 300px */		
+	}
 	
 	.content-wrap {	
 		overflow: hidden;
