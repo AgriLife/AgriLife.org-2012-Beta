@@ -597,3 +597,9 @@ $includes_path = TEMPLATEPATH . '/inc/';
 require_once( $includes_path . 'widgets.php');
 // Include flexslider
 require_once( $includes_path . 'flexslider/flexslider.php' );
+
+// CDN Purge Fix
+add_filter('cdn_cache_purge_wait','agri_cdn_cache_wait');
+function agri_cdn_cache_wait($wait) {
+  return 100;
+}
