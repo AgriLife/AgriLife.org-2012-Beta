@@ -28,6 +28,13 @@
 		</header><!-- .entry-header -->
 
 		<div class="entry-summary">
+      <div class="post-thumbnail">
+        <?php
+        if( has_post_thumbnail() ) {
+          the_post_thumbnail( 'thumbnail' );
+        }
+        ?>
+      </div><!-- .post-thumbnail -->
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
 <!-- 
