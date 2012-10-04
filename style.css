@@ -405,7 +405,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 .post-thumbnail {
   float: left;
   padding: 3px;
-  margin: 4px 5px 5px 0;
+  margin: 0px 1em 5px 0;
   border: 1px solid #ccc;
 }
 #nav-above, #nav-below, #nav-single {
