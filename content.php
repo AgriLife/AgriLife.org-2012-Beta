@@ -8,7 +8,7 @@
  */
 ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
 		<header class="entry-header">
 			<?php if ( is_sticky() ) : ?>
 				<hgroup>
@@ -28,13 +28,11 @@
 		</header><!-- .entry-header -->
 
 		<div class="entry-summary">
-        <?php
-        if( has_post_thumbnail() ) {
-          echo '<div class="post-thumbnail">';
-          the_post_thumbnail( 'thumbnail' );
-          echo '</div><!-- .post-thumbnail -->';
-        }
-        ?>
+        <?php if( has_post_thumbnail() ) { ?>
+          <div class="post-thumbnail">
+          <?php the_post_thumbnail( 'thumbnail' ); ?>
+          </div><!-- .post-thumbnail -->
+        <?php } ?>
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
 <!-- 
