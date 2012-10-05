@@ -367,7 +367,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 	margin: -49px auto 0 auto;
 	background: url('images/logo-main.png') no-repeat top center;
 	width: 319px;
-	height: 115px;
+	height: 95px;
 	position: relative;
 	z-index: 99;	
 }
@@ -452,11 +452,10 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 	position: absolute;
 	z-index: 0;
 	top: 50px;
-	padding: .5em 2em;
+	padding: 70px 2em .5em 2em;
 	color: white;
-	background: url('images/nav-bg.png') no-repeat transparent;
+	background: #717074;
 	width: 40%;
-	
 	cursor: pointer;
 }
 .menu-button {
@@ -1344,6 +1343,27 @@ html[xmlns] .slides {display: block;}
 }
 /* END FlexSlider Default Theme
 *********************************/
+
+/* =============================================================================
+   Enhance For Tablet
+   ========================================================================== */
+
+@media all and (min-width: 500px) {
+	.menu-button,
+	.agency-button {
+		position: absolute;
+		z-index: 0;
+		top: 75px;
+		padding: .5em 2em;
+		color: white;
+		background: url('images/nav-bg.png') no-repeat transparent;
+		width: 40%;
+		cursor: pointer;
+	}
+	.site-title {
+		height: 115px;
+	}
+}
 
 /* =============================================================================
    Enhance For Desktop
