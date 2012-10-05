@@ -114,7 +114,7 @@
 					'items_wrap' => '%3$s',
 					'depth' => '1' ) 
 				); ?>				
-		</ul>				
+</ul>		
 	</div><!-- #drop-nav -->	
 </div><!-- #drop-section-nav -->
 
@@ -123,10 +123,18 @@
 	<header>
 		<h1 class="site-title one-of-3 ir"><a href="<?php echo site_url('/') ?>">AgriLife.org</a></h1>
 	</header>
+	
+
 	<?php if ( !is_front_page() ) : ?>
-		<div class="agency-button"><a href="#agency-nav">Our Entities</a></div>
+		<div class="agency-button"><a href="#agency-nav">Agencies</a></div>
 	<?php endif; ?>
 	<div class="menu-button"><a href="#">Menu</a></div>
+	<div id="main-search">
+		<form method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" >
+	         <input type="text" value="<?php esc_attr_e( 'Search', 'agrilifeorg' ); ?>" name="s" class="s" onfocus="if (this.value == '<?php esc_attr_e( 'Search', 'agrilifeorg' ); ?>') {this.value = '';}" onblur="if (this.value == '') {this.value = '<?php esc_attr_e( 'Search', 'agrilifeorg' ); ?>';}" />
+	         <input type="submit" class="searchsubmit" value="Go" />
+	    </form>
+	</div>
 	<nav id="access" role="navigation">		
 	  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>
 		<div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'agriflex' ); ?>"><?php _e( 'Skip to content', 'agriflex' ); ?></a></div>

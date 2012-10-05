@@ -311,13 +311,13 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 
 #drop-section-nav #drop-nav ul {
     padding: 0;
-    margin: 0; 
+    margin: 0 20px 0 0; 
 	list-style: none;
 	display: block;
-	width: 100%;
+	float: right;
 }
 
-#drop-nav ul li {
+#drop-nav ul li.menu-item {
 	float: left;
 }
 #drop-nav .agrilife a {
@@ -367,9 +367,8 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 	background: url('images/logo-main.png') no-repeat top center;
 	width: 319px;
 	height: 115px;
-
 	position: relative;
-	z-index: 99;
+	z-index: 99;	
 }
 .container {margin: 10px auto;max-width: 1024px;}
 
@@ -482,14 +481,14 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 	padding-right: 1%;	
 }
 
-.js #branding .searchform,
+.js #main-search .searchform,
 .js #access {
 	display: none;	
-} 
+} #main-search
 
 .searchform .s {
 	display: block;
-	width: 70%;
+	width: 40%;
 	margin: 0 auto;
 }
 
@@ -497,7 +496,9 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 ul.menu {
 	display: block;	
 }
-
+#access .menu-header {
+	background: #F2EDDD;
+}
 #access .menu-header:before,
 ul.menu:before,
 #access .menu-header:after,
@@ -563,22 +564,26 @@ div.menu li {
 /* =============================================================================
    Search Form
    ========================================================================== */
-.s {
-	width: 76%;
-	border: 1px solid #ddddd4;
-	border-radius: 2em;
-	padding: .5em 12%;
-	color: #ccc;
-	font-size: 0.875em; /* 14px / 16px */
-	background: url('images/icons.png') no-repeat 10px 6px;
-	background-color: #fff;
-	box-shadow: inset 0 2px 10px #eaeae5;
+.searchform {
+	margin: .5em auto;	
+	display: none;
+	background: transparent;
 }
-.s:focus {
-	color: #333;
-	background-image: none;
-	border: 1px solid #afafa0;
-	outline: none;	
+
+.s {
+	width: 100%;
+	padding: 8px 5px 8px 30px;
+	background: #fff url('images/search.png') no-repeat left 45%;
+	border-radius: 10px; 
+	color: #999;
+	border: 1px solid #ccc;
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.searchsubmit {
+	display: none;	
 }
 .post p, #content .page p {
 	font-family: "camingodos-web", clean, sans-serif;
@@ -1147,6 +1152,8 @@ h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat 
 .widget_nav_menu.interior-sidebar li.down li.down { background: url(images/arrow-down-2.png) no-repeat 16px 1.1em; }
 .widget_nav_menu.interior-sidebar li.down li.down li.down { background: url(images/arrow-down-2.png) no-repeat 26px 1.1em; }
 
+#access .menu-header ul.sub-menu li { margin-left: 1em;}
+
 /* ========================
  * Fun slideshow stuff!
  * ======================= */
@@ -1377,10 +1384,21 @@ html[xmlns] .slides {display: block;}
 		z-index: 99;
 		height: 61px;
 	}
+	#access .menu-header {
+		background: transparent;
+	}
 	
 	body {
 		background: #D7D7D7 url('images/bg-main6.png') no-repeat top center;
 		background-position: center 54px;
+	}
+	.site-title {
+		margin: -49px 0 0 0;
+		background: url('images/logo-main.png') no-repeat top center;
+		width: 319px;
+		height: 115px;
+		position: relative;
+		z-index: 99;
 	}
 	.site-title a {
 		position: relative;
@@ -1698,6 +1716,7 @@ html[xmlns] .slides {display: block;}
 	/* =============================================================================
 	   END Agency Navigation Styles
 	   ========================================================================== */
+	
 	.widget {
 		margin: 0 3.333333333%; /* 10px / 300px */		
 	}
@@ -1795,17 +1814,13 @@ html[xmlns] .slides {display: block;}
 	}
 	/* End Media Boxes for larger screens */
 	
-	.site-title {
-		margin: -49px 0 0 0;
-		background: url('images/logo-main.png') no-repeat top center;
-		width: 319px;
-		height: 115px;
-		position: relative;
-		z-index: 99;	
-	}	
+	
 	
 	.home .site-title {
 		height: 95px;
+	}
+	#drop-nav ul li {
+		float: left;
 	}
 	#drop-nav ul li.menu-button a {
 		display: none;
@@ -1990,6 +2005,47 @@ html[xmlns] .slides {display: block;}
 	}
 	.recent-stories li a.last {
 		border-bottom: none;
+	}
+	
+	/* =============================================================================
+	   Search Box
+	   ========================================================================== */
+	.js #main-search .searchform {
+		display: block;
+	}
+	#main-search {
+		position: absolute;
+		top: -55px;
+		right: 0;
+		z-index: 99;
+	}
+	
+	#main-search .searchform input.s {
+		width: 0px;
+		float: right;
+		-webkit-transition: .5s width ease;
+		-moz-transition: .5s width ease;		
+		background: #fff url('images/search.png') no-repeat 2px 45%;
+		-webkit-border-top-right-radius: 0;
+		-moz-border-radius-topright: 0;
+		border-top-right-radius:0;
+		-webkit-border-top-left-radius: 0;
+		-moz-border-radius-topleft: 0;
+		border-top-left-radius:0;
+	}
+
+	#main-search .searchform input.s:hover {
+		background-color: #f7f7f7;			
+	}
+
+	#main-search .searchform input.s:focus {
+		width: 220px;
+		background-color: #fafafa;	
+		outline: none;
+		border-color: #2783e6;	
+		-webkit-box-shadow: 0 0 5px #2783e6;
+		-moz-box-shadow: 0 0 5px #2783e6;
+		box-shadow: 0 0 5px #2783e6;					
 	}
 
 	

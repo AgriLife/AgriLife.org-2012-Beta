@@ -316,11 +316,12 @@ $(document).ready( function() {
   	
 	$('.widget_nav_menu.interior-sidebar .menu-item').hover(
 		function() {
-		//	timer = setTimeout(function() {
-		//		timer = null;
-	            $(this).has('ul').addClass('down');
-	        	$(this).children('ul').delay(50).slideDown('medium', function() {});
-	    //    }, 500)
+			var theElement = this;
+			timer = setTimeout(function() {
+				timer = null;
+	            $(theElement).has('ul').addClass('down');
+	        	$(theElement).children('ul').delay(50).slideDown('medium', function() {});
+	        }, 500)
         
 	    },
 	    function() {
@@ -344,6 +345,37 @@ $(document).ready( function() {
 	$('.touch .sf-with-ul').click(function() {
 		$(this).find('.sub-menu').hide.slideToggle('medium');
 	});
+	
+	
+	//set the initial values
+	    detector = jQuery('.js');
+	    compareWidth = detector.width();
+		smallScreen = '1000';
+	// Make sure the search shows up on the desktop
+	// Credit: http://webdeveloper2.com/2011/06/trigger-javascript-on-css3-media-query-change/
+    jQuery(window).resize(function(){
+        //compare everytime the window resize event fires
+        if(detector.width()!=compareWidth){
+
+            //a change has occurred so update the comparison variable
+            compareWidth = detector.width();
+
+			if (compareWidth < smallScreen) {
+				$("body").removeClass("two-column").addClass("one-column");
+				$('#access, .searchform').hide();				
+			}
+			else {
+				$("body").removeClass("one-column").addClass("two-column");	
+				$('#access, .searchform').show();
+			}
+
+			if (compareWidth >= smallScreen) {
+				$('#access, .searchform').show();
+			}
+        }
+    });
+	
+	
 	
 	/*
      * Set up the superfish arguments for non-touch screens
