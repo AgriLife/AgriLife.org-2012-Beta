@@ -364,10 +364,10 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 	height: 2.5em;		
 }
 .site-title {
-	margin: -49px auto 0 auto;
+	margin: -49px auto 20px auto;
 	background: url('images/logo-main.png') no-repeat top center;
 	width: 319px;
-	height: 95px;
+	height: 80px;
 	position: relative;
 	z-index: 99;	
 }
@@ -457,6 +457,9 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 	background: #717074;
 	width: 40%;
 	cursor: pointer;
+}
+.home .menu-button {
+	width: 100%;
 }
 .menu-button {
 	right: -.5em;
@@ -1361,6 +1364,7 @@ html[xmlns] .slides {display: block;}
 		cursor: pointer;
 	}
 	.site-title {
+		margin: -49px auto 0 auto;
 		height: 115px;
 	}
 }
