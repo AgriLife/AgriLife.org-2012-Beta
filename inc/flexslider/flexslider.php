@@ -81,13 +81,23 @@ class AgriLife_FlexSlider {
         $slides[] = array(
           'img'     	=> $this->get_thumb( $post[0]->ID ),
           'caption' 	=> $this->get_title( $post[0]->post_title ),
-		  'permalink'	=> get_permalink($post[0]->ID)
+          'permalink'	=> get_permalink($post[0]->ID),
+          'pubdate'   => get_the_time( 'U', $post[0]->ID)
         );
 
     }
 
+    // Sort the slides array by 'pubdate' descending
+    usort($slides, array( $this, 'cmp' ) );
+
     return $slides;
 
+  }
+
+  public function cmp( $a, $b ) {
+  
+    return strcmp( $b['pubdate'], $a['pubdate'] );
+  
   }
 
   /**
