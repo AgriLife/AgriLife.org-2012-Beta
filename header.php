@@ -47,7 +47,7 @@
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>?7" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>?14" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 
@@ -131,7 +131,7 @@
 	<div class="menu-button"><a href="#">Menu</a></div>
 	<div id="main-search">
 		<form method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" >
-	         <input type="text" value="<?php esc_attr_e( 'Search', 'agrilifeorg' ); ?>" name="s" class="s" onfocus="if (this.value == '<?php esc_attr_e( 'Search', 'agrilifeorg' ); ?>') {this.value = '';}" onblur="if (this.value == '') {this.value = '<?php esc_attr_e( 'Search', 'agrilifeorg' ); ?>';}" />
+	         <input type="text" value="" name="s" class="s" onfocus="" onblur="" />
 	         <input type="submit" class="searchsubmit" value="Go" />
 	    </form>
 	</div>

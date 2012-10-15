@@ -451,7 +451,7 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 .agency-button {
 	position: absolute;
 	z-index: 0;
-	top: 50px;
+	top: 20px;
 	padding: 70px 2em .5em 2em;
 	color: white;
 	background: #717074;
@@ -1356,7 +1356,7 @@ html[xmlns] .slides {display: block;}
 	.agency-button {
 		position: absolute;
 		z-index: 0;
-		top: 75px;
+		top: 45px;
 		padding: .5em 2em;
 		color: white;
 		background: url('images/nav-bg.png') no-repeat transparent;
@@ -1402,8 +1402,8 @@ html[xmlns] .slides {display: block;}
 		background: url('images/nav-bg.png') no-repeat transparent;
 		margin-left: -40px;
 		margin-right: -80px;
-		z-index: 99;
 		height: 61px;
+		z-index: 99;
 	}
 	#access .menu-header {
 		background: transparent;
@@ -1780,10 +1780,26 @@ html[xmlns] .slides {display: block;}
 	.home .home-widgets-lower .widget-3-col-end {
 		margin: 0;
 	}
+	.home-learn-more {
+		background-color: rgba(255,0,0,0);
+		color: #fff;
+		font-weight: bold;
+		height: 120px;
+		text-align: center;
+		line-height: 10em;
+		text-indent: -9999px;
+		/*display: none;*/
+	}
+	.featured-stories .agency:hover .home-learn-more {
+		display: block;
+		background-color: #43689E;	
+		background-color: rgba(79,113,164,0.9);
+		text-indent: 0;
+	}
 	
 	/* Flexslider Slideshow for desktop */
 	.featured-content {
-		background: url('images/featured-content-bg.png') #fff repeat-y;
+		background: url('images/featured-content-bg.png') transparent repeat-y;
 		margin-top: -20px;
 		position: relative;	
 		margin-bottom: 0;
