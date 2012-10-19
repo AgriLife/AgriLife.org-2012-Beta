@@ -10,40 +10,41 @@ echo $slider->make_slider();
 ?>
 			<div class="one-of-3 clearfix featured-stories-container"> 
 			<ol class="featured-stories">
-				<li class=" agency-extension">
+				<li class="agency-extension agency">
 					<div class="mb-inner">
-						<a href="<?php echo site_url('/agrilife-agencies/extension-home/') ?>" class="mb-link">
-							<h2 class="mb-post-title cat-post-title">Texas A&amp;M AgriLife Extension Service</h2>
+						<a href="<?php echo site_url('/agrilife-agencies/extension-home/') ?>" id="l1" class="mb-link">
+							<h2 class="mb-post-title cat-post-title">Click to Learn More <span>about Texas A&amp;M AgriLife Extension Service</span></h2>
 						</a>
-					</div>				
+					</div>	
+								
 				</li>				
-				<li class="agency-research">
+				<li class="agency-research agency">
 				<div class="mb-inner">
 					<a href="<?php echo site_url('/agrilife-agencies/research-home/') ?>" id="l2" class="mb-link">
-						<h2 class="mb-post-title cat-post-title">Texas A&amp;M AgriLife Research</h2>
+						<h2 class="mb-post-title cat-post-title">Click to Learn More <span>about Texas A&amp;M AgriLife Research</span></h2>
 					</a>
-				</div>				
+				</div>			
 			</li>				
-			<li class="agency-college">
+			<li class="agency-college agency">
 				<div class="mb-inner">
-					<a href="<?php echo site_url('/agrilife-agencies/college-home/') ?>" class="mb-link">
-						<h2 class="mb-post-title cat-post-title">Texas A&amp;M College of Agriculture and Life Sciences</h2>
+					<a href="<?php echo site_url('/agrilife-agencies/college-home/') ?>" id="l3" class="mb-link">
+						<h2 class="mb-post-title cat-post-title">Click to Learn More <span>about Texas A&amp;M College of Agriculture and Life Sciences</span></h2>
 					</a>
-				</div>				
+				</div>			
 			</li>				
-			<li class="agency-tfs">
+			<li class="agency-tfs agency">
 				<div class="mb-inner">
 					<a href="<?php echo site_url('/agrilife-agencies/tfs-home/') ?>" id="l4" class="mb-link">
-						<h2 class="mb-post-title cat-post-title">Texas A&amp;M Forest Service</h2>
+						<h2 class="mb-post-title cat-post-title">Click to Learn More <span>about Texas A&amp;M Forest Service</span></h2>
 					</a>
-				</div>				
+				</div>			
 			</li>				
-			<li class="agency-tvmdl">
+			<li class="agency-tvmdl agency">
 				<div class="mb-inner">
 					<a href="<?php echo site_url('/agrilife-agencies/tvmdl-home/') ?>" id="l5" class="mb-link">
-						<h2 class="mb-post-title cat-post-title">Texas A&amp;M Veterinary Medical Diagnostic Clinic</h2>
+						<h2 class="mb-post-title cat-post-title">Click to Learn More <span>about Texas A&amp;M Veterinary Medical Diagnostic Clinic</span></h2>
 					</a>
-				</div>				
+				</div>			
 			</li>		
 			</ol>
 		</div>
