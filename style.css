@@ -299,10 +299,10 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
     margin: 0 auto;
     overflow: hidden;
     color: #fff;
-	background: #500000;
+	background: #fff;
 	line-height: 0;
 	text-indent: -9999px;
-	height: 50px;
+	height: 50;
 }
 
 #drop-nav {
@@ -329,32 +329,11 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 	display: block;
 	text-indent: -999em;
 }
-#drop-nav ul li.menu-button {
-	float: right;
-	margin-top: .5em;	
-}
-#drop-nav ul li.menu-button a,
-.top-button {
-	display: block;
-	padding: .6em 1.2em;
-	text-indent: -999em;
-	width: 20px;
-	height: 15px;
-	background: rgba(0,0,0,.5) url('images/icons.png') no-repeat 50% -305px;
-	border-radius: 5px;
-	border-top: 1px solid rgba(255,255,255,.2);
-}
 .screen-reader-text {
 	position: absolute;
 	left: -9999px;
 }
 
-.top-button {	
-	background-position: 50% -347px;
-	float: right;
-	margin-top: -7px;
-	padding: .3em 1.2em;	
-}
 .site-title {
 	font-size: 2em; /* 32px / 16px */
 	margin: 0;										
@@ -364,12 +343,14 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 	height: 2.5em;		
 }
 .site-title {
-	margin: -49px auto 20px auto;
-	background: url('images/logo-main.png') no-repeat top center;
-	width: 319px;
-	height: 80px;
+	margin: 0;
+	background: url('images/logo.png') no-repeat top center;
+	width: 170px;
+	height:48px;
 	position: relative;
 	z-index: 99;	
+	float: left;
+
 }
 .container {margin: 10px auto;max-width: 1024px;}
 
@@ -440,33 +421,36 @@ h1,h2,h3,h4,h5,h6 {font-family: "ff-meta-serif-web-pro", georgia, serif; font-we
 	border-bottom-right-radius: 1em;	
 }
 
+#header {
+	display: block;
+	padding: 1.8em 3%;
+	overflow: hidden;
+	width: 94%;
+	position: relative;
+	margin-top: 1em;
+}
+
 /* =============================================================================
    Menu
    ========================================================================== */
-.menu-button a,
-.agency-button a {
-	color: #fff;
-}
 .menu-button,
 .agency-button {
 	position: absolute;
+	display: block;
 	z-index: 0;
-	top: 20px;
-	padding: 70px 2em .5em 2em;
 	color: white;
 	background: #717074;
-	width: 40%;
 	cursor: pointer;
-}
-.home .menu-button {
-	width: 100%;
+	width: 25%;
+	padding: .5em;
+	text-align: center;
+	right: 0;
 }
 .menu-button {
-	right: -.5em;
-	text-align: right;
+	top: 0;
 }
 .agency-button {
-	left: -.5em;
+	top: 50px;
 }
 
 .clear {
@@ -1021,11 +1005,11 @@ h2.post-author-title {
 }
 #footer-tamus {
 	margin: 2px auto;
-	padding: 2px;
+	padding: 0px;
 	position: relative;
-	box-shadow: inset 0 5px 25px rgba(255, 255, 255, .4);
 	width: 104px;
 	display: block;
+	border: 1px solid #fff;
 }
 .site-footer .req-links {
 	float:right;
@@ -1035,7 +1019,7 @@ h2.post-author-title {
 	list-style: none;
 	float: left;
 	padding-right: 1em;
-	margin: .5em 1em .5em 0;
+	margin: .3em 1em .3em 0;
 	border-right: 1px solid #9F6D56;
 	line-height: .6em;
 }
@@ -1355,26 +1339,7 @@ html[xmlns] .slides {display: block;}
    ========================================================================== */
 
 @media all and (min-width: 700px) {
-	.menu-button,
-	.agency-button {
-		position: absolute;
-		z-index: 0;
-		top: 45px;
-		padding: .5em 2em;
-		color: white;
-		background: url('images/nav-bg.png') no-repeat transparent;
-		width: 40%;
-		cursor: pointer;
-	}
-	.site-title {
-		margin: -49px auto 0 auto;
-		height: 115px;
-	}
-	.feature-container {
-	  	width: 660px;
-		margin: 0 auto;
-		top: 200px;
-	}
+
 }
 
 /* =============================================================================
@@ -1387,7 +1352,7 @@ html[xmlns] .slides {display: block;}
 	
 	.site-footer {	
 		overflow: hidden;
-		margin: 2em auto 3.33333333% auto;
+		margin: 3em 0 0 0;
 		background: #500000;
 		box-shadow: 0 10px 25px rgba(0, 0, 0, .4);
 		padding: 0 18px;
@@ -1395,9 +1360,8 @@ html[xmlns] .slides {display: block;}
 	#footer-tamus {
 		margin-left: 10px;
 		margin-top: -20px;
-		padding: 2px;
+		padding: 0px;
 		position: absolute;
-		box-shadow: inset 0 5px 25px rgba(255, 255, 255, .4);
 	}
 	.site-footer .req-links {
 		list-style: none;
@@ -1421,8 +1385,15 @@ html[xmlns] .slides {display: block;}
 		background: #D7D7D7 url('images/bg-main6.png') no-repeat top center;
 		background-position: center 54px;
 	}
-	.site-title {
+	#header {
+		display: block;
+		padding: 0;
+		overflow: hidden;
+		width: inherit;
 		margin: -49px 0 0 0;
+	}
+	.site-title {
+		margin: 0;
 		background: url('images/logo-main.png') no-repeat top center;
 		width: 319px;
 		height: 115px;
@@ -1437,7 +1408,7 @@ html[xmlns] .slides {display: block;}
 		background: transparent url('images/backgrounds/sugarcane2.jpg') no-repeat top center;
 	}
 	#page > .wrap {
-		padding: 0 18px 3.333333% 18px;
+		padding: 0 18px;
 		background: url('images/bg-interior-content.png') 0 195px repeat-x #fff;
 		position: relative;
 	}
@@ -1576,7 +1547,7 @@ html[xmlns] .slides {display: block;}
 		z-index: 4;	
 		border: none;
 		font-size: 12px;
-		border-bottom: 1px solid #000;	
+		border-bottom: 1px dashed #000;	
 		background: transparent;
 		padding: 0;					
 	}	
@@ -1770,11 +1741,14 @@ html[xmlns] .slides {display: block;}
 	}
 	.home #content {
 		float: left;
-		padding-top: 0;
+		padding-top: 30px;
 	}
 	.home #sidebar {
 		float: right;
 		background: transparent;
+		padding-top: 50px;
+	}
+	.home #content .page {
 		padding-top: 0;
 	}
 	.home #sidebar .widget {
@@ -2007,11 +1981,11 @@ html[xmlns] .slides {display: block;}
 		margin-left: 1.612903225806%; /* 10px / 620px */
 		margin-left: 0;
 		padding-right: 0;
-		padding-top: 60px;
+		padding-top: 90px;
 		font-weight: 400;
 	}
 	.post p, #content .page p {
-		font-size: 1em;
+		font-size: .9em;
 		margin-bottom: 1.25em; /* 20px / 16px */
 		line-height: 1.375em; /* 22px / 16px */
 	}
@@ -2022,7 +1996,7 @@ html[xmlns] .slides {display: block;}
 		letter-spacing: 3px;
 		position: absolute;
 		padding: 0;
-		margin-top: 36px;
+		margin-top: 30px;
 	}
 	.recent-stories .post {
 		padding: 3.3333333%;

@@ -47,7 +47,7 @@
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>?14" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>?19" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 
@@ -120,15 +120,18 @@
 
 <div id="page" class="hfeed">		
 	<div class='wrap clearfix'>
-	<header>
+	<header id="header">
 		<h1 class="site-title one-of-3 ir"><a href="<?php echo site_url('/') ?>">AgriLife.org</a></h1>
-	</header>
 	
-
-	<?php if ( !is_front_page() ) : ?>
-		<div class="agency-button"><a href="#agency-nav">Agencies</a></div>
-	<?php endif; ?>
-	<div class="menu-button"><a href="#">Menu</a></div>
+		<nav class="off-canvas-nav-links">
+			<ul>
+				<li class="menu-item"><a class="menu-button" href="#menu">Menu</a></li>
+				<?php if ( !is_front_page() ) : ?>			
+					<li class="agency-item"><a class="agency-button" href="#agency-nav">Agencies</a></li>
+				<?php endif; ?>
+			</ul>
+		</nav>
+	</header>
 	<div id="main-search">
 		<form method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" >
 	         <input type="text" value="" name="s" class="s" onfocus="" onblur="" />
