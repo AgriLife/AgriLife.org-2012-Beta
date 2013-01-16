@@ -16,6 +16,8 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php get_template_part( 'content', 'single' ); ?>
+					
+					<?php comments_template( '', true ); ?>
 
 					<nav id="nav-single">
 						<span class="nav-previous"><?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> Prev', 'agrilifeorg' ) ); ?></span>

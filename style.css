@@ -1984,6 +1984,11 @@ html[xmlns] .slides {display: block;}
 		padding-top: 90px;
 		font-weight: 400;
 	}
+	#commentform input,
+	#commentform textarea {
+		margin: 0 0 9px;
+		width: 98%;
+	}
 	.post p, #content .page p {
 		font-size: .9em;
 		margin-bottom: 1.25em; /* 20px / 16px */
