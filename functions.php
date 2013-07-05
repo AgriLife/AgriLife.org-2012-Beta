@@ -76,7 +76,7 @@ function agrilifeorg_setup() {
 							
 	    // enqueue your compressed js in one file and add to bottom of document
 	   	wp_enqueue_script('my_scripts',
-	       	get_bloginfo('template_directory') . '/js/my_scripts.js', array('jquery'), '1.0', true);
+	       	get_bloginfo('template_directory') . '/js/my_scripts-ck.js', array('jquery'), '1.0', true);
 	       
 		       
 		}	         
