@@ -309,31 +309,6 @@ $(document).ready( function() {
     });
 	$('ul.slides').removeClass('invisible');
 	/* End Flexslider invocation */
-	
-	var timer = null;
-	
-  	$('.widget_nav_menu.interior-sidebar .sub-menu').hide();
-  	
-	$('.widget_nav_menu.interior-sidebar .menu-item').hover(
-		function() {
-			var theElement = this;
-			timer = setTimeout(function() {
-				timer = null;
-	            $(theElement).has('ul').addClass('down');
-	        	$(theElement).children('ul').delay(50).slideDown('medium', function() {});
-	        }, 500)
-        
-	    },
-	    function() {
-			if (timer) {
-			      clearTimeout(timer);
-	              timer = null;
-	        }
-	        $(this).has('ul').removeClass('down');
-	        $(this).children('ul').delay(50).slideUp('medium', function() {});
-	    }
-    );
-
 
 
 	// Toggle for nav menu	
