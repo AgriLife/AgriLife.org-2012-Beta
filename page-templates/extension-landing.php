@@ -25,7 +25,7 @@ get_header(); ?>
 		<aside id="director_bio" class="widget interior-sidebar">
 			<div class="widget-wrap director-bio-wrap">
 				<img src="<?php bloginfo('template_directory'); ?>/images/landing/steele.jpg" alt="Dr. Doug Steele" class="director-mug" title="Dr. Doug Steele" />
-				<h2>Dr. Doug Steele,<br />Interim Director</h2>
+				<h2>Dr. Doug Steele,<br />Director</h2>
 			
 				<h4 class="landing-contact">Contact</h4>
 				<p>Agriculture and Life Sciences Building <br />
