@@ -1052,6 +1052,17 @@ h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat 
 .agrilifetoday ul {
 	margin: 0;
 }
+.agrilifetoday > .widget {
+	margin: 0;
+	padding: 0;
+}
+.interior-sidebar.widget.agrilifetoday .widget-wrap {
+	padding: 0;
+}
+.agrilifetoday.widget ul li {
+	border-top: none;
+	border-bottom: none;
+}
 
 .widget_nav_menu.interior-sidebar .widget-wrap {
 	padding: 0;
