@@ -1049,54 +1049,10 @@ h1.landing-tvmdl { background: url('images/logo-tvmdl.png') 15px 11px no-repeat 
 /* ==|== AgriLife Today RSS widget styles ===================================
    Most of these are copied over from the current AgriFlex theme
    ========================================================================== */
-
-.agrilifetoday.widget li {
-	margin: 6px 0;
-	padding-bottom: 6px;
-	border-bottom: 1px dashed #999;
-	position: relative;
+.agrilifetoday ul {
+	margin: 0;
 }
 
-.widget.agrilifetoday ul {
-  padding: 0;
-}
-
-.agrilifetoday .rss-img-link {
-  position: absolute;
-  left: 2%;
-  top: 0;
-  width: 10%;
-}
-.agrilifetoday .rss-content {
-	position: static;
-	margin-left: 15%;
-	height: 70px;
-}
-
-.agrilifetoday .rss-img-link img {
-  width: 100%;
-}
-
-.agrilifetoday .rss-title {
-  display: block;
-  margin-left: 15%;
-}
-
-.agrilifetoday .rss-title a {
-  color: #555;
-  font-weight: 400;
-}
-
-.agrilifetoday .rss-date {
-  color: #500000;
-  font-weight: 400;
-}
-
-.agrilifetoday .rss-content p {
-  font-size: .9em;
-  margin-bottom: 5px;
-  font-weight: 400;
-}
 .widget_nav_menu.interior-sidebar .widget-wrap {
 	padding: 0;
 	background: transparent;
@@ -1966,11 +1922,6 @@ html[xmlns] .slides {display: block;}
 		background: none;
 		margin-bottom: 0;
 	}
-	.agrilifetoday .rss-content {
-		position: static;
-		margin-left: 15%;
-		height: inherit;
-	}
 	.top-button {	
 		display: none;	
 	}
@@ -2284,3 +2235,10 @@ html[xmlns] .slides {display: block;}
    
 
    .missing { box-shadow: 0 0 3px rgba(255,0,0,1); background: rgba(255, 0, 0, 1);}
+
+
+/* ==|== Plugins =======================================================
+   Some plugin styles
+   ========================================================================== */
+
+@import "plugins/gravityforms";
