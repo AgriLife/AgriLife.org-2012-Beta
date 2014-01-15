@@ -24,8 +24,13 @@ get_header(); ?>
 	<section id="sidebar" class="sidebar one-of-3 column" role="navigation">
 		<aside id="director_bio" class="widget interior-sidebar">
 			<div class="widget-wrap director-bio-wrap">
-				<img src="<?php bloginfo('template_directory'); ?>/images/landing/steele.jpg" alt="Dr. Doug Steele" class="director-mug" title="Dr. Doug Steele" />
+				<!-- <img src="<?php bloginfo('template_directory'); ?>/images/landing/steele.jpg" alt="Dr. Doug Steele" class="director-mug" title="Dr. Doug Steele" />
 				<h2>Dr. Doug Steele,<br />Director</h2>
+				-->
+				
+				<img src="//agrilifecdn.tamu.edu/wp-content/uploads/BillDugas1.jpg" alt="Dr. Doug Steele" class="director-mug" title="Dr. Doug Steele" />
+				<h2>Dr. Bill Dugas,<br />Acting Vice Chancellor and Dean</h2>
+				
 			
 				<h4 class="landing-contact">Contact</h4>
 				<p>Agriculture and Life Sciences Building <br />
@@ -33,14 +38,17 @@ get_header(); ?>
 					College Station, TX 77843-7101</p>
 				<h4 class="landing-contact">Phone</h4>
 				<a class="phone" href="tel://979.845.7800">979.845.7800</a>
-				
+				<!-- 
 				<a href="http://agrilife.org/about/leadership/douglassteele/"><img src="<?php bloginfo('template_directory'); ?>/images/landing/learn-steele.png" alt="Dr. Doug Steele Bio" class="director-bio-btn" title="Dr. Doug Steele" /></a>
+				-->
+				<a href="http://agrilife.org/about/leadership/vcdean/"><img src="http://agrilife.org/wp-content/uploads/learnDugas.png" alt="Dr. Bill Dugas Bio" class="director-bio-btn" title="Dr. Bill Dugas" /></a>
 				<a href="http://agrilifeextension.tamu.edu/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/landing/explore-extension.png" alt="Texas A&amp;M AgriLife Extension Service" class="agency-link-btn" title="Texas A&amp;M AgriLife Extension Service" /></a>
 				
 			</div>
 		</aside>
 		<?php dynamic_sidebar( 'sidebar_extension' ); ?>
 	</section>
+
 	
 </div><!-- /.content-wrap -->
 
