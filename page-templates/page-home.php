@@ -4,10 +4,10 @@
 get_header(); ?>
 
 		<section class="featured-content clearfix">
-<?php
-$slider = new AgriLife_FlexSlider;
-echo $slider->make_slider();
-?>
+            <div class="feature-container">
+                <?php if ( function_exists( 'soliloquy_slider' ) ) soliloquy_slider( 'homepage' ); ?>
+            </div>
+
 			<div class="one-of-3 clearfix featured-stories-container"> 
 			<ol class="featured-stories">
 				<li class="agency-extension agency">

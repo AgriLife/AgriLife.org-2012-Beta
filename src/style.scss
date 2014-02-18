@@ -1758,7 +1758,7 @@ html[xmlns] .slides {display: block;}
 		width: 660px;
 		left: 34%;
 		top: 0;
-		margin: 0;
+		margin: 25px 0 0 0;
 	}
 	.flex-caption {
 		position: absolute;
@@ -1779,7 +1779,14 @@ html[xmlns] .slides {display: block;}
 		bottom:0; 
 		left:0;
 		width: 31.914893617021%;				
-	}	
+	}
+
+    /* Soliloquy Slideshow */
+    .soliloquy-container .soliloquy-control-nav {
+        top: 10px;
+        bottom: inherit!important;
+    }
+
 	
 	/* Fluid Grid Classes */	
 	.one-of-3 {
