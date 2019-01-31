@@ -15,7 +15,7 @@ class agrilifeorg_Ephemera_Widget extends WP_Widget {
 	 *
 	 * @return void
 	 **/
-	function agrilifeorg_Ephemera_Widget() {
+	private function __construct() {
 		$widget_ops = array( 'classname' => 'widget_agrilifeorg_ephemera', 'description' => __( 'Use this widget to list your recent Aside, Status, Quote, and Link posts', 'agrilifeorg' ) );
 		$this->WP_Widget( 'widget_agrilifeorg_ephemera', __( 'agrilifeorg Ephemera', 'agrilifeorg' ), $widget_ops );
 		$this->alt_option_name = 'widget_agrilifeorg_ephemera';
